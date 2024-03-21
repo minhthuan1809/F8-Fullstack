@@ -17,8 +17,8 @@
         <li><a href="./bai4.html">Bài Tập 4</a></li>
         <li><a href="./bai5.html">Bài Tập 5</a></li>
     </ul>
-    <button class="btn--back"><a href="/day-1/"> Bài Trước </a></button>
-    <button class="btn--next"><a href="/day-3/"> Tiếp Theo </a></button>
+    <button id="btn--back"><a href="../day-1"> Bài Trước </a></button>
+    <button id="btn--next"><a href="../day-3/"> Tiếp Theo </a></button>
     <footer>
         <hr>
         <b>By: Nguyễn Minh Thuận &copy; </b>
@@ -29,21 +29,23 @@
 
 
 <style>
-    .btn--back,
-    .btn--next {
+    #btn--back,
+    #btn--next {
         border: none;
         color: rgb(55, 55, 248);
         padding: 10px 20px 10px 20px;
         border: 1px solid rgb(55, 55, 248);
         border-radius: 20px;
+        background-color: white;
 
     }
 
-    .btn--back {
+
+    #btn--back {
         margin-left: 50px;
     }
 
-    .btn--next {
+    #btn--next {
         float: right;
         margin-right: 50px;
     }
