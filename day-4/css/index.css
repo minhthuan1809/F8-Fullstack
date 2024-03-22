@@ -1,0 +1,45 @@
+
+:root{
+    --text-color : rgb(8, 0, 255);
+}
+
+*{
+    top: 0;
+    margin: 0;
+
+}
+body{
+    background-image: url(https://media.istockphoto.com/id/516449022/photo/lady-with-kayak.jpg?b=1&s=612x612&w=0&k=20&c=PsQQpGXVtV9dPDaH-DNEgeMAHjqkViCSQsSrkqlHKRk=);
+    background-size: cover;
+}
+
+.Containers{    
+    color: var(--text-color);
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+li{
+    list-style: none;
+
+}
+.ex01--btn{
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+    color: blue;
+    border: none;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 50%;
+}
+a{
+    text-decoration: none;
+}
+.ex01{
+    color: white;
+    border: 2px solid red;
+    border-radius: 20px;
+    width: 200px;
+    height: 300px;
+
+}
