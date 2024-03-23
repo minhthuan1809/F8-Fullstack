@@ -4,11 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <title>bài tập 1</title>
 </head>
+<style>
+    * {
+        top: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+
+
+    /* body {
+        color: #9a9a9a;
+        font-family: Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+    } */
+
+    .container {
+        display: flex;
+        text-align: left;
+        justify-content: space-evenly;
+
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .container--text {
+        width: 180px;
+    }
+
+    .Contact-info {
+        font-size: 20px;
+    }
+
+    p {
+        width: 200px;
+    }
+
+    form[]
+</style>
 
 <body>
-
+    <section>
+        <h2>CONTACT US</h2>
+        <div class="container">
+            <div class="container--text">
+                <h3>Contact info</h3>
+                <ul class="Contact-info">
+                    <li class="Contact-info_address">
+                        <ion-icon name="map-outline"></ion-icon>
+                        321 Awesome Street New York, NY 17022
+                    </li>
+                    <li class="Contact-info_email">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        info@companyname.com
+                    </li>
+                    <li class="Contact-info_tell">
+                        <ion-icon name="call-outline"></ion-icon>
+                        +1 800 123 1234
+                    </li>
+                </ul>
+            </div>
+            <div class="container--form">
+                <h3>Having Any Query! Or Book an appointment</h3>
+                <form action="">
+                    <p> <input type="text" placeholder="Your Name"> </p>
+                    <p> <input type="email" placeholder="Your Email"></p>
+                    <p> <input type="text" placeholder="Subject"></p>
+                    <p> <textarea name="container--form__text" id="" cols="30" rows="10"
+                            placeholder="Message"></textarea>
+                    </p>
+                    <p> <button class="container--form__btn">Send Message</button></p>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
