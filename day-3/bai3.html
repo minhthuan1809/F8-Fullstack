@@ -8,7 +8,66 @@
 </head>
 
 <body>
-    <h1>Nguyễn minh thuận</h1>
+    <form action="https://api-gateway.fullstack.edu.vn/action_page.php">
+        <table width="30%">
+            <tr>
+                <th><label for="Username">Username:</label></th>
+                <td><input name="text" id="Username" type="text"></td>
+            </tr>
+            <tr>
+                <th><label for="Password">Password:</label></th>
+                <td><input name="Password" id="Password" type="Password"></td>
+            </tr>
+            <tr>
+                <th><label for="City">City of <br> Emoloyment:</label></th>
+                <td><input name="City" id="City" type="text"></td>
+            </tr>
+            <tr>
+                <th>Web Sever</th>
+                <td>
+                    <select>
+                        <option value="">--Choose a sever--</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Please specify <br> your role</th>
+                <td>
+                    <label for="role-Admin"><input id="role-Admin" name="role[]" value="0" type="radio" checked>Admin
+                        <br></label>
+                    <label for="role-Engineer"><input id="role-Engineer" name="role[]" value="1" type="radio">Engineer
+                        <br></label>
+                    <label for="role-Manager"><input id="role-Manager" name="role[]" value="2" type="radio">Manager
+                        <br></label>
+                    <label for="role-Guest"><input id="role-Guest" name="role[]" value="3" type="radio">Guest
+                        <br></label>
+                </td>
+            </tr>
+            <tr>
+                <th>Single Sign-on <br>to the following <br> your role</th>
+                <td>
+                    <label for="source-Mail"><input id="source-Mail" name="source[]" type="checkbox" value="Mail"
+                            checked>Mail
+                        <br></label>
+                    <label for="source-Payroll"><input id="source-Payroll" name="source[]" value="Payroll"
+                            type="checkbox">Payroll
+                        <br></label>
+                    <label for="source-sever"><input id="source-sever" name="source[]" value="sever"
+                            type="checkbox"><Self->sever</Self->
+                        <br></label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button>Login</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
 </body>
 
 </html>
