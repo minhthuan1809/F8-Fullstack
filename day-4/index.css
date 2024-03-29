@@ -1,100 +1,114 @@
-
-:root{
-    --text-btn_color : rgb(0, 0, 0);
-    --text-color :white;
+:root {
+    --text-btn_color: rgb(0, 0, 0);
+    --text-color: white;
 }
 
-*{
+* {
     top: 0;
     margin: 0;
 
 }
-body{
+
+body {
     /* background-color: rgba(59, 105, 99, 0.301); */
-    background-image: url(https://th.bing.com/th/id/OIG1.B3965IVExzUZldqNHCDk?pid=ImgGn);   
+    background-image: url(https://th.bing.com/th/id/OIG1.B3965IVExzUZldqNHCDk?pid=ImgGn);
     background-attachment: fixed;
 }
-.Containers{    
-    color: var(    --text-btn_color);
+
+.Containers {
+    color: var(--text-btn_color);
     margin-top: 20px;
     text-align: center;
     font-size: 20px;
 }
-.list{
+
+.list {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-img{
+
+img {
     width: 280px;
     height: 300px;
     border-radius: 19px 19px 0 0;
 }
-.list__item{
-   margin:100px 50px 50px 50px;
-   border-radius: 20px;
-   height: 450px;
+
+.list__item {
+    margin: 100px 50px 50px 50px;
+    border-radius: 20px;
+    height: 450px;
     box-shadow: 30px 30px rgba(0, 0, 0, 0.652);
     background-color: rgb(255, 255, 255);
 
 }
-.Containers>p{
-    color: var(    --text-btn_color);
+
+.Containers>p {
+    color: var(--text-btn_color);
     text-align: center;
     margin-top: 20px;
     font-size: 35px;
-    
+
 }
-.list__item > button{
+
+.list__item>button {
     text-align: center;
     padding: 8px 40px 8px 40px;
     border-radius: 20px;
     border: 0.1px solid rgb(200, 200, 200);
-    margin: 10% 0 0 30% ;
-    
+    margin: 10% 0 0 30%;
+
 }
-.list__item > button:hover{
+
+.list__item>button:hover {
     transform: scale(1.2);
 }
- .list__item > button >a{
+
+.list__item>button>a {
     font-size: 17px;
 }
-.list__item>p{
+
+.list__item>p {
     font-size: 30px;
     margin-top: 20px;
 }
 
-.btn-back , .btn-next{
+.btn-back,
+.btn-next {
     text-align: center;
-    margin:5% 0 0 26%;
+    margin: 5% 0 0 26%;
     border-radius: 20px;
     padding: 20px 50px 20px 50px;
-    box-shadow:10px 20px rgba(0, 0, 0, 0.652);
+    box-shadow: 10px 20px rgba(0, 0, 0, 0.652);
     border: none;
-   
+
 }
 
-.btn-back:hover{
+.btn-back:hover {
     box-shadow: none;
     background-color: rgba(255, 255, 255, 0.493);
     color: black;
 }
-.btn-next:hover{
+
+.btn-next:hover {
     box-shadow: none;
     background-color: rgba(255, 255, 255, 0.493);
 }
 
-hr{
+hr {
 
     margin-top: 4%;
 }
-p ,a{
+
+p,
+a {
     text-align: center;
-    color: var(    --text-btn_color);
+    color: var(--text-btn_color);
     font-size: 15px;
     text-decoration: none;
 
 }
-.footer-text{
-    color:var( --text-color);
+
+.footer-text {
+    color: var(--text-color);
 }

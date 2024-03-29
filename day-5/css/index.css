@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.container--list {
+    margin-top: 60px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container--list__one,
+.container--list__two,
+.container--list__three {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.container--list__one:hover,
+.container--list__two:hover,
+.container--list__three:hover {
+    transform: scale(1.05);
+}
+
+.container--list__text {
+    padding: 10px;
+}
+
+.container--list__text a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style for buttons */
+.btn-back,
+.btn-next {
+    background-color: #363232;
+    color: #fff;
+    border: none;
+    padding: 20px 50px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.652);
+}
+
+.btn {
+    margin-left: 42%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.btn-back:hover,
+.btn-next:hover {
+    background-color: #0056b3;
+}
+
+/* Style for footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+footer span {
+    font-weight: bold;
+}
