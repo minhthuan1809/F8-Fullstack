@@ -4,11 +4,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- thư viên icon ngôi sao -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- thư viện icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
     <title>Bài tập 3</title>
 </head>
+<style>
+    * {
+        top: 0;
+        text-align: center;
+    }
+
+    .choose--btn:nth-of-type(1) {
+        background-color: rgb(40, 55, 142);
+        color: white;
+    }
+
+    .choose--btn {
+        padding: 10px 20px 10px 20px;
+        border: none;
+    }
+
+    .choose--btn:hover {
+        background-color: rgb(40, 55, 142);
+        color: white;
+    }
+
+    .choose--btn:focus {
+        background-color: rgb(40, 55, 142);
+        color: white;
+    }
+
+    .title {
+        font-size: 53px;
+        margin-bottom: -20px;
+    }
+
+    .list {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    img {
+
+        width: 200px;
+        height: 250px;
+    }
+
+    .create--star {
+        margin-top: -35%;
+    }
+
+    .choose--btn {
+        font-size: 16px;
+    }
+
+
+    .create--star span[class^="fa"]:hover {
+        color: yellow;
+    }
+
+    .create--star span[class^="fa"]:nth-last-child(3),
+    .create--star span[class^="fa"]:nth-last-child(4),
+    .create--star span[class^="fa"]:nth-last-child(5) {
+        color: yellow;
+    }
+
+    .box--btn button {
+        background-color: rgb(40, 55, 142);
+        color: white;
+        padding: 10px 20px 10px 20px;
+        margin: 8px;
+        border: none;
+    }
+
+    .box--btn .box--btn__card {
+        padding: 12px 65px 12px 65px;
+        margin: 10px;
+    }
+
+
+    button[class="box--btn__ico"],
+    button[class="box--btn__card"] {
+        transform: translate(0, -270%);
+
+
+    }
+</style>
 
 <body>
-    <h1>Nguyễn minh thuận</h1>
+    <section>
+        <div class="title">
+            <h3>Best seller</h3>
+        </div>
+        <div class="choose">
+            <button class="choose--btn">Skincare</button>
+            <button class="choose--btn">Haircare</button>
+            <button class="choose--btn">Cosmetics Care</button>
+            <button class="choose--btn">Fragrance</button>
+            <button class="choose--btn">Makeup</button>
+        </div>
+        <div class="list">
+            <div class="list--first">
+                <div class="box">
+                    <div class="box--btn">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1478001517127-fccc92f54906?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D"
+                                alt="photo1">
+                        </div>
+                        <button class="box--btn__ico"><ion-icon name="heart-outline" title="heart"></ion-icon></button>
+                        <button class="box--btn__ico"><ion-icon name="swap-horizontal-outline"
+                                title="horizontal"></ion-icon></button>
+                        <button class="box--btn__ico"><ion-icon name="eye-outline" title="eye"></ion-icon></button>
+                        <div>
+                            <button class="box--btn__card">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="create--star">
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p>Casua Shirt With Ruffle Hem</p>
+                <b>$122.00</b>
+
+            </div>
+            <div class="list--second">
+                <div class="box">
+                    <div class="box--btn">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1478001517127-fccc92f54906?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D"
+                                alt="photo1">
+                        </div>
+                        <button class="box--btn__ico"><ion-icon name="heart-outline" title="heart"></ion-icon></button>
+                        <button class="box--btn__ico"><ion-icon name="swap-horizontal-outline"
+                                title="horizontal"></ion-icon></button>
+                        <button class="box--btn__ico"><ion-icon name="eye-outline" title="eye"></ion-icon></button>
+                        <div>
+                            <button class="box--btn__card">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="create--star">
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p>Lorem ipsum dolor sit amet . </p>
+                <b>$122.00</b>
+            </div>
+            <div class="list--third">
+                <div class="list--second">
+                    <div class="box">
+                        <div class="box--btn">
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1478001517127-fccc92f54906?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D"
+                                    alt="photo1">
+                            </div>
+                            <button class="box--btn__ico"><ion-icon name="heart-outline"
+                                    title="heart"></ion-icon></button>
+                            <button class="box--btn__ico"><ion-icon name="swap-horizontal-outline"
+                                    title="horizontal"></ion-icon></button>
+                            <button class="box--btn__ico"><ion-icon name="eye-outline" title="eye"></ion-icon></button>
+                            <div>
+                                <button class="box--btn__card">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create--star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p>Casua Shirt With Ruffle Hem</p>
+                    <b>$200.00</b>
+                </div>
+            </div>
+            <div class="list--Fourth">
+                <div class="list--second">
+                    <div class="box">
+                        <div class="box--btn">
+                            <div>
+                                <img src="https://images.unsplash.com/photo-1478001517127-fccc92f54906?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fDZzTVZqVExTa2VRfHxlbnwwfHx8fHw%3D"
+                                    alt="photo1">
+                            </div>
+                            <button class="box--btn__ico"><ion-icon name="heart-outline"
+                                    title="heart"></ion-icon></button>
+                            <button class="box--btn__ico"><ion-icon name="swap-horizontal-outline"
+                                    title="horizontal"></ion-icon></button>
+                            <button class="box--btn__ico"><ion-icon name="eye-outline" title="eye"></ion-icon></button>
+                            <div>
+                                <button class="box--btn__card">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create--star">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet . </p>
+                    <b>$500.00</b>
+                </div>
+            </div>
+
+    </section>
 </body>
 
 </html>

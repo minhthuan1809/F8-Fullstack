@@ -6,9 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bài tập 2</title>
 </head>
+<style>
+    * {
+        top: 0;
+        margin: 0;
+        color: rgb(58, 38, 23);
+
+    }
+
+
+    .contain {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    button[class="submit"] {
+        width: 90%;
+        padding: 20px;
+        margin-top: 20px;
+        font-family: 'BebasNeue', sans-serif;
+    }
+
+    button[class="submit"] {
+        width: 95%;
+        border-radius: 10px;
+        background-color: rgb(181, 0, 0);
+        border: none;
+        color: white;
+    }
+
+    form {
+        margin-left: 20%;
+        /* margin-top: 20px; */
+
+    }
+
+    .contain--First__litle {
+        margin-bottom: 50px;
+        font-family: 'Alfa Slab One', sans-serif;
+    }
+
+    .contain--Second__litle {
+        margin-bottom: 5px;
+        font-size: 100px;
+        font-family: 'BebasNeue', sans-serif;
+    }
+</style>
 
 <body>
+    <section>
+        <div class="contain">
+            <h1 class="contain--First__litle">RESERVATION</h1>
+            <h2 class="contain--Second__litle">Book your table</h2>
+            <form class="contain--form">
+                <table for="" width="80%" class="contain--form__table">
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="Name" tabindex="1">
+                        </td>
+                        <td>
+                            <input type="email" placeholder="Email" tabindex="2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="Date" tabindex="3">
+                        </td>
+                        <td>
+                            <input type="text" placeholder="Time" tabindex="4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="number" placeholder="People" tabindex="5">
+                        </td>
+                        <td>
+                            <button class="submit">Find A Table</button tabindex="6">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
 
+    </section>
 </body>
 
 </html>

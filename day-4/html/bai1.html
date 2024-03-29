@@ -6,8 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bài tập 1</title>
 </head>
+<style>
+    :root {
+        --color--btn--text: rgb(255, 165, 0);
+    }
+
+    * {
+        top: 0;
+        margin: 0;
+    }
+
+    input[type="email"]::placeholder {
+        color: var(--color--btn--text);
+    }
+
+    section {
+        background-color: rgb(51, 68, 85);
+        width: 50%;
+        height: 200px;
+        color: white;
+        border-radius: 20px;
+        margin: 15%;
+
+
+    }
+
+    .infor>button>a {
+        color: white;
+        text-decoration: none;
+
+    }
+
+    .infor>button {
+        background-color: var(--color--btn--text);
+        border: none;
+    }
+
+    .section-text {
+        color: var(--color--btn--text);
+    }
+
+    .Content {
+        display: block;
+        transform: translate(-500% -50%);
+    }
+
+    .Content>h2 {
+        font-size: 30px;
+    }
+
+    .infor-btn {
+        padding: 11.5px;
+        border-radius: 2px;
+    }
+
+    .infor>input[type='email'] {
+        width: 30%;
+        padding: 10px;
+    }
+
+    .infor {
+        margin-top: 20px;
+    }
+
+    .Content-text {
+        color: var(--color--btn--text);
+
+    }
+</style>
 
 <body>
+    <section>
+        <div class="Content">
+            <h2><b class="Content-text">Earn income </b> with your CSS skills</h2>
+            <p>Sign up and we'll send you the best freelance opportunities straight to your inbox. <br> We're building
+                the
+                largest
+                self-service freelancing marketplace for people like you.</p>
+            <form action="">
+                <div class="infor">
+                    <input type="email" placeholder="Email address  ">
+                    <button class="infor-btn"><a href="#">Send Me Opportunities</a></button>
+                </div>
+            </form>
+        </div>
+    </section>
 
 </body>
 
