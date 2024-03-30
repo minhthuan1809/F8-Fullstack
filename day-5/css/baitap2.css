@@ -18,9 +18,9 @@ body {
     margin-bottom: 20px;
 }
 
-/* .checkbox {
+.checkbox {
     display: none;
-} */
+}
 
 .checkbox+label {
     /* cursor: pointer; */
