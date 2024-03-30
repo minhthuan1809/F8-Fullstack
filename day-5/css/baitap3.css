@@ -34,6 +34,7 @@ body {
     text-align: center;
     margin-top: 5rem;
     transition: transform 1s ease;
+    animation: identifier 2s ease;
 
 }
 
@@ -60,4 +61,18 @@ body {
 h2::selection {
     background-color: black;
     color: white;
+}
+
+@keyframes identifier {
+    0% {
+
+        margin-left: 100px;
+    }
+
+    50% {
+        margin-right: 100px;
+    }
+
+
+
 }
