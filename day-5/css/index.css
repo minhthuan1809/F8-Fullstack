@@ -1,7 +1,11 @@
+@import url(../css/font.css);
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: lato, sans-serif;
+    font-size: 22px;
 }
 
 header {
@@ -9,7 +13,9 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+
 }
+
 
 .container {
     display: flex;
@@ -47,6 +53,7 @@ header {
 
 .container--list__text {
     padding: 10px;
+    text-transform: capitalize;
 }
 
 .container--list__text a {
@@ -71,7 +78,7 @@ header {
 }
 
 .btn {
-    margin-left: 42%;
+    margin-left: 37%;
     margin-top: 60px;
     margin-bottom: 60px;
 }

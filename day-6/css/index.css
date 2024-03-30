@@ -1,0 +1,62 @@
+@import url(../css/font.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f2f2f2; */
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url(../img/nề.jpg);
+    color: white;
+    height: 700px;
+    background-size: cover;
+    clip-path: polygon(0% 0%, 100% 0, 100% 27%, 51% 52%, 0 24%);
+}
+
+
+
+
+
+.title--logo {
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+
+
+.text {
+    margin-right: 350px;
+    float: right;
+    letter-spacing: 80px;
+    font-size: 60px;
+    margin-top: 50px;
+    font-weight: 900;
+    text-align: center;
+    font-family: Sans;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -280px;
+    flex-wrap: wrap;
+
+}
+
+.list .list-box {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+a {
+    text-decoration: none;
+}

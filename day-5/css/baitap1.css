@@ -1,0 +1,36 @@
+* {
+    top: 0;
+    padding: 0;
+    margin: 0;
+
+}
+
+.container {
+    background-image: url(//i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg);
+    /* background-size: 2000px cover; */
+    height: 700px;
+    width: 1500px;
+    background-size: cover;
+}
+
+.cover {
+    background-color: rgba(255, 255, 255, 0.404);
+    width: 450px;
+    height: 280px;
+    transform: translate(-27%, -55%);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+
+}
+
+.cover--text__one {
+    font-size: 30px;
+    padding: 20px;
+}
+
+.cover--text__underlined {
+    text-decoration: underline;
+
+}

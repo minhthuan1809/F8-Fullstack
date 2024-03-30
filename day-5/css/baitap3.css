@@ -1,0 +1,63 @@
+@import url(../css/font.css);
+
+:root {
+    --bg--img--: rgb(0, 0, 0);
+}
+
+.list--box img {
+    width: 70px;
+    height: 70px;
+    border: 3px solid var(--bg--img--);
+    border-radius: 100%;
+    padding: 30px;
+    margin-top: 20px;
+    color: var(--bg--img--);
+}
+
+body {
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.list--box {
+    /* border: 1px solid var(--bg--img--); */
+    border: none;
+    box-shadow: 20px 20px 20px;
+    height: 20rem;
+    width: 280px;
+    text-align: center;
+    margin-top: 5rem;
+    transition: transform 1s ease;
+
+}
+
+.list--box:hover {
+    transform: scale(1.5);
+}
+
+.header--text {
+    font-size: 30px;
+    font-family: lato, sans-serif;
+}
+
+.list--box div strong {
+    font-size: 30px;
+}
+
+.list--btn {
+    padding: 9px 30px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+h2::selection {
+    background-color: black;
+    color: white;
+}
