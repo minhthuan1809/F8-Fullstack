@@ -20,7 +20,8 @@ body {
 
 .list {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 90px;
     flex-wrap: wrap;
 
 }
@@ -64,12 +65,12 @@ h2::selection {
 }
 
 @keyframes identifier {
-    0% {
+    to {
 
         margin-left: 200px;
     }
 
-    50% {
+    from {
         margin-right: 100px;
     }
 

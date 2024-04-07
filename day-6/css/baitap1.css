@@ -1,0 +1,118 @@
+@import url(../css/font.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: lato, sans-serif;
+    background-color: #f4f4f4;
+    font-family: lato, sans-serif;
+
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-family: Lobster, sans-serif;
+
+}
+
+strong {
+    color: #ff0000;
+}
+
+.form p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="number"],
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form input[type="button"] {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 40%;
+}
+
+.form input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+.form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form label {
+    font-size: 14px;
+}
+
+.list--first,
+.list--Second,
+.list--Third,
+.list--Fourth,
+.list--Fifth {
+    display: flex;
+    align-items: center;
+}
+
+.list--first ion-icon,
+.list--Second ion-icon,
+.list--Third ion-icon,
+.list--Fourth ion-icon,
+.list--Fifth ion-icon {
+    margin-right: 10px;
+}
+
+.list--action {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 24%, 69% 24%, 64% 30%, 61% 24%, 0 24%);
+    margin-left: 30px;
+    position: absolute;
+    top: 10%;
+    display: none;
+}
+
+.list--action p {
+    display: block;
+    color: white;
+    margin-top: -13px;
+
+}
+
+.list--first:hover+.list--action {
+    display: block;
+}
