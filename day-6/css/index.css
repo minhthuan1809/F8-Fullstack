@@ -60,3 +60,35 @@ body {
 a {
     text-decoration: none;
 }
+
+.btn-back,
+.btn-next {
+    background-color: #363232;
+    color: #fff;
+    border: none;
+    padding: 20px 50px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.652);
+}
+
+.btn {
+    margin-left: 40%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.btn-back:hover,
+.btn-next:hover {
+    background-color: #0056b3;
+}
