@@ -1,107 +1,162 @@
-@import url(../css/font.css);
+@import url(../css/index.css);
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: lato, sans-serif;
-    font-size: 22px;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+.logo {
     text-align: center;
+    margin-top: 5%;
+    line-height: 50px;
+    font-family: Regular, sans-serif;
+    animation: identifier 1s ease;
+}
+
+body {
+    background-image: url("../img/p81tvov.png");
 
 }
 
+h1 {
+    font-size: 50px;
+    letter-spacing: 45px;
+    color: rgb(191, 191, 191);
+}
 
-.container {
+span {
+    font-size: 30px;
+    margin-top: 25px;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 45px;
+}
+
+.char1,
+.char11,
+.char6 {
+    color: red;
+}
+
+.char2,
+.char10 {
+    color: rgb(0, 255, 145);
+}
+
+.char3,
+.char9 {
+    color: blue;
+}
+
+.char4,
+.char8 {
+    color: rgb(170, 20, 211);
+}
+
+.char5,
+.char7 {
+    color: rgb(238, 255, 47);
+}
+
+.content {
+    background-color: white;
+    width: 600px;
+    height: 45px;
+    border-radius: 30px;
+    margin: 90px auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
+
 }
 
-.container--list {
-    margin-top: 60px;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+.content ion-icon:hover {
+    background-color: rgba(210, 210, 210, 0.452);
+    border-radius: 50px;
+
 }
 
-.container--list__one,
-.container--list__two,
-.container--list__three {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+ion-icon {
+    font-size: 20px;
+    margin: 13px 0 0 17px;
 }
 
-.container--list__one:hover,
-.container--list__two:hover,
-.container--list__three:hover {
-    transform: scale(1.05);
-}
-
-.container--list__text {
-    padding: 10px;
-    text-transform: capitalize;
-}
-
-.container--list__text a {
-    text-decoration: none;
-    color: #333;
-}
-
-/* Style for buttons */
-.btn-back,
-.btn-next {
-    background-color: #363232;
-    color: #fff;
+input[type="search"] {
+    font-size: 20px;
+    display: inline-block;
+    width: 460px;
+    height: 40px;
     border: none;
-    padding: 20px 50px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.652);
+    margin: 2px 0 0 9px;
+    outline: none;
 }
 
-.btn {
-    margin-left: 37%;
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-button a {
+.list a {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
     text-decoration: none;
     color: white;
 
 }
 
-.btn-back:hover,
-.btn-next:hover {
-    background-color: #0056b3;
+.list a:hover {
+    background-color: rgba(214, 214, 214, 0.288);
 }
 
-/* Style for footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+.list a:focus {
+    background-color: rgba(214, 214, 214, 0.288);
+    outline: none;
 }
 
-footer span {
-    font-weight: bold;
+
+
+.list a .icon {
+    display: block;
+    background-color: rgb(243, 243, 243);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+
+
+}
+
+.list a ion-icon {
+    color: rgb(27, 22, 172);
+    margin-top: -3px;
+
+}
+
+.list {
+    position: absolute;
+    left: 37%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 400px;
+    height: 200px;
+    margin-top: -20px;
+}
+
+
+@keyframes identifier {
+    0% {
+        margin: 0;
+    }
+
+    10% {
+        margin-left: 10px;
+    }
+
+    20% {
+        margin-left: 100px;
+    }
+
+    30% {
+        margin-left: 150px;
+    }
 }
