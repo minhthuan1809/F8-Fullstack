@@ -1,0 +1,71 @@
+@import url(../css/font.css);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 0;
+}
+
+
+
+.box_menu_xo {
+    width: 73.1%;
+    margin: 0 auto;
+    border: 1px solid rgb(205, 205, 205);
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu li a {
+    display: block;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid rgb(205, 205, 205);
+}
+
+
+.menu li:hover>a {
+    background-color: #3400ef;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+}
+
+.submenu li a:hover {
+    background-color: #3400ef;
+
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu li a {
+    padding: 10px 20px;
+}
+
+.menu li:hover>.submenu {
+    display: block;
+}
+
+.Contacts {
+    position: relative;
+    left: 300%;
+}

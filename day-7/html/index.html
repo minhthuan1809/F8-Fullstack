@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Reset CSS */
+    body,
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+
+    /* Header */
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    nav ul {
+        list-style-type: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    /* Main */
+    main {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+    .banner {
+        background-image: url(https://images.pexels.com/photos/16039120/pexels-photo-16039120/free-photo-of-bi-n-da-song-bi-n-b-bi-n.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .banner h2 {
+        font-size: 36px;
+    }
+
+    .gallery {
+        margin-top: 50px;
+    }
+
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .image-container img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Dịch Vụ</a></li>
+                <li><a href="#">Bài Viết</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <h2>Chào mừng đến với trang web của chúng tôi</h2>
+        </section>
+        <section class="gallery">
+            <h2>Bộ sưu tập hình ảnh</h2>
+            <div class="image-container">
+                <img src="https://via.placeholder.com/250" alt="Image 1">
+                <img src="https://via.placeholder.com/250" alt="Image 2">
+                <img src="https://via.placeholder.com/250" alt="Image 3">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Trang Web của bạn</p>
+    </footer>
+</body>
+
+</html>
