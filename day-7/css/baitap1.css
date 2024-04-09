@@ -10,7 +10,7 @@ body {
 
 
 .box_menu_xo {
-    width: 73.1%;
+    width: 78%;
     margin: 0 auto;
     border: 1px solid rgb(205, 205, 205);
 }
@@ -38,6 +38,7 @@ body {
 
 .menu li:hover>a {
     background-color: #3400ef;
+    color: white;
 }
 
 .submenu {
@@ -50,6 +51,7 @@ body {
 
 .submenu li a:hover {
     background-color: #3400ef;
+    color: white;
 
 }
 
