@@ -2,3 +2,8 @@
     font-family: Regular;
     src: url(../font/DM-Sans-Regular.woff2);
 }
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Bold.ttf);
+}

@@ -1,0 +1,70 @@
+@import url(../css/font.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: roboto, sans-serif;
+}
+
+header h2 {
+
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+header p {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.box h3 {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.box p {
+    font-size: 15px;
+}
+
+.box--first,
+.box--Second,
+.box--Third,
+.box--Fourth,
+.box--Fifth,
+.box--Sixth {
+    width: 350px;
+    word-wrap: break-word;
+
+}
+
+img {
+    width: 80px;
+}
+
+.box button {
+    margin: 50px auto;
+    border: none;
+}
+
+.box button a {
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    padding: 8px 25px;
+    background: rgb(15, 15, 136);
+    color: white;
+}
