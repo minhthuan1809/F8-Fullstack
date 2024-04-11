@@ -1,0 +1,62 @@
+@import url(../css/font.css);
+:root{
+    --color--text--:#bf4240;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body{
+    width: 100%;
+    height: 900px;
+    color: #3f3424;
+}
+.banner{
+    background-image: url(https://cdn.houseviet.vn/images/project/23042023/ha-noi-melody-residences-cover.jpg);
+    background-repeat: no-repeat;
+    width: 1500px;
+    height: 400px;
+    max-width: 2000px;
+    max-height: 550px;
+  
+}
+.banner--text{
+    background-color: rgba(245, 245, 245, 0.712);
+    width: 600px;
+    height: 170px;
+    position: relative;
+    top: 20%;
+    left: 10%;
+    padding: 20px ;
+    line-height: 20px;
+    font-size: 15px;
+}
+.banner--text h1{
+    color: var(--color--text--);
+    padding-bottom: 20px;
+    
+}
+.banner--text b ion-icon{
+    margin-right: 10px;
+
+}
+.banner--text b {
+    display: block;
+    margin-top: 20px;
+}
+
+.price{
+    display:block;
+    background-color:var(--color--text--);
+    padding: 20px;
+    width: 150px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    left: 550px;
+    top: 220px;
+}
