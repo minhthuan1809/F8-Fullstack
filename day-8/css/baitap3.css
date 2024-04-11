@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+main {
+    margin-top: 30px;
+}
+
 .container {
     width: 1370px;
 }
@@ -38,4 +42,20 @@ hr {
     background-color: rgba(0, 0, 0, 0.1);
     color: black;
     padding: 3px;
+}
+
+.container--click a strong {
+    display: block;
+
+    margin-top: 7px;
+}
+
+.container--click a p {
+
+    font-size: 13px;
+}
+
+.container--click .container--click--one {
+    color: white;
+    background-color: rgb(241, 140, 17);
 }
