@@ -1,41 +1,77 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-    width: 1370px;
+  margin-top: 50px;
+  width: 1370px;
 }
 
 .text {
-    font-size: 15px;
-    margin-left: 80px;
+  font-size: 15px;
+  margin-left: 80px;
 }
 
 hr {
-    width: 800px;
-    float: right;
-    margin-top: -8px;
-    margin-right: 70px;
+  width: 800px;
+  float: right;
+  margin-top: -8px;
+  margin-right: 70px;
 }
 
 .container--click {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .container--click a {
-    display: block;
-    border: none;
-    border-radius: 200px;
-    height: 60px;
-    width: 140px;
-    text-align: center;
-    margin-top: 30px;
-    text-decoration: none;
-    line-height: 24px;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: black;
-    padding: 3px;
+  display: block;
+  border: none;
+  border-radius: 200px;
+  height: 60px;
+  width: 140px;
+  text-align: center;
+  margin-top: 30px;
+  text-decoration: none;
+  line-height: 24px;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+  padding: 3px;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /* gap: 20px; */
+}
+
+.list--box {
+  width: 400px;
+  margin-top: 60px;
+  margin-bottom: -250px;
+}
+
+.list--box img {
+  width: 100%;
+  height: auto;
+}
+
+.list--box img {
+  width: 340px;
+}
+
+.list--box b {
+  display: block;
+  line-height: 110px;
+  position: relative;
+  bottom: 190px;
+  left: 10px;
+  font-size: 20px;
+  color: white;
+}
+.list--box span {
+  font-size: 10px;
 }
