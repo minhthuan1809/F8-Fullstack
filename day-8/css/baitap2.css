@@ -1,0 +1,53 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Asap", sans-serif;
+}
+
+.panner img {
+    width: 100%;
+    height: 350px;
+}
+.logo{
+    height: 0;
+}
+
+.logo img {
+    background-color: aliceblue;
+    width: 200px;
+    height: 200px;
+    margin-top: -150px;
+    margin-left: 80px;
+}
+.logo h2 , .logo p{
+    position: relative;
+    left: 300px;
+    line-height: 80px;
+    top: -200px ;
+    color: white;
+}
+.logo p span{
+   padding-left: 20px;
+}
+
+.choose--menu{
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+    margin-top: 20px;
+    margin-right: 10%;
+    list-style: none;
+}
+ .choose--menu li:nth-last-of-type(3) {
+    color: red;
+    padding-bottom: 10px;
+    border-bottom:3px solid red ;
+    
+
+}
+.choose--menu li:hover{
+    color: red;
+cursor: pointer;
+}rgba(255, 0, 0, 0.719)
