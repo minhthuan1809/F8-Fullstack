@@ -1,29 +1,117 @@
-.box {
-  position: relative;
-  overflow: hidden;
+* {
+  padding: 0;
+  bottom: 0;
+
 }
 
-.box label,
-.box b,
-.box p {
-  transition: transform 0.3s ease;
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
 }
 
-.box:hover label,
-.box:hover b,
-.box:hover p {
-  transform: translateY(-100%);
-}
 
-.box--btn {
+.box::before {
+  content: "";
+  width: 550px;
+  height: 400px;
   position: absolute;
-  bottom: 10px; /* Adjust this value as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  transition: opacity 0.3s ease;
-  opacity: 0;
+  border: 2px solid rgba(147, 147, 147, 0.536);
 }
 
-.box:hover .box--btn {
-  opacity: 1;
+.box::after {
+  content: "";
+  display: block;
+  width: 550px;
+  height: 400px;
+  position: absolute;
+  background-image: url(../img/istockphoto-1498170916-170667a.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 0;
+}
+
+.box {
+  width: 550px;
+  height: 400px;
+  transition: 0.5s ease;
+  position: relative;
+  transform-origin: width, height, margin-left;
+}
+
+
+.box:hover::before {
+  width: 510px;
+  height: 360px;
+  margin: 20px;
+
+}
+
+
+.box:hover a {
+  visibility: visible;
+}
+
+.box:hover .box--text {
+  color: aliceblue;
+
+}
+
+.box:hover {
+  background-color: rgba(163, 119, 104, 0.474);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.box:hover ion-icon[name="layers-outline"] {
+  height: 0;
+  visibility: hidden;
+  color: white;
+}
+
+ion-icon[name="layers-outline"] {
+  transition: 0.5s ease-in-out;
+  display: block;
+  font-size: 120px;
+  margin: 10px 30px;
+}
+
+.box--text {
+  margin: 70px 40px;
+  transition: 0.5s ease-in-out;
+}
+
+.box--text b {
+  font-size: 35px;
+}
+
+.box--text p {
+  font-size: 22px;
+}
+
+.box--btn a {
+  text-decoration: none;
+  margin-left: 40px;
+  color: white;
+  font-size: 20px;
+  visibility: hidden;
+
+
+}
+
+.box--btn a ion-icon {
+  border-radius: 100px;
+  border: 1px solid white;
+  padding: 5px;
+  margin-left: 40px;
+  position: relative;
+  top: 10px;
+}
+
+.box--btn a ion-icon:hover .box--btn a ion-icon:hover {
+  background-color: white;
+  color: black;
+
 }

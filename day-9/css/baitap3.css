@@ -3,26 +3,60 @@
   padding: 0;
   box-sizing: none;
 }
+
+.text {
+  margin: 30px auto;
+  font-size: 55px;
+  text-align: center;
+}
+
 label {
   display: block;
   border: 1px solid rgb(199, 198, 197);
   border-radius: 10px;
   margin: 10px;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
+
 input {
   outline: none;
   display: block;
   width: 500px;
   height: 40px;
   border: none;
+  font-size: 25px;
+  padding-top: 10px;
 }
+
 label:focus-within p {
   font-size: 20px;
-  top: 10px;
+  top: 2px;
 }
+
 p {
   font-size: 30px;
   position: relative;
   top: 20px;
+}
+
+select {
+  width: 550px;
+  height: 50px;
+  border: none;
+  font-size: 25px;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  margin-top: 10px;
+}
+
+
+label[for="text--four"] {
+  padding: 18px;
+}
+
+table {
+  margin: 90px auto;
 }

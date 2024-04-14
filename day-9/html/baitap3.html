@@ -10,8 +10,11 @@
 
 <body>
     <header>
-        <h2>Drop Us a Line</h2>
-        <p>Reach out to us from our contact form and we will get back to you shortly.</p>
+        <div class="text">
+
+            <h2>Drop Us a Line</h2>
+            <p>Reach out to us from our contact form and we will get back to you shortly.</p>
+        </div>
         <form action="">
             <table>
 
@@ -26,12 +29,42 @@
                     </td>
                     <td>
                         <label for="text--two">
-                            <p>First Name</p>
+                            <p>Last Name</p>
                             <input type="text" id="text--two">
                         </label>
 
                     </td>
                 </tr>
+                <tr>
+
+                    <td id="">
+                        <label for="text--three">
+                            <p>Email</p>
+                            <input type="email" id="text--three">
+                        </label>
+
+                    </td>
+                    <td>
+                        <label for="text--four">
+                            <select id="text--four">
+                                <option value="">-----choose----</option>
+                                <option value="">Sales</option>
+                                <option value="">Cusstomer Support</option>
+                                <option value="">Maketing</option>
+                            </select>
+                        </label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label for="textarea">
+                            <p>Message</p>
+                            <textarea name="" id="textarea" cols=150" rows="20"></textarea>
+                        </label>
+                    </td>
+                </tr>
+
             </table>
         </form>
     </header>
