@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .history {
@@ -9,8 +10,11 @@
     display: flex;
     margin-top: 50px;
     justify-content: center;
+    align-items: center;
     gap: 50px;
-    transition: transform 2s ease-in-out;
+    position: relative;
+    perspective: 1000px;
+    /* Tạo hiệu ứng chiều sâu */
 }
 
 .history--text {
@@ -18,12 +22,12 @@
     font-size: 30px;
     text-align: right;
     line-height: 30px;
+    transition: transform 1s;
 }
 
 .history--text p {
     font-size: 20px;
     margin-top: 20px;
-
 }
 
 button {
@@ -36,6 +40,13 @@ button {
     display: block;
     padding: 5px 15px;
     text-decoration: none;
+}
+
+.history--center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .history--center span {
@@ -59,20 +70,48 @@ button {
     margin-top: 5px;
 }
 
-.history:hover .history--time,
-.history:hover .history--text {
 
-    transition: transform 2s ease-in-out;
+.font {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 2s;
+    transform-style: preserve-3d;
 }
 
-.history:hover {
-    transform: rotatey(180deg);
+.back {
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    transition: transform 2s;
+    transform-style: preserve-3d;
+}
+
+.history--time {
+    position: relative;
+    right: 2px;
+    padding: 20px;
+    color: #000000;
+    font-size: 20px;
+}
+
+.history--time p {
+    margin-left: 200px;
+    transition: transform 1s;
 
 }
 
-.history:hover .history--time,
-.history:hover .history--text {
-    transform: rotatey(180deg);
+.history:hover .back,
+.history:hover .font {
+    transform: rotateY(180deg);
+}
+
+.history:hover .history--text,
+.history:hover .history--time p {
     transform: rotatey(180deg);
 
 }
