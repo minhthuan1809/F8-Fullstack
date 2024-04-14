@@ -1,0 +1,29 @@
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.box label,
+.box b,
+.box p {
+  transition: transform 0.3s ease;
+}
+
+.box:hover label,
+.box:hover b,
+.box:hover p {
+  transform: translateY(-100%);
+}
+
+.box--btn {
+  position: absolute;
+  bottom: 10px; /* Adjust this value as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.box:hover .box--btn {
+  opacity: 1;
+}
