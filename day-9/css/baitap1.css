@@ -1,117 +1,167 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.img {
+  position: absolute;
+  right: 0;
+}
+img {
+  width: 450px;
+  height: 550px;
+  z-index: 0;
+}
+.img--two img {
+  width: 380px;
+  height: 500px;
+  position: relative;
+  top: -400px;
+
+  right: 240px;
+}
+
+.img--two {
+  width: 380px;
+  height: 500px;
+  content: "";
+  position: absolute;
+}
+.img--two {
+  display: block;
+
+  position: relative;
+  top: 20px;
+}
+.img--two .img--text {
+  position: absolute;
+  width: 350px;
+  height: 450px;
+  z-index: 9999;
+  right: 255px;
+  top: -375px;
+  background-color: rgb(17, 17, 145);
+}
+span {
+  /* color: transparent; */
+  -webkit-background-clip: text;
+  position: absolute;
+  bottom: 30px;
+  font-size: 70px;
+  left: 180px;
+}
+span p {
+  font-size: 20px;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 
 .history {
-    width: 50%;
-    height: 200px;
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    position: relative;
-    perspective: 1000px;
-    /* Tạo hiệu ứng chiều sâu */
+  width: 50%;
+  height: 200px;
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  perspective: 1000px;
+  z-index: 1;
 }
 
 .history--text {
-    width: 400px;
-    font-size: 30px;
-    text-align: right;
-    line-height: 30px;
-    transition: transform 1s;
+  width: 400px;
+  font-size: 30px;
+  text-align: right;
+  line-height: 30px;
+  transition: transform 1s;
 }
 
 .history--text p {
-    font-size: 20px;
-    margin-top: 20px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 button {
-    border: none;
-    border-radius: 50px;
-    margin-top: 20px;
+  border: none;
+  border-radius: 50px;
+  margin-top: 20px;
 }
 
 .history--text button a {
-    display: block;
-    padding: 5px 15px;
-    text-decoration: none;
+  display: block;
+  padding: 5px 15px;
+  text-decoration: none;
 }
 
 .history--center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .history--center span {
-    background-color: rgb(236, 236, 236);
-    display: block;
-    padding: 6px;
-    border-radius: 100%;
+  background-color: rgb(236, 236, 236);
+  display: block;
+  padding: 6px;
+  border-radius: 100%;
 }
 
-.history--center span>span {
-    background-color: rgb(12, 232, 0);
-    padding: 6px;
-    border-radius: 100%;
+.history--center span > span {
+  background-color: rgb(12, 232, 0);
+  padding: 6px;
+  border-radius: 100%;
 }
 
 .vertical-line {
-    width: 0;
-    height: 150px;
-    border: 0.5px solid rgb(137, 137, 137);
-    margin-left: 10px;
-    margin-top: 5px;
+  width: 0;
+  height: 150px;
+  border: 0.5px solid rgb(137, 137, 137);
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
-
 .font {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 2s;
-    transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 2s;
+  transform-style: preserve-3d;
 }
 
 .back {
-    width: 350px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 300px;
-    transition: transform 2s;
-    transform-style: preserve-3d;
+  width: 350px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 300px;
+  transition: transform 2s;
+  transform-style: preserve-3d;
 }
 
 .history--time {
-    position: relative;
-    right: 2px;
-    padding: 20px;
-    color: #000000;
-    font-size: 20px;
+  position: relative;
+  right: 2px;
+  padding: 20px;
+  color: #000000;
+  font-size: 20px;
 }
 
 .history--time p {
-    margin-left: 200px;
-    transition: transform 1s;
-
+  margin-left: 200px;
+  transition: transform 1s;
 }
 
 .history:hover .back,
 .history:hover .font {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .history:hover .history--text,
 .history:hover .history--time p {
-    transform: rotatey(180deg);
-
+  transform: rotatey(180deg);
 }
