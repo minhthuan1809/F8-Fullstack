@@ -14,7 +14,6 @@
     gap: 50px;
     position: relative;
     perspective: 1000px;
-    /* Tạo hiệu ứng chiều sâu */
 }
 
 .history--text {
@@ -22,7 +21,7 @@
     font-size: 30px;
     text-align: right;
     line-height: 30px;
-    transition: transform 1s;
+    transition: transform 1s ease-in-out;
 }
 
 .history--text p {
@@ -105,13 +104,68 @@ button {
 
 }
 
+.font .history--text button {
+    transition: all 5s ease-in-out;
+}
+
 .history:hover .back,
 .history:hover .font {
     transform: rotateY(180deg);
+}
+
+.history:hover .font .history--text button,
+.history:hover .font .history--text button a {
+    color: white;
+    background-color: rgb(255, 140, 0);
+    border-radius: 50px;
+
 }
 
 .history:hover .history--text,
 .history:hover .history--time p {
     transform: rotatey(180deg);
 
+}
+
+.img {
+    width: 500px;
+    height: 300px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.background--img--in {
+    background-image: url(../img/photo-1712921675029-f455ad17bfc6.avif);
+    width: 500px;
+    height: 655px;
+    position: absolute;
+    top: 170px;
+    right: 300px;
+}
+
+.background--img--in h2 {
+    width: 400px;
+    margin: 0 0 35px 50px;
+    position: absolute;
+    padding: 350px 90px 30px 180px;
+    bottom: 0;
+    padding-bottom: 80px;
+    font-size: 7vw;
+    font-weight: 900;
+    text-align: center;
+    /* text-transform: uppercase; */
+    background: rgb(16, 11, 73);
+    color: white;
+    /* background-clip: text; */
+    mix-blend-mode: multiply;
+}
+
+.background--img--in p {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
 }
