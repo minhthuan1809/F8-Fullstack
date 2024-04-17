@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -56,113 +57,175 @@ span p {
   font-size: 20px;
   margin-right: 10px;
   margin-top: 20px;
+=======
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+>>>>>>> 2064a2ae9245f86f29094e895b6ec812e3c01b65
 }
 
 .history {
-  width: 50%;
-  height: 200px;
-  display: flex;
-  margin-top: 50px;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  position: relative;
-  perspective: 1000px;
-  z-index: 1;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    perspective: 1000px;
 }
 
 .history--text {
-  width: 400px;
-  font-size: 30px;
-  text-align: right;
-  line-height: 30px;
-  transition: transform 1s;
+    width: 400px;
+    font-size: 30px;
+    text-align: right;
+    line-height: 30px;
+    transition: transform 1s ease-in-out;
 }
 
 .history--text p {
-  font-size: 20px;
-  margin-top: 20px;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
 button {
-  border: none;
-  border-radius: 50px;
-  margin-top: 20px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
 }
 
 .history--text button a {
-  display: block;
-  padding: 5px 15px;
-  text-decoration: none;
+    display: block;
+    padding: 5px 15px;
+    text-decoration: none;
 }
 
 .history--center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .history--center span {
-  background-color: rgb(236, 236, 236);
-  display: block;
-  padding: 6px;
-  border-radius: 100%;
+    background-color: rgb(236, 236, 236);
+    display: block;
+    padding: 6px;
+    border-radius: 100%;
 }
 
-.history--center span > span {
-  background-color: rgb(12, 232, 0);
-  padding: 6px;
-  border-radius: 100%;
+.history--center span>span {
+    background-color: rgb(12, 232, 0);
+    padding: 6px;
+    border-radius: 100%;
 }
 
 .vertical-line {
-  width: 0;
-  height: 150px;
-  border: 0.5px solid rgb(137, 137, 137);
-  margin-left: 10px;
-  margin-top: 5px;
+    width: 0;
+    height: 150px;
+    border: 0.5px solid rgb(137, 137, 137);
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
+
 .font {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 2s;
-  transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 2s;
+    transform-style: preserve-3d;
 }
 
 .back {
-  width: 350px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 300px;
-  transition: transform 2s;
-  transform-style: preserve-3d;
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    transition: transform 2s;
+    transform-style: preserve-3d;
 }
 
 .history--time {
-  position: relative;
-  right: 2px;
-  padding: 20px;
-  color: #000000;
-  font-size: 20px;
+    position: relative;
+    right: 2px;
+    padding: 20px;
+    color: #000000;
+    font-size: 20px;
 }
 
 .history--time p {
-  margin-left: 200px;
-  transition: transform 1s;
+    margin-left: 200px;
+    transition: transform 1s;
+
+}
+
+.font .history--text button {
+    transition: all 5s ease-in-out;
 }
 
 .history:hover .back,
 .history:hover .font {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.history:hover .font .history--text button,
+.history:hover .font .history--text button a {
+    color: white;
+    background-color: rgb(255, 140, 0);
+    border-radius: 50px;
+
 }
 
 .history:hover .history--text,
 .history:hover .history--time p {
-  transform: rotatey(180deg);
+    transform: rotatey(180deg);
+
+}
+
+.img {
+    width: 500px;
+    height: 300px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.background--img--in {
+    background-image: url(../img/photo-1712921675029-f455ad17bfc6.avif);
+    width: 500px;
+    height: 655px;
+    position: absolute;
+    top: 170px;
+    right: 300px;
+}
+
+.background--img--in h2 {
+    width: 400px;
+    margin: 0 0 35px 50px;
+    position: absolute;
+    padding: 350px 90px 30px 180px;
+    bottom: 0;
+    padding-bottom: 80px;
+    font-size: 7vw;
+    font-weight: 900;
+    text-align: center;
+    /* text-transform: uppercase; */
+    background: rgb(16, 11, 73);
+    color: white;
+    /* background-clip: text; */
+    mix-blend-mode: multiply;
+}
+
+.background--img--in p {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
 }

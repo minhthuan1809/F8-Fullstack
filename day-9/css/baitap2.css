@@ -101,6 +101,10 @@ ion-icon[name="layers-outline"] {
 
 }
 
+.box--btn {
+  z-index: 99;
+}
+
 .box--btn a ion-icon {
   border-radius: 100px;
   border: 1px solid white;
