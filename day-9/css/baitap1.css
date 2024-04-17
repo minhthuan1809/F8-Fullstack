@@ -7,6 +7,7 @@
 .img {
   position: absolute;
   right: 0;
+  /* filter: hue-rotate(350deg); */
 }
 img {
   width: 450px;
