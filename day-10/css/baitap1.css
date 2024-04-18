@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+:root {
+  --color--: rgb(49, 168, 247);
+}
+.bacground {
+  width: 100%;
+  height: 795px;
+  background-color: var(--color--);
+  z-index: -2;
+}
+.bacground--text {
+  float: right;
+  margin-right: 250px;
+  margin-top: 17%;
+  line-height: 90px;
+  background-color: var(--color--);
+  color: white;
+}
+.bacground--text h1 {
+  font-size: 60px;
+}
+.bacground--text p {
+  font-size: 20px;
+}
+.bacground--text p span {
+  font-size: 35px;
+  padding-left: 10px;
+}
+
+/* //////////  focus */
+
+.btn--check__focus {
+  display: block;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  background-color: rgb(255, 255, 255);
+  color: var(--color--);
+  border-bottom-right-radius: 500px;
+
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+.btn--check__focus .icon--menu {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+
+  transition: all 0.3s ease-in-out;
+}
+.btn--check__left .icon--left {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transition: all 0.3s ease-in-out;
+  color: var(--color--);
+  font-size: 50px;
+  transform: rotate(180deg);
+  z-index: 2;
+  visibility: hidden;
+}
+.cover {
+  width: 100%;
+  height: 795px;
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+}
+
+#btn--check:checked ~ .btn--check__focus {
+  width: 200%;
+  height: 1000px;
+  overflow: hidden;
+  transform: rotate(360deg);
+}
+#btn--check:checked ~ .btn--check__focus .icon--menu {
+  transform: rotate(180deg);
+  visibility: hidden;
+}
+#btn--check:checked ~ .btn--check__left .icon--left {
+  transform: rotate(360deg);
+  visibility: visible;
+}
+
+.list {
+  width: 200px;
+  height: 795px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: none;
+  transition: display 0.3s ease-in-out;
+}
+.list ul {
+  position: relative;
+  top: 120px;
+}
+.list ul > li {
+  font-size: 20px;
+  list-style: none;
+}
+.list ul > li > a {
+  color: var(--color--);
+  margin-top: 20px;
+  padding: 10px 60px;
+  width: 80px;
+  display: block;
+  text-decoration: none;
+}
+.list ul > li > a:hover {
+  background-color: rgb(128, 128, 128);
+  color: black;
+}
+#btn--check:checked ~ .list {
+  display: block;
+}

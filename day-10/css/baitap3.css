@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(53, 53, 53, 0.884);
+}
+
+.box {
+  margin-top: 250px;
+  transition: top 0.3s ease-in-out;
+  position: relative;
+  top: 0;
+  width: 200px;
+  margin: 200px auto;
+}
+
+.box .triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 40px solid rgb(156, 38, 25);
+  margin: 0 auto;
+  transform: translateY(60px);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.box .square {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(156, 38, 25);
+  margin: auto;
+  position: relative;
+}
+
+.letter {
+  width: 150px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  top: 150px;
+  transition: all 1s ease-in-out;
+}
+
+.letter--font {
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: -150px;
+}
+
+.circle {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(175, 36, 36, 0.253);
+  position: relative;
+  border-radius: 50%;
+  margin: 0 auto;
+  top: 40px;
+  left: 40px;
+}
+
+.line--one {
+  width: 65px;
+  height: 10px;
+  background-color: rgba(202, 0, 0, 0.719);
+  display: block;
+  margin-top: -33px;
+}
+
+.line--two {
+  width: 40px;
+  height: 10px;
+  background-color: rgba(202, 0, 0, 0.719);
+  display: block;
+  margin-top: 10px;
+}
+
+.letter--line {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.line--cross__one,
+.line--cross__two,
+.line--cross__three,
+.line--cross__four,
+.line--cross__five,
+.line--cross__six,
+.line--cross__seven {
+  display: block;
+  width: 9px;
+  height: 15px;
+  background-color: rgb(223, 65, 65);
+  transform: skew(-25deg);
+}
+
+.square--cover {
+  width: 0px;
+  height: 0px;
+  border-top: 50px solid transparent;
+  border-left: 100px solid rgba(224, 63, 46, 0.671);
+  border-right: 100px solid rgb(250, 68, 48);
+  border-bottom: 50px solid rgb(255, 68, 47);
+  margin: 0 auto;
+  top: -100px;
+  position: relative;
+}
+
+.box:hover .triangle {
+  transform: translateY(0);
+}
+
+.box:hover .letter {
+  transform: translateY(-150px);
+}
+
+.box:hover {
+  top: 50px; /* Đặt vị trí top khi hover */
+}
