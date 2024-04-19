@@ -9,7 +9,6 @@ body {
 
 .box {
   margin-top: 250px;
-  transition: top 0.3s ease-in-out;
   position: relative;
   top: 0;
   width: 200px;
@@ -24,7 +23,7 @@ body {
   border-bottom: 40px solid rgb(156, 38, 25);
   margin: 0 auto;
   transform: translateY(60px);
-  transition: all 0.4s ease;
+  transition: transform 2s ease-out;
   z-index: 1;
 }
 
@@ -38,12 +37,12 @@ body {
 
 .letter {
   width: 150px;
-  height: 100px;
+  height: 120px;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
   position: relative;
   top: 150px;
-  transition: all 1s ease-in-out;
+  transition: transform 0.7s ease;
 }
 
 .letter--font {
@@ -51,7 +50,7 @@ body {
   height: 150px;
   overflow: hidden;
   margin: 0 auto;
-  margin-top: -150px;
+  margin-top: -155px;
 }
 
 .circle {
@@ -106,22 +105,26 @@ body {
   width: 0px;
   height: 0px;
   border-top: 50px solid transparent;
-  border-left: 100px solid rgba(224, 63, 46, 0.671);
+  border-left: 100px solid rgb(224, 64, 46);
   border-right: 100px solid rgb(250, 68, 48);
   border-bottom: 50px solid rgb(255, 68, 47);
   margin: 0 auto;
-  top: -100px;
+  top: -95px;
   position: relative;
 }
 
 .box:hover .triangle {
   transform: translateY(0);
+  transition: transform 0.2s ease-in;
 }
 
 .box:hover .letter {
   transform: translateY(-150px);
+  transition: transform 1s ease-in;
+
 }
 
 .box:hover {
-  top: 50px; /* Đặt vị trí top khi hover */
+  top: 50px;
+  transition: top 0.1s ease-in;
 }
