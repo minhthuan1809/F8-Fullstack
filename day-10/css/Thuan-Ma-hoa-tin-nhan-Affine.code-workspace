@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../Thuan-Ma-hoa-tin-nhan-Affine"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "Thuan-Ma-hoa-tin-nhan-Affine"
+	}
+}

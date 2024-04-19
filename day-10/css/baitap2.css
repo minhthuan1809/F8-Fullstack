@@ -3,17 +3,20 @@
   padding: 0;
   border: 0;
 }
+
 body {
   background-color: rgb(0, 0, 0, 0.1);
 }
+
 .container {
   margin-top: 50px;
   background-color: white;
-  height: 400px;
+  height: 100px;
   width: 1018px;
 
   transform: translate(40%, 50%);
 }
+
 button label {
   padding: 20px 30px;
   font-size: 20px;
@@ -25,10 +28,12 @@ button label {
 
   border: 1px solid rgb(196, 196, 196);
 }
+
 button label:hover {
   background-color: rgb(5, 36, 214);
   color: white;
 }
+
 button label:focus {
   background-color: rgb(5, 36, 214);
   color: white;
@@ -37,14 +42,17 @@ button label:focus {
 button {
   background-color: transparent;
 }
+
 .card {
   width: 1019px;
   height: 336px;
   position: absolute;
-
+  top: 80px;
   overflow: scroll;
   overflow-y: auto;
+  background-color: white;
 }
+
 .card h2 {
   margin-top: 20px;
   margin-left: 20px;
@@ -57,31 +65,29 @@ button {
   font-size: 25px;
   transform-origin: top;
 }
-/* .card--two {
-  position: relative;
-  top: -334px;
-  visibility: hidden;
-  transform-origin: top;
-  transform: rotateX(90deg);
-  transition: all 0.5s ease;
-} */
 
 .card {
-  visibility: hidden;
   transform: rotateX(90deg);
-  transition: transform 0.5s ease, opacity ease-in;
+  transition: transform 2s ease, opacity ease-in, visibility 2s ease-in;
+  visibility: hidden;
   opacity: 0%;
   transform-origin: top;
 }
-#check--one:checked ~ .card--one,
-#check--two:checked ~ .card--two,
-#check--two:checked ~ .card--three,
-#check--two:checked ~ .card--two {
+
+#check--one:checked~.card--one,
+#check--two:checked~.card--two,
+#check--three:checked~.card--three,
+#check--four:checked~.card--four {
   opacity: 100%;
   visibility: visible;
   transform: rotateX(0deg);
+  transition: all 1s ease-in;
 }
-#check--one:checked ~ button label[for="check--one"] {
+
+#check--one:checked~button label[for="check--one"],
+#check--two:checked~button label[for="check--two"],
+#check--three:checked~button label[for="check--three"],
+#check--four:checked~button label[for="check--four"] {
   background-color: rgb(5, 36, 214);
   color: white;
 }
