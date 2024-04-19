@@ -92,12 +92,12 @@
 .list {
   width: 200px;
   height: 795px;
-  background-color: white;
+  background-color: transparent;
   position: absolute;
   top: 0;
   z-index: 1;
   display: none;
-  transition: display 0.3s ease-in-out;
+  transition: display 2s ease-in;
 }
 .list ul {
   position: relative;
