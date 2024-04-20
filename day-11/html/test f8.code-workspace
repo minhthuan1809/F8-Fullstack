@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../test f8"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "f8-fullstack-k8"
+	}
+}

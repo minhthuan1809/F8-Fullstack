@@ -2,3 +2,9 @@
   font-family: text;
   src: url(../font/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2);
 }
+
+@font-face {
+  font-family: Poppins;
+  src: url(../font/Poppins-Light.ttf);
+  font-weight: 500;
+}
