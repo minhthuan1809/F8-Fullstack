@@ -301,6 +301,7 @@
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  margin-top: 10rem;
   margin-left: 8rem;
 }
 
@@ -382,7 +383,7 @@
 .select span {
   width: 650px;
   display: block;
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: #676767;
   font-size: 25px;
   line-height: 2.5rem;
