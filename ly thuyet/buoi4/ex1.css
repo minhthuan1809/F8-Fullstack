@@ -1,0 +1,21 @@
+/* 
+selector: ~ , +
+
+-ngang Hàng
+- cùng thuộc 1 cha 
+- chọn thành phần đứng sau
+- ~ : tất cả thành phần đứng sau
+- +: chỉ thành phần đứng s liền kề
+, : dùng để kết hợp nhiều selector sử dụng chung cho 1 block
+*/
+/* .box p ~ h2{
+    color: aqua;
+} */
+
+.box p ~ h2{
+    color: blue;
+}
+
+.box  h2 + h2 , .box p  + h2{
+    color: aqua;
+}

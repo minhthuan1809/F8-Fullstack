@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+x
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 
+   mã màu : rgb , hsl , hexa
+   color opacity --> độ trong suốt của màu
+
+
+   các giá trị kế thừa
+   -initial
+   -inherit
+   thuộc tính color là thuộc tính kế thừa
+    */
+    h1 {
+        color: rgba(102, 51, 153, 0.529);
+    }
+
+    h1:hover {
+        color: initial;
+    }
+
+    body h2 {
+        color: blue;
+    }
+
+    body {
+        color: aqua;
+    }
+
+    h2 {
+        border: 2px solid currentColor;
+        /*lấy màu từ thẻ cha*/
+    }
+
+    h2:hover {
+        color: inherit;
+    }
+</style>
+
+<body>
+    <h1>f8 học lập trình đi làm</h1>
+    <h2>học HTML-css</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi numquam quibusdam, nostrum voluptatem corporis
+        iure officia dolores, quaerat aspernatur magni soluta beatae odio suscipit quisquam laudantium qui, labore quod
+        ut?</p>
+</body>
+
+</html>

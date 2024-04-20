@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* float --> trôi các thể html về phía bên trái hoặc bên phải thành phần cha
+    -- none -- mặc định
+    -- left -- trái
+    -- right -- phải
+    thuộc tính clear : ngắn không cho các thể html trôi theo float
+    -- none
+    -- left
+    -- right
+    -- both
+    lưu ý : chỉ hoạt động với thể block
+    */
+    .box {
+        width: 300px;
+        border: 1px solid rgb(0, 0, 0);
+        margin: 0 auto;
+        /* overflow: auto; */
+    }
+
+    .columa-a {
+        width: 30%;
+        height: 100px;
+        background-color: red;
+        float: right;
+    }
+
+    .columa-b {
+        width: 30%;
+        height: 150px;
+        background-color: rgb(140, 0, 255);
+        float: right;
+        border: none;
+    }
+
+    p {
+        clear: both;
+    }
+
+    .box::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .clear {
+        clear: both;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="columa-a">
+            cột a
+        </div>
+        <div class="columa-b">
+            cột ab
+        </div>
+        <!-- <p>hello</p>
+        <img src="https://picsum.photos/50" alt=""> -->
+        <!-- <div class="clear"></div> -->
+    </div>
+</body>
+
+</html>

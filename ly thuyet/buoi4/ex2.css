@@ -1,0 +1,42 @@
+/* 
+attribute Seleter
+
+1.tag[attribute]
+
+2.tag[attribute]
+3.tag[attribute^="value"] : chọn thuộc tính có giá trị bắt đầu bằng value
+4.tag[attribute*="value"] : chọn thuộc tính chưa value
+5.tag[attribute$="value"] : chọn thuộc tính có giá trị kết thúc và value
+6.tag[attribute~="value"] : chọn thuộc tính có giá trị là 1 từ
+lưu ý : class với id hoàn toàn có thể app dụng như attribute
+
+*/
+
+
+/* ul li a[target] {
+    color: aquamarine;
+}
+ul li a[href="//facebook.com"] {
+    color: rgb(32, 22, 96);
+} */
+
+/* ul li a[href^="facebook.com"] {
+    color: rgb(135, 135, 135);
+} */
+/* ul li a[href*="facebook.com"] {
+    color: rgb(246, 4, 28);
+} */
+ /* ul li a[href$="com"] {
+    color: rgb(246, 4, 28);
+}  */
+
+/* ul li a[title~="hello"] {
+    color: rgb(246, 4, 28);
+}  */
+
+/* .row [class^="col-"]{
+    color: rgb(107, 107, 113);
+} */
+*{
+    color: rgb(255, 10, 10);
+}

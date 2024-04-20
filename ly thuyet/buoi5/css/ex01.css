@@ -1,0 +1,44 @@
+/* thuộc tính text-decoration : tạo đường line cho văn bản
++ none 
++ underline 
++ overline 
++ line-through
+
+thuộc tính text-transform : chữ hoa , chữ thường 
++ none 
++ uppercase
++ lowercase
++ captitalize
+
+thuộc tính letter-spacing 
+thuộc tính word-spacing
+thuộc tính text-align 
++left 
++ right 
++ center 
++ justify
+
+lưu ý : thuộc tính này sẽ căn chỉnh được các thẻ inline
+
+*/
+
+body {
+    /* text-decoration: line-through;
+    letter-spacing: 5px; */
+    height: 200%;
+    word-spacing: 50px;
+    background-image: url(https://picsum.photos/id/237/200/300);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+p {
+    /* text-align: left;
+    text-indent: 20px; */
+    text-align-last: right;
+}
+
+h2 {
+    /* word-wrap: break-word; */
+    word-break: break-all;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 
+    thu hẹp lề
+    th1 : 2 thành phần đứng cạnh nhau 
+    - 2 giá trị cùng dấu thì nó lấy giá trị tuyệt đối lơn hơn lớn hơn
+    -2 giá trị trái dấu --> cộng lại 
+    margin-top và bottom chỉ hoạt động với block 
+
+    thuộc tính box-sizing : chọn kích thức cửa box theo conntent hay boder
+
+    -content-box --> mặc định 
+    -- border-box --> theo border (tính từ boder ), đẩy content vào trong và tăng chiều cao lên
+    */
+    .box-one {
+        background-color: aqua;
+        height: 500px;
+    }
+
+    .box {
+        width: 500px;
+        border: 1px solid red;
+        margin-top: 10%;
+        margin-inline: auto;
+        /* margin: auto; */
+    }
+
+    h2:first-of-type {
+        border: 1px solid red;
+        margin-bottom: 30px;
+    }
+
+    h2:last-of-type {
+        border: 1px solid red;
+        margin-top: 20px;
+    }
+
+    .banner {
+        background-color: green;
+        text-align: center;
+        color: white;
+        /* padding: 30px; */
+        /* border: 1px solid red; */
+        display: inline-block;
+        width: 100%;
+    }
+
+    .banner h3 {
+        /* margin: 30px 0; */
+    }
+
+    .content {
+        width: 300px;
+        padding: 30px 0;
+        border: 5px solid rgb(156, 15, 15);
+        margin: 5px;
+        box-sizing: border-box;
+        padding: 50px;
+
+
+    }
+</style>
+
+<body>
+    <!-- <div class="box-one">
+        <div class="box">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et sequi ipsa ad eos reiciendis quidem explicabo
+            odit
+            voluptatum alias, perferendis tenetur pariatur quia praesentium magnam minima ab corrupti vitae
+            voluptatibus!
+        </div>
+        <h2>học lập trình không khó</h2>
+        <h2>học lập trình RẤT dễ</h2>
+    </div> -->
+    <!-- 
+    <div class="banner">
+        <h3>học lập trình không khó</h3>
+    </div> -->
+    <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis eos facere iste cum recusandae
+        accusamus voluptate eligendi placeat at, esse repellat odio rerum odit tempore officia quisquam adipisci modi!
+    </div>
+</body>
+
+</html>

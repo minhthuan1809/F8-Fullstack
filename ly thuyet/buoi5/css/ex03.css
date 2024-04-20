@@ -1,0 +1,14 @@
+/* 
+thuộc tính bacground-attachment:scroll | fixed;
+thuôc tính bacground : color image position / size regeat attachment
+
+*/
+.banner {
+    height: 2000px;
+    /* background-image: url("https://picsum.photos/200/500");
+    background-color: aqua;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: scroll; */
+    background: red url("https://picsum.photos/200/500") no-repeat 0 0 / cover;
+}

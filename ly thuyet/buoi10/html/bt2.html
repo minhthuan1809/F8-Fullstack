@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    span {
+        padding: 20px 80px;
+        font-size: 30px;
+        border: none;
+        background-color: aqua;
+    }
+
+    .bg--cover {
+        background-color: rgb(164, 164, 164);
+        position: absolute;
+        inset: 0;
+        display: none;
+        opacity: 30%;
+    }
+
+    .btn--text {
+        width: 50px;
+        display: block;
+        margin: 100px auto;
+        padding: 40px 100px;
+        background-color: red;
+
+    }
+
+
+    .box {
+        background-color: rgb(255, 255, 255);
+        width: 600px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
+        font-family: sans-serif;
+
+    }
+
+    .box h1 {
+        margin: 20px auto;
+    }
+
+    input[ type="checkbox"]:checked~.bg--cover {
+        display: block;
+    }
+
+    input[ type="checkbox"]:checked~.box {
+        display: block;
+        transform: translateX(0);
+    }
+
+    .check--x {
+        font-size: 40px;
+        position: relative;
+        left: 25rem;
+        top: -50px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <input type="checkbox" id="cover" hidden>
+        <label for="cover" class="btn--text">Click</label>
+        <label for="cover" class="bg--cover">
+        </label>
+        <div class="box">
+
+            <h1>Heading <label class="check--x" for="cover"><ion-icon name="close-outline"></ion-icon></label></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique cupiditate, soluta quis
+                aspernatur
+                nemo dicta eaque alias velit culpa illo modi repellendus maxime beatae eligendi, ad quae voluptates,
+                <br>
+                perspiciatis consequatur.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

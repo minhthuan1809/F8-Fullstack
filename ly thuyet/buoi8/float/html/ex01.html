@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 500px;
+        border: 1px solid red;
+        margin: 0 auto;
+    }
+
+    img {
+        float: left;
+        width: 200px;
+        height: 400px;
+        border-radius: 500px;
+        margin: 0;
+        padding: 0;
+        shape-outside: ellipse();
+    }
+
+    p {
+        text-align: justify;
+        padding: 0;
+        margin-left: 20px;
+
+    }
+
+
+    ul {
+        width: 300px;
+        margin: 30px auto;
+        list-style: none;
+        /* counter-reset: dem; */
+    }
+
+    body {
+        counter-reset: dem;
+    }
+
+    ul li {
+        counter-increment: dem;
+    }
+
+    /* 
+    counter css : nhóm các thuộc tính để để thực hiện  đếm
+    -- tạo dộ đếm
+    -- đếm 
+    --hiển thị kết quả đếm
+    
+    */
+
+    ul li::before {
+        content: "#" counter(dem);
+        /* content: attr(data-index); */
+        display: block;
+        background-color: aquamarine;
+        color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        float: left;
+        margin-right: 5px;
+        text-align: center;
+        line-height: 20px;
+
+    }
+
+    ul li::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+</style>
+
+<body>
+    <!-- <div class="box">
+        <img src="https://picsum.photos/200" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut accusantium necessitatibus, animi voluptatem
+            nesciunt nisi libero nulla vel illo nam ratione odio doloremque laudantium, aperiam facere, praesentium
+            sapiente eos eius?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam, perspiciatis autem quia fugiat
+            recusandae dolores corrupti rem illum voluptas laborum dolorem sapiente odit ipsam vitae necessitatibus
+            aspernatur est possimus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam, perspiciatis autem quia fugiat
+            recusandae dolores corrupti rem illum voluptas laborum dolorem sapiente odit ipsam vitae necessitatibus
+            aspernatur est possimus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam, perspiciatis autem quia fugiat
+            recusandae dolores corrupti rem illum voluptas laborum dolorem sapiente odit ipsam vitae necessitatibus
+            aspernatur est possimus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam, perspiciatis autem quia fugiat
+            recusandae dolores corrupti rem illum voluptas laborum dolorem sapiente odit ipsam vitae necessitatibus
+            aspernatur est possimus?
+        </p>
+    </div> -->
+    <ul>
+        <li data-index="1">công việc 1</li>
+        <li data-index="2">công việc 2</li>
+        <li data-index="3">công việc 3</li>
+        <li data-index="4">công việc 4</li>
+        <li data-index="5">công việc 5</li>
+    </ul>
+    <ul>
+        <li data-index="1">công việc 1</li>
+        <li data-index="2">công việc 2</li>
+        <li data-index="3">công việc 3</li>
+        <li data-index="4">công việc 4</li>
+        <li data-index="5">công việc 5</li>
+    </ul>
+</body>
+
+</html>

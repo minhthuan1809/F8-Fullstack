@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* phông size
+    cú pháp : font-size : value + unit
+    1 . đơn vị tuyệt đối
+    -px
+    - pt =1.3 x px
+
+    2. đơn vị tương đối
+    -em -->tỷ lệ với thành phần cha 
+    -rem --> tỷ lệ với mặc định trình duyệt
+    -% -->tỷ lẹ với phần cha
+    1em,rem = font-size cơ sở 
+
+
+    line-height :thiết lập chiều cao cho dòng văn bản(Giãn Dòng)
+    cú pháp : line-height : value;
+    giá trị thực bằng value * font-size
+    */
+    html {
+        font-size: 62.5%;
+        /* 
+        10/16*100
+        1rem = 10px
+        */
+    }
+
+    .wrapper .content p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <h2>học lập trình không khó</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda neque officia praesentium incidunt
+                inventore ut ad, dolores commodi sequi, rerum corrupti placeat accusantium illo, molestias mollitia
+                illum aliquid sit itaque!</p>
+        </div>
+    </div>
+</body>
+
+</html>
