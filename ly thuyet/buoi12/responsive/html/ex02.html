@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*
+   trong css  Lưu các giá trị của các thuộc tính vào biến để tái sử dụng
+   - Biến Tòa cục (Global Varianle) : dùng ở khắp mọi nơi kể từ vị trí khai báo
+   - Biến cục bộ (Local Variable): chỉ sử dunjgbtrong các Selector và selector con
+
+   khai báo trong lớp giả :root
+    */
+    :root {
+        --primary-color: red;
+        --font-size: 16px;
+        --secondary-color: green;
+    }
+
+    h1 {
+        color: var(--secondary-color);
+    }
+
+    p {
+        color: var(--primary-color);
+    }
+
+    .box {
+        --background-color: blue;
+        background-color: var(--background-color);
+    }
+</style>
+
+<body>
+    <div class="box">
+        <h1>học html--css</h1>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, cum labore. Corporis ab dolore voluptate
+        explicabo odio unde a laborum odit illo. Sed illo, reiciendis in non necessitatibus laudantium cum.</p>
+</body>
+
+</html>
