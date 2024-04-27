@@ -1,0 +1,351 @@
+@import url(../css/font.css);
+
+:root {
+  --default: black;
+  --color--bg--: #fdecec;
+  --default--text--: #f55556;
+  --document: #676767;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: text, sans-serif;
+}
+
+
+/*------ header-------- */
+
+.logo img {
+  width: 180px;
+}
+
+.nav--menu {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav--item {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+
+}
+
+.nav--item li a {
+  text-decoration: none;
+  color: var(--default);
+  font-size: 16px;
+  color: var(--document);
+
+}
+
+.nav-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.nav-search i {
+  font-size: 22px;
+}
+
+.bi-cart-fill {
+  display: block;
+  margin-left: -10px;
+}
+
+.nav--search__produce {
+  width: 8rem;
+  height: 40px;
+}
+
+.nav--search__produce {
+  background-color: transparent;
+  border: transparent;
+  margin: 0 1rem;
+  outline: none;
+}
+.bi-cart-fill{
+  position: relative;
+  right: 2.5rem;
+ 
+}
+.nav--card__number{
+  background-color: #f55556;
+  padding:0.2rem 0.7rem;
+  border-radius: 100px;
+  color: white;
+  position: relative;
+  top: -1.5rem;
+  right: 2.5rem;
+}
+
+.nav--search__produce:focus~.text--seach,
+.nav--search__produce:valid~.text--seach {
+  visibility: hidden;
+}
+
+.nav-search .text--seach {
+  position: relative;
+  right: 9rem;
+}
+
+/* // section 1  */
+.title{
+  display: flex;
+  justify-content: space-around;
+  
+  margin-top: 4rem;
+}
+.title--oder{
+  width: 38rem;
+  height: auto;
+  padding-left: 5rem;
+
+}
+.title--oder__btn{
+  color: var(--default--text--);
+  background-color: var(--color--bg--);
+  width: 12.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+
+  
+}
+ .title--img>img{
+  width: 40vw;
+  height: 30vw;
+}
+ .title--img{
+  text-align: center;
+}
+.title--oder h2{
+  font-size: 3rem;
+}
+.title--oder span{
+  color: var(--default--text--);
+}
+.title--oder p{
+  color:var(--document);
+  line-height: 30px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.btn{
+margin-top: 20px;
+  display: flex;
+}
+.OrderProcess{
+  display: flex;
+
+}
+.btn button{
+  border: none;
+  background: white;
+}
+.btn button a{
+  display: inline-block;
+  padding: 17px 40px;
+border-radius: 15px;
+background-color: var(--default--text--);
+color: aliceblue;
+text-decoration: none;
+font-size: 1rem;
+transition: all 0.3s ease;
+  
+}
+
+.btn button a:hover{
+  color: var(--default--text--);
+  background-color: white;
+  border: 2px solid var(--default--text--);
+  
+  }
+  
+/* // section 2  */
+.Serve{
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  background-color: var(--color--bg--);
+  margin-top: 10rem;
+  
+}
+.Serve .Serve--text{
+  display: block;
+  color: #f55556;
+  padding-top: 4rem;
+  font-size:16px ;
+}
+.Serve h2{
+  padding-top: 1rem;
+  width: 50rem;
+  font-size:40px ;
+  margin: 0 auto;
+}
+.Serve--card{
+  margin-top: 20px;
+  display: flex;
+
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+.Serve--card__item::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 20px;
+  width: 18rem;
+  height: 350px;
+  background-color: rgb(255, 255, 255);
+  z-index: -1; /* Thiết lập z-index của phần tử trước để nó đứng dưới */
+}
+
+.Serve--card__item {
+  display: block;
+  width: 18rem;
+  height: 350px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 20px;
+  padding-top: 50px;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2; /* Thiết lập z-index cho phần tử chính */
+}
+
+
+
+.Serve--card__item:hover {
+  transform-origin: top right;
+  transform: rotate(-20deg); /* Sử dụng thuộc tính transform để xoay */
+}
+
+.Serve--card__item img{
+  width: 90px;
+  height:90px ;
+}
+.Serve--card__item h3{
+  font-size:22px ;
+  margin-top: 2.5rem;
+}
+.Serve--card__item p{
+  color: var(--document);
+  font-size:15px ;
+  margin-top: 20px;
+  line-height: 1.8rem;
+
+}
+
+
+/* section 3,4 */
+.choose>img ,.home img{
+  width: 35vw;
+}
+.choose,.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 70px;
+}
+.choose p{
+  color: #03A66B;
+  margin-bottom: 20px;
+}
+.select ,.home--text{
+  width: 33rem;
+
+
+}
+.select span,.home--text span{
+  line-height: 27px;
+  display: block;
+  width: 50rem;
+  font-size: 15px;
+  max-width: 90%;
+  margin-top: 20px;
+}
+.select h3,.home--text h3{
+  width: 50rem;
+  line-height: 44px;
+  font-size: 32px;
+  max-width: 90%;
+}
+
+.select button ,.home--text button{
+  background-color: white;
+  border: none;
+  margin-top: 70px;
+}
+.select button a,.home--text button  a{
+  display: inline-block;
+  padding: 17px 40px;
+border-radius: 15px;
+background-color: var(--default--text--);
+color: aliceblue;
+text-decoration: none;
+font-size: 1rem;
+transition: all 0.3s ease;
+
+}
+
+
+.select button a:hover,.home--text button  a:hover{
+color: var(--default--text--);
+background-color: white;
+border: 2px solid var(--default--text--);
+
+}
+
+.home--text{
+  margin-left: 180px;
+}
+
+
+
+
+
+
+@media screen and (max-width:991px) {
+  .title{
+    flex-direction: column;
+    
+  }
+  .title--oder{
+    width: 90vw;
+  }
+  .title--img>img{
+    width: 700px;
+    height: 500px;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width:767px) {
+ .btn button {
+  .title{
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+ }
+ .title--oder__btn{
+  margin-left: 200px;
+ }
+ .btn{
+  margin-left: 100px;
+ }
+}
