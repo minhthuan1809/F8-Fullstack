@@ -315,9 +315,91 @@ border: 2px solid var(--default--text--);
 }
 
 
+/* section 4 */
+.Download{
+  width: 100%;
+  height: 50rem;
+justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+  background-color: var(--color--bg--);
+  margin-top: 70px;
+}
+.Download--introduce{
+  width: 35rem;
+}
+.Download--introduce p{
+  color: var(--default--text--);
+  line-height: 3rem;
+}
+.Download--introduce h3{
+  font-size: 35px;
+  line-height: 44px;
+  max-width: 90%;
+  line-height: 3rem;
+}
+.Download--introduce span{
+  display: block;
+  color: var(--document);
+  line-height: 2.3rem;
+  margin-top: 20px;
+}
+.Download--mobile--AppStore,.Download--mobile--PlayStore{
+  display: flex;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.3rem;
+  border:1px solid #676767;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-top: 3.5rem;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+.Download--mobile--AppStore:hover,
+.Download--mobile--PlayStore:hover{
+  transform: scale(1.15);
+}
+.Download--mobile{
+  display: flex;
+  gap: 3rem;
+}
 
+.container{
+  display: flex;
+  margin-top: 5rem;
+  justify-content: space-around;
+}
 
+.container--text__one,.container--text__two{
+  color: var(--document);
+  width: 20rem;
+  line-height: 2rem;
+}
+.container--choose__one ul li a , .container--choose__two ul li a{
+  text-decoration: none;
+  color: var(--document);
+}
+.container--choose__one ul li:hover a ,.container--choose__two ul li:hover a{
+  color: black;
+}
+.container--choose__one ul li, .container--choose__two ul li {
+  margin-top: 1.1rem;
+  list-style: none;
+}
 
+.container--choose__one h4, .container--text__one img ,.container--text__two h4 ,.container--choose__two h4{
+  font-size: 20px;
+  margin-bottom: 2.5rem;
+  color: black;
+}
+/* .footer--bottom{
+
+} */
+/* responsive */
 
 @media screen and (max-width:991px) {
   .title{
@@ -332,20 +414,76 @@ border: 2px solid var(--default--text--);
     height: 500px;
     margin-top: 40px;
   }
+
+  .choose{
+    flex-direction: column;
+    align-items: center;
+    margin-left: 8rem;
+  }
+  .choose .select , .home .home--text{
+    width: 45rem;
+    margin-left: -20px;
+    margin-top: 50px;
+    
+  }
+
+  .home{
+    align-items: center;
+  flex-direction: column-reverse;
+  margin-left: 8rem;
+
+  
+  }
+  .choose>img ,.home img{
+    width: 650px;
+    height: 450px;
+    margin: 0 auto;
+  }
+    .Download {
+      flex-direction: column;
+      height: 66rem;
+      gap: 2rem;
+    }
+        .Download--mobile {
+         margin-top: -40px;
+          gap: 1rem;
+        }
 }
+
+
 @media screen and (max-width:767px) {
- .btn button {
+
   .title{
     justify-content: center;
     align-items: center;
     
   }
 
- }
  .title--oder__btn{
   margin-left: 200px;
  }
  .btn{
   margin-left: 100px;
+ }
+
+
+
+ .choose .select , .home .home--text{
+  text-align: center;
+margin-left: -90px;  
+}
+.choose .select h3,.choose .select span, .home .home--text h3,.home .home--text span{
+  margin: 0 auto;
+  
+}
+.Download{
+  text-align: center;
+}
+.Download--mobile {
+       margin-top: -20px;
+       margin-left: 5rem;
+ }
+ .Download--introduce span, .Download--introduce h3{
+  margin: 0 auto;
  }
 }
