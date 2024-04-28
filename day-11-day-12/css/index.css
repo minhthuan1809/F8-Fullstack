@@ -23,8 +23,12 @@
 
 .nav--menu {
   margin-top: 2rem;
+  margin-left: 200px;
   display: flex;
   justify-content: space-around;
+  gap: 15%;
+  width: 60vw;
+  /* margin: 5rem auto; */
 }
 
 .nav--item {
@@ -95,11 +99,19 @@
   position: relative;
   right: 9rem;
 }
-
+.bi-list{
+  color: black;
+  font-size: 2.5rem;
+  display: none;
+}
+.nav--menu__cover{
+  display: flex;
+  gap: 20rem;
+}
 /* // section 1  */
 .title{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   
   margin-top: 4rem;
 }
@@ -117,7 +129,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   border-radius: 100px;
   margin-bottom: 1rem;
 
@@ -198,39 +209,39 @@ transition: all 0.3s ease;
   margin-top: 20px;
   display: flex;
 
-  gap: 5rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
 }
-.Serve--card__item::before {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  border-radius: 20px;
-  width: 18rem;
-  height: 350px;
-  background-color: rgb(255, 255, 255);
-  z-index: -1; /* Thiết lập z-index của phần tử trước để nó đứng dưới */
-}
 
-.Serve--card__item {
+.Serve--card__cover{
   display: block;
-  width: 18rem;
-  height: 350px;
-  background-color: rgb(255, 0, 0);
-  border-radius: 20px;
-  padding-top: 50px;
-  margin-top: 2rem;
-  position: relative;
-  z-index: 2; /* Thiết lập z-index cho phần tử chính */
+    width: 17rem;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding-top: 50px;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 2;
+   top: -23.85rem;
+}
+
+.Serve--card__hover{
+    display: block;
+      width: 16.5rem;
+      height: 350px;
+      background-color: #fe6a6a;
+      border-radius: 20px;
+      padding-top: 50px;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
 }
 
 
-
-.Serve--card__item:hover {
-  transform-origin: top right;
-  transform: rotate(-20deg); /* Sử dụng thuộc tính transform để xoay */
+.Serve--card__item:hover  .Serve--card__hover{
+  transform: rotate(-3deg);
+    margin-left: 35px;
 }
 
 .Serve--card__item img{
@@ -420,6 +431,12 @@ color: var(--document);
 /* responsive */
 
 @media screen and (max-width:991px) {
+
+.bi-list {
+ 
+    display: block;
+  }
+
   .title{
     flex-direction: column;
     
@@ -432,6 +449,15 @@ color: var(--document);
     height: 500px;
     margin-top: 40px;
   }
+.Serve--card__hover,
+.Serve--card__cover {
+  width: 13rem;
+}
+.Serve--card__cover p{
+  width: 10rem;
+  margin: 20px auto;
+
+}
 
   .choose{
     flex-direction: column;
@@ -502,8 +528,41 @@ color: var(--document);
  .btn{
   margin-left: 100px;
  }
+.Serve--card{
+  flex-direction: column;
+  
+}
+.Serve--card__hover,
+.Serve--card__cover {
+  width: 35rem;
+  height: 20rem;
 
-
+}
+.Serve--card__cover{
+  position: relative;
+  top: -352.3px;
+}
+.Serve--card__cover p{
+ width: 30rem;
+}
+.Serve h2{
+ width: 40rem;
+}
+.Serve{
+  height: 80rem;
+}
+.Serve--card__item:nth-child(2){
+  position: relative;
+  top: -25rem;
+}
+.Serve--card__item:nth-child(3){
+    position: relative;
+      top: -50rem;
+}
+.Serve--card__item:hover .Serve--card__hover {
+  transform: rotate(-3deg);
+ 
+}
 
  .choose .select , .home .home--text{
   text-align: center;
