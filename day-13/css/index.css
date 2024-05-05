@@ -1,0 +1,367 @@
+:root {
+  --height--dad: 100vh;
+  --mg--top: 16vh;
+  --color--text: #3e3f5e;
+  --color--text--form: #3e3f5e;
+  --color--boder--form: #dedeea;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: var(--height--dad);
+  background-image: url(../img/landing-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  /* font-size: 0; */
+  overflow: hidden;
+}
+.bg {
+  width: 64%;
+  height: 140%;
+  border-radius: 50%;
+  background: url(../img/dot-texture.png) repeat 0 0 #fff;
+  position: absolute;
+  top: -20%;
+  right: -32%;
+}
+
+.row {
+  max-width: 100%;
+  height: calc(var(--height--dad));
+  /* margin: var(--mg--top) auto; */
+}
+#container-text {
+  text-align: center;
+  color: white;
+}
+#container-text h1 {
+  font-size: 7rem;
+  text-transform: uppercase;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0.5rem;
+}
+#container-text h2 {
+  font-size: 1.5rem;
+  margin-top: 3%;
+}
+#container-text p {
+  width: 384px;
+  margin: 20px auto;
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+}
+#container-text {
+  margin: 6% auto;
+}
+#container-text span {
+  display: inline-block;
+  font-size: 1rem;
+  color: white;
+}
+.btn--conver__one {
+  border: 1px solid white;
+  padding: 20px 80px;
+  margin: 0;
+  font-size: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#container-text .btn--conver__two {
+  padding: 20px 70px;
+  margin: 0;
+  font-size: 1rem;
+  border-right: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  border: 1px solid white;
+}
+
+#check--item__two:checked ~ .Login {
+  transform: translatex(400px);
+  opacity: 0;
+}
+#check--item__one:checked ~ .Create {
+  transform: translatex(400px);
+  opacity: 0;
+}
+
+/* form */
+.Login {
+  display: block;
+  width: 500px;
+  height: 650px;
+  background-color: white;
+  z-index: 2;
+  position: relative;
+  top: 20%;
+  right: 80px;
+
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.651);
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.9s ease;
+}
+.Login form h2 {
+  color: #3e3f5e;
+  font-size: 1.7rem;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.username > label {
+  font-size: 1rem;
+  display: block;
+  color: var(--color--text--form);
+  position: relative;
+  top: -35px;
+  left: 75px;
+  background-color: white;
+  transition: all 0.3s ease;
+
+  width: 150px;
+}
+.password > label {
+  font-size: 1rem;
+  display: block;
+  color: var(--color--text--form);
+  position: relative;
+  top: -35px;
+  left: 70px;
+  background-color: white;
+
+  width: 100px;
+  transition: all 0.3s ease;
+}
+.username {
+  margin-top: 60px;
+}
+.username > input,
+.password > input {
+  font-size: 20px;
+  margin-top: 10px;
+  border: 1px solid var(--color--boder--form);
+  width: 380px;
+  height: 55px;
+  border-radius: 10px;
+  padding-inline: 20px;
+  transition: all 0.3s ease;
+}
+
+.password > input:focus ~ label,
+.password > input:valid ~ label,
+.username > input:focus ~ label,
+.username > input:valid ~ label,
+.username > input:valid {
+  top: -65px;
+}
+
+.password > input:focus,
+.password > input:valid,
+.username > input:focus,
+.username > input:valid {
+  border: 1px solid rgb(55, 57, 187);
+}
+.remember {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 76%;
+  margin: 20px auto;
+}
+.remember a {
+  text-decoration: none;
+  color: var(--color--text);
+}
+.remember a:hover {
+  color: aqua;
+}
+
+.remember--text > label > .custom--check {
+  display: block;
+  border: 1px solid var(--color--boder--form);
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+}
+.custom {
+  display: flex;
+  align-items: center;
+}
+.custom label {
+  margin-left: 20px;
+}
+.bi-x-lg {
+  margin-left: -22px;
+  visibility: hidden;
+  margin-top: 4px;
+  display: block;
+}
+#check-remember:checked ~ .custom--check {
+  background-color: rgba(6, 177, 177, 0.774);
+}
+#check-remember:checked ~ .bi-x-lg {
+  color: white;
+  visibility: visible;
+}
+.btn-login button {
+  background-color: #0026ffd5;
+  width: 76%;
+  height: 50px;
+  margin: 8% auto;
+  display: block;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+}
+.line p::before {
+  content: "Login with your Social Account";
+  font-size: 0.8rem;
+  background-color: white;
+  position: relative;
+  top: 8px;
+  width: 220px;
+  display: block;
+  margin: 0 auto;
+}
+.line p {
+  width: 76%;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--color--boder--form); /* Đường viền đặc, màu đen */
+}
+.app a {
+  display: block;
+  padding: 15px;
+  margin-inline: 10px;
+  background-color: #3a299b;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.app a:hover {
+  transform: translatey(-10px);
+}
+.app {
+  display: flex;
+  justify-content: center;
+  margin: 10% auto;
+  font-size: 1rem;
+}
+
+.app a:nth-child(1) {
+  background-color: blue;
+}
+.app a:nth-child(2) {
+  background-color: #1abcff;
+}
+.app a:nth-child(3) {
+  background-color: #7b5dfa;
+}
+.app a:nth-child(4) {
+  background-color: red;
+}
+
+/* form create */
+.Create {
+  display: block;
+  width: 500px;
+  height: 780px;
+  background-color: white;
+  z-index: 2;
+  position: relative;
+  top: 14%;
+  right: 280px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.651);
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.9s ease;
+}
+.Create form h2 {
+  color: #3e3f5e;
+  font-size: 1.7rem;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+.Create > form > input {
+  font-size: 20px;
+  border: 1px solid var(--color--boder--form);
+  width: 380px;
+  height: 55px;
+  border-radius: 10px;
+  padding-inline: 20px;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 10px auto;
+  background-color: transparent;
+}
+.Create > form > label {
+  font-size: 1rem;
+  display: block;
+  color: var(--color--text--form);
+  position: relative;
+  top: -46px;
+  left: 70px;
+  background-color: white;
+
+  width: 100px;
+  transition: all 0.3s ease;
+}
+.Create > form > label[for="repeat"] {
+  width: 160px;
+}
+#gmail {
+  margin-top: 4rem;
+}
+
+.Create > form > input:focus + label,
+.Create > form > input:valid + label {
+  top: -75px;
+}
+
+.Create > form > input:focus,
+.Create > form > input:valid {
+  border: 1px solid rgb(55, 57, 187);
+}
+.updates--email {
+  margin-left: 60px;
+}
+.updates--email > .custom > .custom--check {
+  display: block;
+  border: 1px solid var(--color--boder--form);
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+}
+.custom {
+  display: flex;
+  align-items: center;
+}
+.custom label {
+  margin-left: 20px;
+}
+.bi-x-lg {
+  margin-left: -22px;
+  visibility: hidden;
+  margin-top: 4px;
+  display: block;
+}
+#check-email:checked + .custom--check {
+  background-color: rgba(6, 177, 177, 0.774);
+}
+#check-email:checked ~ .bi-x-lg {
+  color: white;
+  visibility: visible;
+}

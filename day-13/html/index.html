@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/grid.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-8" id="container-text">
+        <svg class="icon-logo-vikinger">
+          <use xlink:href="#svg-logo-vikinger"></use>
+        </svg>
+        <h2>Welcome to</h2>
+        <h1>Vikinger</h1>
+        <p>
+          The next generation social network & community! Connect with your
+          friends and play with our quests and badges gamification system!
+        </p>
+
+        <label for="check--item__one">
+          <span class="btn--conver__one">Login</span>
+        </label>
+        <label for="check--item__two">
+          <span class="btn--conver__two active">Register</span>
+        </label>
+      </div>
+      <!-- end #container-text -->
+      <div class="col-4">
+        <div class="row">
+          <!-- start col-5 -->
+          <div class="col-5">
+            <input type="radio" name="check--item" id="check--item__two" />
+
+            <div class="Login">
+              <form action="">
+                <h2>Account Login</h2>
+                <div class="username">
+                  <input type="text" required id="username" />
+                  <label for="username"> Username Or Email </label>
+                </div>
+                <div class="password">
+                  <input type="password" id="password" required />
+                  <label for="password">Password</label>
+                </div>
+                <div class="remember">
+                  <div class="remember--text">
+                    <label class="custom" for="check-remember">
+                      <input type="checkbox" id="check-remember" hidden checked />
+                      <span class="custom--check"></span>
+                      <i class="bi bi-x-lg"></i>
+                      <label for="check-remember">Remember Me</label>
+                    </label>
+                  </div>
+                  <a href="#0">Forgot password?</a>
+                </div>
+                <div class="btn-login">
+                  <button>Login to your Social Account</button>
+                </div>
+              </form>
+              <div class="line">
+                <p></p>
+              </div>
+              <p class="line-text"></p>
+              <div class="app">
+                <a href="#0"><i class="bi bi-facebook"></i></a>
+                <a href="#0"><i class="bi bi-twitter"></i></a>
+                <a href="#0"><i class="bi bi-twitch"></i></a>
+                <a href="#0"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+            <!-- end login -->
+          </div>
+          <!-- end col-5 -->
+          <div class="col-5">
+            <input type="radio" name="check--item" id="check--item__one" checked hidden />
+            <div class="Create">
+              <form action="">
+                <h2>Create your Account!</h2>
+                <input type="text" id="gmail" required />
+                <label for="gmail"> Your Email </label>
+                <input type="text" id="name" required />
+                <label for="name">Username</label>
+                <input type="password" id="pass" required />
+                <label for="pass"> Password </label>
+                <input type="repeat" id="pass" required />
+                <label for="repeat"> Repeat Password</label>
+              </form>
+              <div class="updates--email">
+                <label class="custom" for="check-email">
+                  <input type="checkbox" id="check-email" hidden checked />
+                  <span class="custom--check"></span>
+                  <i class="bi bi-x-lg"></i>
+                  <label for="check-email">Send me news and updates via email</label>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end col-3 -->
+    </div>
+  </div>
+</body>
+
+</html>
