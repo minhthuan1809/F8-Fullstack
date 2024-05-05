@@ -18,11 +18,9 @@
 <body>
   <div class="bg"></div>
   <div class="container">
-    <div class="row">
-      <div class="col-8" id="container-text">
-        <svg class="icon-logo-vikinger">
-          <use xlink:href="#svg-logo-vikinger"></use>
-        </svg>
+    <div class="row g-5">
+      <div class="col-12 .col-xl-7" id="container-text">
+
         <h2>Welcome to</h2>
         <h1>Vikinger</h1>
         <p>
@@ -38,11 +36,11 @@
         </label>
       </div>
       <!-- end #container-text -->
-      <div class="col-4">
+      <div class="col-12 .col-xl-5">
         <div class="row">
           <!-- start col-5 -->
-          <div class="col-5">
-            <input type="radio" name="check--item" id="check--item__two" />
+          <div class="col-5 col--layout">
+            <input type="radio" name="check--item" id="check--item__two" hidden />
             <div class="Login">
               <img class="rocket--login" src="../img/rocket.webp" alt="anh">
               <form action="">
@@ -84,7 +82,7 @@
             <!-- end login -->
           </div>
           <!-- end col-5 -->
-          <div class="col-5">
+          <div class="col-5 col--Create">
             <input type="radio" name="check--item" id="check--item__one" checked hidden />
 
             <div class="Create">
@@ -105,7 +103,7 @@
                     <input type="checkbox" id="check-email" hidden checked />
                     <span class="custom--check"></span>
                     <i class="bi bi-x-lg"></i>
-                    <label for="check-email">Send me news and updates via email</label>
+                    <label for="check-email" class="check--create__text">Send me news and updates via email</label>
                   </label>
                 </div>
                 <div class="btn-register">
@@ -115,16 +113,16 @@
                   You'll receive a confirmation email in your inbox with a link to activate your account. If you have
                   any problems,
                   <a href="#">contact us</a> !
-                  <!-- end form -->
-                </div>
               </form>
 
             </div>
+
           </div>
         </div>
       </div>
-      <!-- end col-3 -->
     </div>
+    <!-- end col-3 -->
+  </div>
   </div>
 </body>
 

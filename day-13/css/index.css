@@ -1,6 +1,6 @@
 :root {
   --height--dad: 100vh;
-  --mg--top: 16vh;
+  --mg--top: 10vh;
   --color--text: #3e3f5e;
   --color--text--form: #3e3f5e;
   --color--boder--form: #dedeea;
@@ -8,13 +8,12 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container {
   width: 100vw;
-  height: var(--height--dad);
+  height: auto;
   background-image: url(../img/landing-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,7 +21,7 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .bg {
   width: 64%;
@@ -56,10 +55,11 @@ body {
   margin-top: 3%;
 }
 #container-text p {
-  width: 384px;
+  width: 500px;
   margin: 20px auto;
   line-height: 1.5rem;
   font-size: 1.3rem;
+  margin-bottom: 5%;
 }
 #container-text {
   margin: 6% auto;
@@ -87,15 +87,6 @@ body {
   border-bottom-right-radius: 10px;
 
   border: 1px solid white;
-}
-
-#check--item__two:checked ~ .Login {
-  transform: translatex(400px);
-  opacity: 0;
-}
-#check--item__one:checked ~ .Create {
-  transform: translatex(400px);
-  opacity: 0;
 }
 
 /* form */
@@ -213,10 +204,8 @@ body {
   margin-left: 20px;
 }
 .bi-x-lg {
-  margin-left: -22px;
   visibility: hidden;
-  margin-top: 4px;
-  display: block;
+  font-size: 1rem;
 }
 #check-remember:checked ~ .custom--check {
   background-color: rgba(6, 177, 177, 0.774);
@@ -290,7 +279,7 @@ body {
   background-color: white;
   z-index: 2;
   position: relative;
-  top: 14%;
+  top: 8%;
   right: 280px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.651);
   border-radius: 10px;
@@ -377,6 +366,11 @@ body {
   color: white;
   visibility: visible;
 }
+.check--create__text {
+  font-size: 1rem;
+  position: relative;
+  left: 10px;
+}
 .btn-register {
   margin-top: 2rem;
 }
@@ -385,6 +379,7 @@ body {
   height: 50px;
   background-color: #23d2e2;
   color: white;
+  border-radius: 10px;
 }
 .register--text {
   width: 380px;
@@ -400,3 +395,49 @@ body {
   color: #23d2e2;
   font-weight: 400;
 }
+
+@media screen and (max-width: 1200px) {
+  #container-text {
+    position: relative;
+    top: 0;
+    left: 1.5%;
+  }
+  .bg,
+  .rocket--login {
+    display: none;
+  }
+  .Login {
+    left: 30px;
+    top: 0%;
+  }
+  .row {
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .Login form,
+  .Create form {
+    top: 0;
+  }
+  #check--item__two:checked ~ .Login {
+    display: none;
+  }
+  #check--item__one:checked ~ .Create {
+    transform: translatex(-200px);
+    display: none;
+  }
+
+  .Create {
+    right: 95%;
+    /* top: -20%; */
+  }
+  .container {
+    height: 130vh;
+  }
+}
+/* @media screen and (min-width: 1200px) {
+  .container .row {
+    display: flex;
+  }
+} */
