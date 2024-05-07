@@ -1,0 +1,31 @@
+:root {
+    --boder-btn: #ffa500;
+}
+
+.menu--nav {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    position: fixed;
+    margin: 0 auto;
+}
+
+.menu--nav .nav--text {
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+
+.menu--nav .nav--text a {
+    text-decoration: none;
+    padding: 2rem 1.5rem;
+    margin: auto;
+}
+
+.btn--order button {
+    font-size: 1.2rem;
+    background-color: var(--boder-btn);
+    color: white;
+    border-radius: 100px;
+    padding: 0.7rem 2rem;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Document</title>
+</head>
+<style>
+    .bg {
+        width: 400px;
+        height: 250px;
+        margin: 0 auto;
+        background: rgb(226, 226, 226);
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    .bg::before {
+        translate: -100%;
+        content: "";
+        position: absolute;
+        inset: 0;
+        animation: identifier 1s infinite ease;
+        background: -moz-linear-gradient(286deg, rgba(226, 226, 226, 0) 76%, rgba(244, 244, 244, 1) 79%, rgba(244, 244, 244, 1) 81%, rgba(255, 255, 255, 0) 85%);
+        background: -webkit-linear-gradient(286deg, rgba(226, 226, 226, 0) 76%, rgba(244, 244, 244, 1) 79%, rgba(244, 244, 244, 1) 81%, rgba(255, 255, 255, 0) 85%);
+        background: linear-gradient(286deg, rgba(226, 226, 226, 0) 76%, rgba(244, 244, 244, 0.519) 79%, rgba(244, 244, 244, 0.399) 81%, rgba(255, 255, 255, 0) 85%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e2e2e2", endColorstr="#ffffff", GradientType=1);
+    }
+
+    @keyframes identifier {
+        100% {
+            translate: 100%;
+        }
+
+
+    }
+
+    .title {
+        animation-iteration-count: infinite;
+    }
+</style>
+
+<body>
+    <div class="bg">
+
+    </div>
+    <h1 class="animate__animated animate__bounce animate__fadeOutDown title">f8- học lập trình rất khó</h1>
+</body>
+
+</html>
