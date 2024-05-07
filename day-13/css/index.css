@@ -8,26 +8,30 @@
 body {
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
+  height: 50vw;
+  display: block;
+  width: 100vw;
+  background-image: url(../img/landing-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .container {
   width: 100vw;
-  height: auto;
-  background-image: url(../img/landing-background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 50vw;
+
   font-family: "Rajdhani", sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 0;
-  /* overflow: hidden; */
 }
 .bg {
   width: 64%;
-  height: 140%;
+  height: 125%;
   border-radius: 50%;
-  background: url(../img/dot-texture.png) repeat 0 0 #fff;
+  background: url(..//img/dot-texture.png) repeat 0 0 #fff;
   position: absolute;
   top: -20%;
   right: -32%;
@@ -129,7 +133,6 @@ body {
   left: 75px;
   background-color: white;
   transition: all 0.3s ease;
-
   width: 150px;
 }
 .password > label {
@@ -173,6 +176,7 @@ body {
 .username > input:valid {
   border: 1px solid rgb(55, 57, 187);
 }
+
 .remember {
   font-size: 1.1rem;
   display: flex;
@@ -320,7 +324,7 @@ body {
   width: 100px;
   transition: all 0.3s ease;
 }
-.Create > form > label[for="repeat"] {
+.Create > form > label[for="Repeat--pass"] {
   width: 160px;
 }
 #gmail {
@@ -395,8 +399,19 @@ body {
   color: #23d2e2;
   font-weight: 400;
 }
+#check--item__two:checked ~ .Login {
+  opacity: 0;
+  transform: translateX(70%);
+}
+#check--item__one:checked ~ .Create {
+  opacity: 0;
+  transform: translateX(70%);
+}
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
+  body {
+    height: 120vw;
+  }
   #container-text {
     position: relative;
     top: 0;
@@ -424,20 +439,15 @@ body {
     display: none;
   }
   #check--item__one:checked ~ .Create {
-    transform: translatex(-200px);
     display: none;
+    /* transform: translatex(-200px); */
   }
 
   .Create {
-    right: 95%;
-    /* top: -20%; */
+    left: -110%;
+    top: 0;
   }
   .container {
     height: 130vh;
   }
 }
-/* @media screen and (min-width: 1200px) {
-  .container .row {
-    display: flex;
-  }
-} */
