@@ -72,6 +72,11 @@ body {
 }
 
 /* menu mobile */
+.nav--mobile {
+  position: relative;
+  z-index: 9999;
+  top: 4.035rem;
+}
 .nav--mobile .nav--menu__mobile {
   display: flex;
   flex-direction: column;
