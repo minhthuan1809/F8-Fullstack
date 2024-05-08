@@ -2,8 +2,7 @@
   --boder-btn: #ffa500;
 }
 body {
-  font-family: sans-serif;
-  height: 1000px;
+  font-family: "Nunito Sans", sans-serif;
 }
 .menu {
   width: 100%;
@@ -128,8 +127,10 @@ body {
 }
 .conten--text span {
   display: block;
+  color: transparent;
   font-size: 4vw;
   font-weight: 900;
+  -webkit-text-stroke: 0.1rem var(--boder-btn);
 }
 .conten--text h2 {
   font-size: 5vw;
