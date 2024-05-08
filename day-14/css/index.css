@@ -1,11 +1,17 @@
 :root {
   --boder-btn: #ffa500;
 }
+body {
+  font-family: sans-serif;
+  height: 1000px;
+}
 .menu {
   width: 100%;
   height: 4rem;
   background-color: rgba(34, 34, 34, 0.848);
   font-family: sans-serif;
+  position: fixed;
+  z-index: 99;
 }
 .icon--mobile .bi-list {
   color: white;
@@ -22,6 +28,7 @@
   left: 50%;
   transform: translateX(-50%);
   margin: 0.7rem auto;
+  z-index: 99;
 }
 
 .menu--nav .nav--text {
@@ -83,10 +90,115 @@
   transition: all 0.3s ease-in-out;
   display: block;
 }
+/* section--header */
+.Mumbai {
+  width: 90%;
+  height: 700px;
+  background-image: url(../img/photo-3-1690264584559996714853.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: 90px;
+}
+.Mumbai::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: initial;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  margin: 0 auto;
+}
+.conten--text {
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 100px;
+}
+.conten--text span {
+  display: block;
+  font-size: 4vw;
+  font-weight: 900;
+}
+.conten--text h2 {
+  font-size: 5vw;
+  color: white;
+  margin-block: 30px;
+}
+.conten--text p {
+  font-size: 1rem;
+  color: #eee;
+  width: 60%;
+  line-height: 2rem;
+  margin: 0 auto;
+}
+.conten--text button {
+  position: relative;
+  top: 30px;
+  padding: 15px 20px;
+  border-radius: 100px;
+  font-size: 1.2rem;
+  background-color: var(--boder-btn);
+  border: 2px solid var(--boder-btn);
+}
+.conten--text button:hover {
+  background-color: #ffa60031;
+  color: white;
+}
+
+/* section-2 */
+.sale--box {
+  background-color: white;
+  border-radius: 10px;
+  width: 80%;
+  height: 160px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.6);
+  justify-content: space-around;
+  margin: 30px auto;
+  align-items: center;
+}
+.sale--box h1 {
+  color: var(--boder-btn);
+  font-size: 40px;
+  width: 40%;
+}
+.sale--box button {
+  width: 35vw;
+  height: 3rem;
+  background-color: var(--boder-btn);
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 100px;
+}
 
 @media screen and (max-width: 991.98px) {
   .menu--nav {
     width: 95%;
+  }
+  .conten--text {
+    width: 90%;
+  }
+  .conten--text span {
+    font-size: 7vw;
+  }
+  .conten--text h2 {
+    font-size: 8vw;
+    width: 100%;
+  }
+  .conten--text p {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .sale--box h1 {
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 770.98px) {
@@ -111,5 +223,17 @@
   #check--mobile:checked ~ .nav--menu__mobile {
     visibility: visible;
     height: 250px;
+  }
+  .sale--box h1 {
+    font-size: 25px;
+    font-weight: 200;
+    width: 90%;
+  }
+  .sale--box button {
+    font-size: 20px;
+    width: 90%;
+  }
+  .sale--box {
+    flex-direction: column;
   }
 }
