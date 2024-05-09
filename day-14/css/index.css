@@ -1,3 +1,5 @@
+@import url(../css/grid.css);
+
 :root {
   --boder-btn: #ffa500;
 }
@@ -471,7 +473,7 @@ button {
 .conten--img {
   overflow: hidden;
   width: 100%;
-  height: 13.5rem;
+  /* height: 13.5rem; */
 
   transition: 0.3s;
   border-radius: 1rem;
@@ -501,6 +503,57 @@ button {
   color: var(--boder-btn);
 }
 
+/* section 7 */
+.Evaluate--container {
+
+  width: 85%;
+  margin: 0 auto;
+  /* --max--column: 14;
+   thay đổi col của grid-system  */
+}
+
+
+.Evaluate--title {
+  text-align: center;
+}
+
+.Evaluate--title h3 {
+  color: var(--boder-btn);
+  font-size: 2rem;
+}
+
+.Evaluate--title p {
+  font-size: 0.9rem;
+}
+
+.Evaluate--text {
+  border: 2px solid var(--boder-btn);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.Evaluate--text p {
+  color: #000000c2;
+  font-size: 0.9rem;
+  line-height: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+}
+
+.avatar--text b {
+  display: block;
+}
 
 @media screen and (max-width: 998.98px) {
   .menu--nav {
