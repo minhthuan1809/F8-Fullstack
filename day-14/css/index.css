@@ -3,7 +3,7 @@
 }
 body {
   font-family: "Nunito Sans", sans-serif;
-  background-color: #fefefe;
+  background-color: #efefef;
 }
 .menu {
   width: 100%;
@@ -198,7 +198,7 @@ body {
   margin-top: 3rem;
   margin: 5rem auto;
   align-items: center;
-  width: 80%;
+  width: 85%;
   gap: 1.5rem;
 }
 .experience--video video,
@@ -261,7 +261,7 @@ video:nth-of-type(3) {
   color: #555;
 }
 button {
-  background-color: white;
+  background-color: transparent;
 }
 .experience--text button a {
   text-decoration: none;
@@ -280,21 +280,45 @@ button {
   width: 100%;
 }
 .box-container {
-  width: 50%;
+  width: 85%;
   margin: 0 auto;
 }
-.box {
+
+.box .img {
   overflow: hidden;
+  width: 16.2vw;
+  position: relative;
+  top: -20px;
+  left: -20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.box img {
-  width: 15vw;
+.box .img img {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 12vw;
 }
-.box img:hover {
+.box:hover img {
   scale: 1.1;
 }
 .box {
   display: block;
   padding: 20px;
+  height: 420px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  box-sizing: border-box;
+  margin: 10px;
+  overflow: hidden;
+}
+.box h4 {
+  font-size: 18px;
+}
+.box p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #aaa;
 }
 
 @media screen and (max-width: 998.98px) {
