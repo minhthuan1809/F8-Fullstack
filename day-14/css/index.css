@@ -1,10 +1,14 @@
 :root {
   --boder-btn: #ffa500;
 }
+
+
+
 body {
   font-family: "Nunito Sans", sans-serif;
   background-color: #efefef;
 }
+
 .menu {
   width: 100%;
   height: 4rem;
@@ -13,11 +17,13 @@ body {
   position: fixed;
   z-index: 99;
 }
+
 .icon--mobile .bi-list {
   color: white;
   font-size: 2rem;
   display: none;
 }
+
 .menu--nav {
   display: flex;
   width: 80%;
@@ -37,6 +43,7 @@ body {
   align-items: center;
   margin: auto;
 }
+
 .nav--logo a {
   font-size: 1.5rem;
   color: white;
@@ -44,6 +51,7 @@ body {
   font-weight: 700;
   font-family: sans-serif;
 }
+
 .nav--logo a span {
   color: #ffa500;
   position: relative;
@@ -64,6 +72,7 @@ body {
   border-radius: 100px;
   padding: 0.7rem 1rem;
 }
+
 .Dark--mode {
   padding: 15px;
   border: 3px solid var(--boder-btn);
@@ -77,6 +86,7 @@ body {
   z-index: 9999;
   top: 4.035rem;
 }
+
 .nav--mobile .nav--menu__mobile {
   display: flex;
   flex-direction: column;
@@ -87,6 +97,7 @@ body {
   height: 0px;
   transition: all 0.3s ease-in-out;
 }
+
 .nav--mobile .nav--menu__mobile a {
   text-decoration: none;
   font-size: 1rem;
@@ -95,6 +106,7 @@ body {
   transition: all 0.3s ease-in-out;
   display: block;
 }
+
 /* section--header */
 .Mumbai {
   width: 90%;
@@ -107,6 +119,7 @@ body {
   position: relative;
   top: 90px;
 }
+
 .Mumbai::before {
   content: "";
   position: absolute;
@@ -117,6 +130,7 @@ body {
   z-index: 0;
   margin: 0 auto;
 }
+
 .conten--text {
   width: 60%;
   margin: 0 auto;
@@ -126,6 +140,7 @@ body {
   align-items: center;
   top: 100px;
 }
+
 .conten--text span {
   display: block;
   color: transparent;
@@ -133,11 +148,13 @@ body {
   font-weight: 900;
   -webkit-text-stroke: 0.1rem var(--boder-btn);
 }
+
 .conten--text h2 {
   font-size: 5vw;
   color: white;
   margin-block: 30px;
 }
+
 .conten--text p {
   font-size: 1rem;
   color: #eee;
@@ -145,6 +162,7 @@ body {
   line-height: 2rem;
   margin: 0 auto;
 }
+
 .conten--text button {
   position: relative;
   top: 30px;
@@ -154,6 +172,7 @@ body {
   background-color: var(--boder-btn);
   border: 2px solid var(--boder-btn);
 }
+
 .conten--text button:hover {
   background-color: #ffa60031;
   color: white;
@@ -172,11 +191,13 @@ body {
   margin: 30px auto;
   align-items: center;
 }
+
 .sale--box h1 {
   color: var(--boder-btn);
   font-size: 40px;
   width: 40%;
 }
+
 .sale--box button {
   width: 35vw;
   height: 3rem;
@@ -186,6 +207,7 @@ body {
   border-radius: 100px;
   border: 2px solid var(--boder-btn);
 }
+
 .sale--box button:hover,
 .experience--text button a:hover {
   background-color: #ffa60031;
@@ -201,6 +223,7 @@ body {
   width: 85%;
   gap: 1.5rem;
 }
+
 .experience--video video,
 .experience--video {
   width: 40vw;
@@ -210,21 +233,27 @@ body {
 video:nth-of-type(1) {
   display: none;
 }
+
 video:nth-of-type(2) {
   display: none;
 }
+
 video:nth-of-type(3) {
   display: none;
 }
-#check--video__one:checked ~ video:nth-of-type(1) {
+
+#check--video__one:checked~video:nth-of-type(1) {
   display: block;
 }
-#check--video__two:checked ~ video:nth-of-type(2) {
+
+#check--video__two:checked~video:nth-of-type(2) {
   display: block;
 }
-#check--video__three:checked ~ video:nth-of-type(3) {
+
+#check--video__three:checked~video:nth-of-type(3) {
   display: block;
 }
+
 .btn--conver {
   display: flex;
   align-items: center;
@@ -233,6 +262,7 @@ video:nth-of-type(3) {
   margin: 20px auto;
   width: 200px;
 }
+
 .btn--conver label {
   width: 20px;
   height: 20px;
@@ -241,6 +271,7 @@ video:nth-of-type(3) {
   margin-left: 2rem;
   transition: all 0.3s ease-in-out;
 }
+
 .btn--conver label:hover {
   background-color: var(--boder-btn);
 }
@@ -249,20 +280,24 @@ video:nth-of-type(3) {
   color: var(--boder-btn);
   font-size: 1.4rem;
 }
+
 .experience--text h3 {
   font-size: 2.3rem;
   color: #333;
   margin-top: 1rem;
 }
+
 .experience--text p {
   font-size: 1rem;
   line-height: 2;
   margin-top: 1rem;
   color: #555;
 }
+
 button {
   background-color: transparent;
 }
+
 .experience--text button a {
   text-decoration: none;
   color: white;
@@ -279,6 +314,7 @@ button {
 .travel {
   width: 100%;
 }
+
 .box-container {
   width: 85%;
   margin: 0 auto;
@@ -286,59 +322,89 @@ button {
 
 .box .img {
   overflow: hidden;
-  width: 16.2vw;
-  position: relative;
-  top: -20px;
-  left: -20px;
+  width: 100%;
+  height: 13.5rem;
+
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
 .box .img img {
   transition: all 0.3s ease-in-out;
   width: 100%;
-  height: 12vw;
+  height: 100%;
+  object-fit: cover;
 }
+
 .box:hover img {
   scale: 1.1;
 }
+
 .box {
   display: block;
-  padding: 20px;
-  height: 420px;
+  height: 380px;
   border-radius: 10px;
   text-align: center;
   background-color: white;
   box-sizing: border-box;
   margin: 10px;
   overflow: hidden;
+  padding-inline: 0;
+  position: relative;
 }
+
 .box h4 {
   font-size: 18px;
+  margin-top: 20px;
 }
+
 .box p {
-  font-size: 14px;
+  font-size: 14.5px;
   margin-top: 10px;
   color: #aaa;
+  display: block;
+  height: 5.5rem;
+}
+
+.box a {
+  color: var(--boder-btn);
+  text-decoration: none;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  transition: all 3s ease-in-out;
+}
+
+
+
+.box a:hover span {
+  position: relative;
+  right: 15px;
 }
 
 @media screen and (max-width: 998.98px) {
   .menu--nav {
     width: 95%;
   }
+
   .conten--text {
     width: 90%;
   }
+
   .conten--text span {
     font-size: 7vw;
   }
+
   .conten--text h2 {
     font-size: 8vw;
     width: 100%;
   }
+
   .conten--text p {
     font-size: 1rem;
     width: 100%;
   }
+
   .sale--box h1 {
     font-size: 30px;
   }
@@ -346,44 +412,54 @@ button {
   .experience {
     flex-direction: column;
   }
+
   .experience--video video,
   .experience--video {
     width: 90vw;
     border-radius: 10px;
   }
 }
+
 @media screen and (max-width: 770.98px) {
   .icon--mobile .bi-list {
     display: block;
   }
+
   .menu--nav .nav--text {
     display: none;
   }
+
   .menu--nav {
     width: 98%;
     justify-content: space-between;
   }
+
   .Dark--mode {
     padding: 15px;
     position: relative;
     left: 14%;
   }
+
   .nav--logo {
     position: relative;
   }
-  #check--mobile:checked ~ .nav--menu__mobile {
+
+  #check--mobile:checked~.nav--menu__mobile {
     visibility: visible;
     height: 250px;
   }
+
   .sale--box h1 {
     font-size: 25px;
     font-weight: 200;
     width: 90%;
   }
+
   .sale--box button {
     font-size: 20px;
     width: 90%;
   }
+
   .sale--box {
     flex-direction: column;
   }

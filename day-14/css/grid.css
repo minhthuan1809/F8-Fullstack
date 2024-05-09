@@ -25,7 +25,7 @@
 */
 :root {
   --container-width: 1200px;
-  --max--column: 16;
+  --max--column: 12.9;
   --column--space: 20px;
   --spacer: 1rem;
 }
@@ -142,7 +142,7 @@
   border: 1px solid saddlebrown;
 }
 
-@media screen and (min-width: 576.98px) {
+@media screen and (min-width: 576px) {
   .container {
     padding: 0;
   }
@@ -196,7 +196,7 @@
   }
 }
 
-@media screen and (min-width: 768.98px) {
+@media screen and (min-width: 768px) {
   .container {
     padding: 0;
   }
@@ -250,7 +250,7 @@
   }
 }
 
-@media screen and (min-width: 992.98px) {
+@media screen and (min-width: 992px) {
   .container {
     padding: 0;
   }
