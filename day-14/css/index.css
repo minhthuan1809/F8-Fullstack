@@ -97,8 +97,9 @@ body {
   position: fixed;
   width: 100%;
   visibility: hidden;
-  height: 0px;
+  height: auto;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .nav--mobile .nav--menu__mobile a {
@@ -723,6 +724,61 @@ button {
   margin-inline: 10px;
 }
 
+/* banner */
+.banner--cover {
+  background-image: url(../img/banner-bg.jpg);
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.banner {
+  background-color: rgba(0, 0, 0, 0.515);
+  height: 100%;
+  text-align: center;
+}
+
+.banner span {
+  color: var(--boder-btn);
+  font-size: 1.8rem;
+  display: block;
+
+}
+
+.banner h3 {
+  color: white;
+  font-size: 2.8rem;
+  margin-top: 1.5rem;
+
+}
+
+.banner p {
+  color: white;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
+.banner button {
+  padding: 1rem 3rem;
+  color: white;
+  background-color: var(--boder-btn);
+  margin-top: 2rem;
+  border: 3px solid var(--boder-btn);
+  border-radius: 100px;
+  font-size: 1.5rem;
+}
+
+.banner button:hover {
+  background-color: #ffa60031;
+  color: var(--boder-btn);
+
+}
+
+.banner--text {
+  position: relative;
+  top: 5rem;
+}
 
 @media screen and (max-width: 998.98px) {
   .menu--nav {
@@ -761,6 +817,7 @@ button {
     border-radius: 10px;
   }
 }
+
 
 @media screen and (max-width: 770.98px) {
 
