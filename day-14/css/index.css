@@ -472,7 +472,7 @@ button {
 .mumbai--img__container {
   width: 85%;
   margin: 3rem auto;
-  --max--column: 12.8;
+  --max--column: 13;
 
 
 }
@@ -515,7 +515,7 @@ button {
 
   width: 85%;
   margin: 0 auto;
-  /* --max--column: 14; */
+  --max--column: 12.1;
   /* thay đổi col của grid-system  */
 }
 
