@@ -1,0 +1,65 @@
+@import "partials/reset";
+
+
+// comment scss
+
+// cú pháp lồng selecter
+// Biến 
+// lưu ý : nên đặt tên biến theo quy tắc camlCase
+
+$primemaryColor:red; // biến toàn cục
+
+
+.header{
+    background-color: $primemaryColor;
+    .topbar{
+        $textColor:blue;
+        background-color: yellow;
+        a{
+            color: $textColor; // biến cục bộ (local variable)
+            text-decoration: none;
+            &:hover{
+                background-color: aqua;
+            }
+        }
+    }
+    .header-inner{
+        background-color: red;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    nav{
+        &.menu{
+            ul{
+                >li{
+                    >a{
+                        color: aqua;
+                        &::before{
+                            content: "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+$munber:12;
+body{
+    font-size: #{$munber *10 };
+}
+$selecter:".colum-a";
+$_selecter:".colum-b";
+#{$selecter}{
+    color: red;
+    #{$_selecter}{
+        color: aqua;
+    }
+}
+$prefix:"col-";
+$munber:12;
+#{"."+$prefix + $munber }{
+    width: 50%;
+}

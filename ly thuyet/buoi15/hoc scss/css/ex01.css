@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: red;
+}
+.header .topbar {
+  background-color: yellow;
+}
+.header .topbar a {
+  color: blue;
+  text-decoration: none;
+}
+.header .topbar a:hover {
+  background-color: aqua;
+}
+.header .header-inner {
+  background-color: red;
+}
+.header .header-inner img {
+  width: 100%;
+  height: auto;
+}
+.header nav.menu ul > li > a {
+  color: aqua;
+}
+.header nav.menu ul > li > a::before {
+  content: "";
+}
+
+body {
+  font-size: 120;
+}
+
+.colum-a {
+  color: red;
+}
+.colum-a .colum-b {
+  color: aqua;
+}
+
+.col-12 {
+  width: 50%;
+}
+
+/*# sourceMappingURL=ex01.css.map */

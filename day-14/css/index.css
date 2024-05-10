@@ -727,21 +727,22 @@ button {
 /* banner */
 .banner--cover {
   background-image: url(../img/banner-bg.jpg);
-  height: 100%;
+  height: auto;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
+
 }
 
 .banner {
   background-color: rgba(0, 0, 0, 0.515);
-  height: 100%;
+  height: auto;
   text-align: center;
 }
 
 .banner span {
   color: var(--boder-btn);
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   display: block;
 
 }
@@ -763,10 +764,10 @@ button {
   padding: 1rem 3rem;
   color: white;
   background-color: var(--boder-btn);
-  margin-top: 2rem;
+  margin-top: 1rem;
   border: 3px solid var(--boder-btn);
   border-radius: 100px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .banner button:hover {
@@ -775,9 +776,148 @@ button {
 
 }
 
+footer {
+  background: #222;
+}
+
 .banner--text {
   position: relative;
-  top: 5rem;
+  top: 1.2rem;
+  height: 17rem;
+}
+
+.footer--container {
+  width: 80%;
+  margin: 0 auto;
+  --max--column: 12;
+  padding-top: 3rem;
+
+}
+
+
+
+.footer--logo {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.footer--container span {
+  color: #aaa;
+  display: block;
+}
+
+.footer--logo span {
+  color: var(--boder-btn);
+  display: inline-block;
+  position: relative;
+  left: 5px;
+}
+
+.footer--title p {
+  color: #aaa;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-icon i {
+  color: var(--boder-btn);
+  padding: 13px;
+  border: 2px solid var(--boder-btn);
+  border-radius: 100px;
+  margin: 20px 5px;
+}
+
+.footer-icon i:hover {
+  background-color: var(--boder-btn);
+  color: black;
+}
+
+
+
+
+.footer--secon a {
+  display: flex;
+  text-decoration: none;
+  padding-block: 0.5rem;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.footer--secon a i {
+  color: var(--boder-btn);
+  margin-right: 10px;
+}
+
+.footer--secon a span {
+  transition: all 0.3s ease-in-out;
+}
+
+.footer--secon a:hover span {
+  color: var(--boder-btn);
+  margin-left: 10px;
+}
+
+
+.footer--secon h3,
+.box--three h3,
+.box--four h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+
+
+.box--three i {
+  color: var(--boder-btn);
+  margin-right: 5px;
+  line-height: 2.5rem;
+}
+
+.box--four span,
+.box--three span {
+  font-size: 0.95rem;
+}
+
+.box--four input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  height: 50px;
+  border: 2px solid var(--boder-btn);
+  border-radius: 100px;
+  padding-inline: 20px;
+  color: #555;
+  margin-top: 20px;
+}
+
+.box--four button {
+  padding: 18px 40px;
+  background-color: var(--boder-btn);
+  color: white;
+  border-radius: 100px;
+  margin-top: 20px;
+  border: 2px solid var(--boder-btn);
+}
+
+.box--four button:hover {
+  background-color: #ffa60031;
+  color: var(--boder-btn);
+
+}
+
+.footer--end {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.footer--end span {
+  color: var(--boder-btn);
 }
 
 @media screen and (max-width: 998.98px) {
@@ -868,6 +1008,35 @@ button {
     padding: 0;
     margin-bottom: 10px;
     height: 300px;
+
+  }
+}
+
+@media screen and (max-width:586px) {
+  .banner span {
+    color: var(--boder-btn);
+    font-size: 1.2rem;
+    display: block;
+
+  }
+
+  .banner h3 {
+    font-size: 2rem;
+
+  }
+
+  .banner p {
+    font-size: 0.7rem;
+  }
+
+  .banner button {
+    padding: 0.8rem 3rem;
+
+  }
+
+  .banner {
+    height: 19rem;
+
 
   }
 }
