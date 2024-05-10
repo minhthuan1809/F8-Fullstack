@@ -18,6 +18,7 @@ body {
   font-family: sans-serif;
   position: fixed;
   z-index: 99;
+  top: 0;
 }
 
 .icon--mobile .bi-list {
@@ -335,6 +336,8 @@ button {
 .box-container {
   width: 85%;
   margin: 0 auto;
+  --max--column: 13;
+
 }
 
 .box .img {
@@ -403,6 +406,8 @@ button {
 /* section5 */
 .service {
   margin-top: 4rem;
+  --max--column: 13;
+
 }
 
 .service--text {
@@ -467,6 +472,8 @@ button {
 .mumbai--img__container {
   width: 85%;
   margin: 3rem auto;
+  --max--column: 12.8;
+
 
 }
 
@@ -508,13 +515,15 @@ button {
 
   width: 85%;
   margin: 0 auto;
-  /* --max--column: 14;
-   thay đổi col của grid-system  */
+  /* --max--column: 14; */
+  /* thay đổi col của grid-system  */
 }
 
 
 .Evaluate--title {
   text-align: center;
+  margin-bottom: 20px;
+
 }
 
 .Evaluate--title h3 {
@@ -555,6 +564,166 @@ button {
   display: block;
 }
 
+/* section 8 */
+.feedback--container {
+  width: 85%;
+  margin: 3rem auto;
+
+}
+
+.feeback--text h3 {
+  color: var(--boder-btn);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  height: auto;
+}
+
+.form input {
+  width: 100%;
+  height: 3rem;
+  padding-inline: 20px;
+  background-color: #f7f7f7;
+}
+
+.form textarea {
+  padding: 20px;
+  width: 100%;
+  background-color: #f7f7f7;
+
+}
+
+.form button {
+  border-radius: 100px;
+  background-color: var(--boder-btn);
+  border: 2px solid var(--boder-btn);
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.form button:hover {
+  background-color: #ffa60031;
+  color: var(--boder-btn);
+}
+
+.map {
+  /* padding: 0; */
+  border-radius: 10px;
+
+
+}
+
+/* section9 */
+.Mumbai--found__container {
+  width: 85%;
+  margin: 20px auto;
+}
+
+.found--text {
+  text-align: center;
+}
+
+.found--text span {
+
+  color: var(--boder-btn);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.found--text h3 {
+  font-size: 2rem;
+  margin-block: 0.5vw;
+}
+
+.found {
+  background-color: white;
+  margin: 8.1px;
+  height: auto;
+  --max--column: 12.7;
+  border-radius: 10px;
+  position: relative;
+
+}
+
+.found-img {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.found-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.found--information {
+  width: 90%;
+  margin: 15px auto;
+  margin-bottom: 2rem;
+
+}
+
+.found--information h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.found--information h4:hover {
+  color: var(--boder-btn);
+}
+
+.found--information p {
+  font-size: 0.9rem;
+  line-height: 2rem;
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 3.5rem;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  position: absolute;
+  bottom: 5px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.fa-clock,
+.fa-user {
+  color: var(--boder-btn);
+}
+
+.clock a {
+  text-decoration: none;
+  color: #222;
+  display: flex;
+  align-items: center;
+}
+
+.clock a span {
+  margin-inline: 10px;
+}
+
+
 @media screen and (max-width: 998.98px) {
   .menu--nav {
     width: 95%;
@@ -594,6 +763,7 @@ button {
 }
 
 @media screen and (max-width: 770.98px) {
+
   .icon--mobile .bi-list {
     display: block;
   }
@@ -635,5 +805,12 @@ button {
 
   .sale--box {
     flex-direction: column;
+  }
+
+  .map {
+    padding: 0;
+    margin-bottom: 10px;
+    height: 300px;
+
   }
 }
