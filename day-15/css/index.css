@@ -81,12 +81,15 @@
   font-size: 1.4rem;
   display: flex;
   align-items: center;
+  position: relative;
+  left: -15rem;
 }
 .menu-top .search .search--main {
-  width: 10vw;
+  width: 20vw;
   height: 2.5rem;
   font-size: 1.4rem;
   padding: 20px;
+  outline: none;
 }
 .menu-top .search input::placeholder {
   font-size: 1.4rem;
@@ -176,6 +179,9 @@ img {
   }
 }
 @media screen and (max-width: 991.98px) {
+  .menu-top .search {
+    left: -4rem;
+  }
   .col-menu .item a span {
     display: none;
   }

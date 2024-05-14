@@ -98,12 +98,15 @@
         font-size: 1.4rem;
         display: flex;
         align-items: center;
+        position: relative;
+        left: -15rem;
 
         .search--main {
-            width: 10vw;
+            width: 20vw;
             height: 2.5rem;
             font-size: 1.4rem;
             padding: 20px;
+            outline: none;
         }
 
         input::placeholder {
