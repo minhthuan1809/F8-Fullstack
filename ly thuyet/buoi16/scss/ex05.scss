@@ -1,0 +1,6 @@
+@use "./componnents/footer.scss"
+
+body {
+    font-size: small;
+    font-size: footer.$primarycolor;
+}

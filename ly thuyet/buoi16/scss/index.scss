@@ -1,0 +1,17 @@
+ @use 'componnents/_header.scss'; // namespace : header 
+ // truy cập biến , mixin , function
+
+
+ //cú pháp " tennamespace..tenmember
+ @use "./page/home/header" as headerPage;
+
+
+
+ // .produce {
+ //     background-color: header.$primarycolor;
+ //     @include header.section-base;
+ // }
+
+ // .posts {
+ //     @extend %section-base;
+ // }

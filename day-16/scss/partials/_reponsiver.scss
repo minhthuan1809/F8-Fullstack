@@ -1,0 +1,21 @@
+@media screen and (max-width:992.98px) {
+    .menu--top {
+
+        .menu--choose {
+            .nav--menu__text li {
+                display: none;
+            }
+
+            .icon--menu {
+                display: block;
+            }
+
+        }
+    }
+
+    #check--menu:checked~.nav--menu__mobile {
+        height: 360px;
+        transition: all 0.3s ease-in-out;
+        overflow: 1;
+    }
+}

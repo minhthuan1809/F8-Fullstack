@@ -1,0 +1,26 @@
+$primarycolor: red;
+$-secondary: gray;
+
+@mixin section-base {
+    padding: 30px;
+}
+
+%section-base {
+    margin: 0 auto;
+}
+
+.header {
+    padding: 10px 0;
+    background: gray;
+
+    .header-logo {
+        img {
+            min-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.posts {
+    background-color: $-secondary;
+}
