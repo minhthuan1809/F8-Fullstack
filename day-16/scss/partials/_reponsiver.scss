@@ -19,3 +19,53 @@
         overflow: 1;
     }
 }
+
+@media screen and (max-width:900.98px) {
+    .baner--baner__left {
+        .baner-text {
+            width: 90%;
+            margin-top: 2rem;
+
+            span {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.7rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .baner--baner__right {
+        position: relative;
+
+        h3 {
+            rotate: 360deg;
+            margin-top: -25vw;
+            margin-left: -20vw;
+        }
+
+        .baner {
+            height: 15rem;
+        }
+    }
+
+    .header--container {
+        .baner-img {
+            visibility: hidden;
+        }
+
+        .baner-img__mobile {
+            top: 5%;
+            height: 100%;
+            position: relative;
+            display: block;
+
+        }
+    }
+}

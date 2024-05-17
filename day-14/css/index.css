@@ -4,8 +4,6 @@
   --boder-btn: #ffa500;
 }
 
-
-
 body {
   font-family: "Nunito Sans", sans-serif;
   background-color: #efefef;
@@ -246,15 +244,15 @@ video:nth-of-type(3) {
   display: none;
 }
 
-#check--video__one:checked~video:nth-of-type(1) {
+#check--video__one:checked ~ video:nth-of-type(1) {
   display: block;
 }
 
-#check--video__two:checked~video:nth-of-type(2) {
+#check--video__two:checked ~ video:nth-of-type(2) {
   display: block;
 }
 
-#check--video__three:checked~video:nth-of-type(3) {
+#check--video__three:checked ~ video:nth-of-type(3) {
   display: block;
 }
 
@@ -320,7 +318,6 @@ button {
   text-align: center;
 }
 
-
 .travel--hearder span {
   color: var(--boder-btn);
   font-size: 1.5rem;
@@ -331,14 +328,12 @@ button {
   font-size: 3rem;
 
   margin-bottom: 20px;
-
 }
 
 .box-container {
   width: 85%;
   margin: 0 auto;
   --max--column: 13;
-
 }
 
 .box .img {
@@ -396,19 +391,15 @@ button {
   transition: all 3s ease-in-out;
 }
 
-
-
 .box a:hover span {
   position: relative;
   right: 15px;
 }
 
-
 /* section5 */
 .service {
   margin-top: 4rem;
   --max--column: 13;
-
 }
 
 .service--text {
@@ -426,7 +417,6 @@ button {
   margin-block: 0.5vw;
 }
 
-
 .service--container {
   width: 85%;
   margin: 3rem auto;
@@ -438,7 +428,6 @@ button {
   height: auto;
   margin: 10px;
   text-align: center;
-
 }
 
 ._box:hover {
@@ -461,8 +450,6 @@ button {
   margin-bottom: 2rem;
 }
 
-
-
 /* section 6 */
 .mumbai--img__text h3 {
   color: var(--boder-btn);
@@ -474,8 +461,6 @@ button {
   width: 85%;
   margin: 3rem auto;
   --max--column: 13;
-
-
 }
 
 .conten--img {
@@ -492,7 +477,6 @@ button {
   object-fit: cover;
   width: 100%;
   height: 100%;
-
 }
 
 .conten {
@@ -513,18 +497,15 @@ button {
 
 /* section 7 */
 .Evaluate--container {
-
   width: 85%;
   margin: 0 auto;
   --max--column: 12.1;
   /* thay đổi col của grid-system  */
 }
 
-
 .Evaluate--title {
   text-align: center;
   margin-bottom: 20px;
-
 }
 
 .Evaluate--title h3 {
@@ -569,7 +550,6 @@ button {
 .feedback--container {
   width: 85%;
   margin: 3rem auto;
-
 }
 
 .feeback--text h3 {
@@ -598,7 +578,6 @@ button {
   padding: 20px;
   width: 100%;
   background-color: #f7f7f7;
-
 }
 
 .form button {
@@ -618,8 +597,6 @@ button {
 .map {
   /* padding: 0; */
   border-radius: 10px;
-
-
 }
 
 /* section9 */
@@ -633,7 +610,6 @@ button {
 }
 
 .found--text span {
-
   color: var(--boder-btn);
   font-size: 1.1rem;
   font-weight: 600;
@@ -651,7 +627,6 @@ button {
   --max--column: 12.7;
   border-radius: 10px;
   position: relative;
-
 }
 
 .found-img {
@@ -671,7 +646,6 @@ button {
   width: 90%;
   margin: 15px auto;
   margin-bottom: 2rem;
-
 }
 
 .found--information h4 {
@@ -731,7 +705,6 @@ button {
   background-attachment: fixed;
   background-size: cover;
   position: relative;
-
 }
 
 .banner {
@@ -744,14 +717,12 @@ button {
   color: var(--boder-btn);
   font-size: 1.2rem;
   display: block;
-
 }
 
 .banner h3 {
   color: white;
   font-size: 2.8rem;
   margin-top: 1.5rem;
-
 }
 
 .banner p {
@@ -773,7 +744,6 @@ button {
 .banner button:hover {
   background-color: #ffa60031;
   color: var(--boder-btn);
-
 }
 
 footer {
@@ -791,10 +761,7 @@ footer {
   margin: 0 auto;
   --max--column: 12;
   padding-top: 3rem;
-
 }
-
-
 
 .footer--logo {
   font-size: 1.8rem;
@@ -835,9 +802,6 @@ footer {
   color: black;
 }
 
-
-
-
 .footer--secon a {
   display: flex;
   text-decoration: none;
@@ -860,7 +824,6 @@ footer {
   margin-left: 10px;
 }
 
-
 .footer--secon h3,
 .box--three h3,
 .box--four h3 {
@@ -868,8 +831,6 @@ footer {
   font-size: 1.2rem;
   margin-bottom: 1.4rem;
 }
-
-
 
 .box--three i {
   color: var(--boder-btn);
@@ -906,7 +867,6 @@ footer {
 .box--four button:hover {
   background-color: #ffa60031;
   color: var(--boder-btn);
-
 }
 
 .footer--end {
@@ -958,9 +918,7 @@ footer {
   }
 }
 
-
 @media screen and (max-width: 770.98px) {
-
   .icon--mobile .bi-list {
     display: block;
   }
@@ -984,7 +942,7 @@ footer {
     position: relative;
   }
 
-  #check--mobile:checked~.nav--menu__mobile {
+  #check--mobile:checked ~ .nav--menu__mobile {
     visibility: visible;
     height: 250px;
   }
@@ -1008,21 +966,18 @@ footer {
     padding: 0;
     margin-bottom: 10px;
     height: 300px;
-
   }
 }
 
-@media screen and (max-width:586px) {
+@media screen and (max-width: 586px) {
   .banner span {
     color: var(--boder-btn);
     font-size: 1.2rem;
     display: block;
-
   }
 
   .banner h3 {
     font-size: 2rem;
-
   }
 
   .banner p {
@@ -1031,12 +986,9 @@ footer {
 
   .banner button {
     padding: 0.8rem 3rem;
-
   }
 
   .banner {
     height: 19rem;
-
-
   }
 }

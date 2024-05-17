@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../day-16"
+	},
+	{
+		"path": "../.."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "f8-fullstack-k8"
+  }
+}

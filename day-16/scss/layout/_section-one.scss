@@ -3,7 +3,7 @@
     .content {
         text-align: center;
         margin: 5rem auto;
-        width: 80%;
+        width: 100%;
 
         h2 {
             margin: 0 auto;
@@ -41,6 +41,8 @@
         height: auto;
         margin-inline: 1rem;
         border-radius: 3.333px;
+        position: relative;
+        left: -1rem;
         background: var(#FFF);
         box-shadow: -5.833px 8.333px 72.5px 0px rgba(54, 54, 54, 0.12);
         padding: 1.5rem;
