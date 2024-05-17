@@ -1,0 +1,93 @@
+.product {
+    h2 {
+        text-align: center;
+        font-family: Inter;
+        font-size: 31.667px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 131.523%;
+        margin: 5rem;
+    }
+}
+
+.product--container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+    .product--card {
+        .bg--round {
+            width: 250px;
+            height: 250px;
+            background-color: #FFBA94;
+            border-radius: 1000px;
+            position: absolute;
+            z-index: -1;
+            margin: 0 auto;
+        }
+
+
+
+        .img--product {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            img {
+                width: 200px;
+                height: 200px;
+                position: relative;
+                top: 5rem;
+            }
+
+
+        }
+
+        .produce--text {
+            margin-top: 4.5rem;
+
+            h4 {
+                width: 183.333px;
+                height: 56.667px;
+                margin: 1rem auto;
+                font-size: 1.3rem;
+                font-family: Inter;
+                display: block;
+            }
+
+            p {
+                color: #656565;
+                font-family: Inter;
+                font-style: normal;
+                line-height: 21.667px;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            span {
+                font-family: Inter;
+                font-size: 23.333px;
+                display: block;
+            }
+
+            button {
+                background-color: #46B20F;
+                color: white;
+                display: inline-flex;
+                padding: 13.333px 11.667px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6.667px;
+                margin-top: 1rem;
+
+                &:hover {
+                    background-color: #329600;
+                }
+            }
+        }
+
+    }
+
+
+}
