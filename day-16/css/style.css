@@ -646,6 +646,15 @@
   color: #46b20f;
 }
 
+.map {
+  width: 100%;
+  height: 30rem;
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 992.98px) {
   .menu--top .menu--choose .nav--menu__text li {
     display: none;
