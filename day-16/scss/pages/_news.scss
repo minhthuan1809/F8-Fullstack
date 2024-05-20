@@ -1,54 +1,75 @@
-.outstanding--container {
+.outstanding {
     width: 80%;
-    margin: 5rem auto;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .outstanding--right {
+        .img {
+            margin-top: 3rem;
+        }
+
+        .outstanding--text {
+            margin-top: 5rem;
+        }
+
+    }
 
     .outstanding--left,
     .outstanding--right {
+        width: 49.5%;
+        height: 100%;
+
+        padding: 2rem;
+
         .img {
-            width: 80%;
-            height: 70%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            height: 100%;
 
             img {
                 width: 100%;
                 height: 100%;
             }
+
         }
 
         .outstanding--text {
-            width: 80%;
-
             span {
                 color: #46B20F;
+                margin-top: 2.5rem;
+                font-size: 1.1rem;
                 display: block;
-                margin-top: 3rem;
             }
 
             h3 {
                 font-size: 23.333px;
                 font-style: normal;
                 font-weight: 700;
+                line-height: normal;
                 margin-top: 1rem;
+                width: 80%;
             }
 
             p {
                 font-size: 13.333px;
                 font-style: normal;
                 font-weight: 400;
-                margin-top: 2rem;
-
+                margin-top: 1rem;
+                line-height: 1.5rem;
+                display: block;
+                width: 75%;
             }
 
             button {
-                margin-top: 2rem;
-                margin-bottom: 2rem;
                 background-color: white;
-                border: 2px solid #46B20F;
-                border-radius: 10px;
-                padding: 1rem 1.5rem;
-
+                border: 1px solid #46B20F;
+                font-size: 1rem;
+                font-weight: 700;
+                padding: 0.8rem 1rem;
+                border-radius: 5px;
+                margin-top: 3rem;
             }
         }
     }
@@ -125,5 +146,62 @@
         color: #2C2C2C;
         margin-top: 1rem;
         line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width:767.98px) {
+    .outstanding {
+        flex-direction: column;
+
+        .outstanding--left,
+        .outstanding--right {
+            width: 100%;
+
+            padding: 1rem;
+
+            .img {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+            .outstanding--text {
+
+
+                h3 {
+                    font-size: 23.333px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    margin-top: 1rem;
+                    width: 95%;
+                }
+
+                p {
+
+                    width: 90%;
+                }
+
+
+            }
+
+        }
+
+        .outstanding--right {
+
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+
+            .outstanding--text {
+                margin-top: 0rem;
+            }
+
+        }
     }
 }
