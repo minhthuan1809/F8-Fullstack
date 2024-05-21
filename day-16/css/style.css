@@ -910,6 +910,9 @@
   .menu--top .menu--choose .icon--menu {
     display: block;
   }
+  .product--car .img--product .bg--round {
+    display: none;
+  }
   #check--menu:checked ~ .nav--menu__mobile {
     height: 360px;
     transition: all 0.3s ease-in-out;
