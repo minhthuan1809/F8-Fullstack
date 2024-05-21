@@ -106,5 +106,7 @@ Trong điều kiện ép kiểu dữ liệu cần phải ép kiểu dữ liệu 
 // ví dụ : minh họa lại toán tử 3 ngôi
 var a = 0;
 // nếu a là truthy gán b =20 , ngược lại là 30
+// var b = a ? 20 : 30;
+// console.log(b);
 var b = a ? 20 : 30;
 console.log(b);
