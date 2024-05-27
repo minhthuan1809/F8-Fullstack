@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập 4</title>
+</head>
+<style>
+    * {
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        font-weight: 700;
+    }
+</style>
+
+<body>
+    <h1>Bài 4: Kiểm tra số cùng dấu</h1>
+    <script>
+        var a = -1100, b = 5;
+        var ketqua = true;
+        if (a * -1 < 0 && b * -1 < 0 || a * -1 > 0 && b * -1 > 0) {
+            ketqua = true;
+        }
+        else {
+            ketqua = false;
+        }
+
+        document.write(`a = ${a} <br> b = ${b} <br> Hai số a và b cùng đấu : ${ketqua}`);
+    </script>
+</body>
+
+</html>

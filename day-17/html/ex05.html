@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+<style>
+    * {
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        font-weight: 700;
+    }
+</style>
+
+<body>
+    <h1>Bài 5: Sắp xếp 3 số</h1>
+    <script>
+        var a = 5,
+            b = 22,
+            c = 8;
+
+        if (a > b) {
+            var ketqua = a;
+            a = b;
+            b = ketqua;
+        }
+        if (b > c) {
+            var ketqua = b;
+            b = c;
+            c = ketqua;
+        }
+        if (a > b) {
+            var ketqua = a;
+            a = b;
+            b = ketqua;
+        }
+
+        document.write("Sắp xếp từ bé đến lớn : " + a + " " + b + " " + c);
+    </script>
+
+</body>
+
+</html>
