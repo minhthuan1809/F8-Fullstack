@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Word Color with Timeout</title>
+</head>
+
+<body>
+    <script>
+        var text = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique molestias voluptatem eum explicabo molestiae
+        quia ad dolores suscipit facere vero alias, numquam, porro odit ut eligendi accusamus ex inventore accusantium!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique molestias voluptatem eum explicabo molestiae
+        quia ad dolores suscipit facere vero alias, numquam, porro odit ut eligendi accusamus ex inventore accusantium!`;
+
+        // Khởi tạo vị trí bắt đầu
+        var currentIndex = 0;
+
+        function changeWordColor() {
+            // Tìm vị trí của khoảng trắng tiếp theo
+            var nextSpaceIndex = text.indexOf(' ', currentIndex);
+
+            if (nextSpaceIndex === -1) {
+                nextSpaceIndex = text.length; // Nếu không có khoảng trắng nữa, lấy đến cuối đoạn văn bản
+            }
+
+            // Lấy từ hiện tại
+            var currentWord = text.substring(currentIndex, nextSpaceIndex);
+
+            // Tạo nội dung đã xử lý màu cho các từ trước đó
+            var processedText = text.substring(0, currentIndex) +
+                '<span style="color: red;">' + currentWord + '</span>' +
+                text.substring(nextSpaceIndex);
+
+            // Cập nhật nội dung của trang
+            document.body.innerHTML = '<p>' + processedText + '</p>';
+
+            // Cập nhật vị trí bắt đầu cho từ tiếp theo
+            currentIndex = nextSpaceIndex + 1;
+
+            // Nếu vẫn còn từ để xử lý, tiếp tục gọi hàm này sau 2000ms
+            if (currentIndex < text.length) {
+                setTimeout(changeWordColor, 200);
+            }
+        }
+
+        // Bắt đầu quá trình thay đổi màu từ từ đầu tiên
+        changeWordColor();
+    </script>
+</body>
+
+</html>
