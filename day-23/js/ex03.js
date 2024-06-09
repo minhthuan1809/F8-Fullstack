@@ -3,7 +3,21 @@ var arr = [
   ["b", 2, false],
 ];
 
+var string = [];
+var number = [];
+var boolean = [];
+var newArr = [];
 var _arr = arr.filter(function (value, index) {
-  for (let i = 0; i < index; i++) {}
+  value.forEach(function (params) {
+    if (typeof params === "string") {
+      return (string[string.length] = params);
+    } else if (typeof params === "boolean") {
+      return (boolean[boolean.length] = params);
+    } else if (typeof params === "number") {
+      return (number[number.length] = params);
+    }
+  });
 });
-console.log(typeof arr[1][1]);
+newArr = newArr.concat(string, number, boolean);
+document.write(`var arr = [["a", 1, true], ["b", 2, false]] <br>`);
+document.write(`Kết quả :[${newArr}]`);
