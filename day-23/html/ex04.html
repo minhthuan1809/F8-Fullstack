@@ -17,6 +17,11 @@
         font-family: sans-serif;
     }
 
+    .container h1 {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
     .title {
         display: flex;
         margin-top: 2rem;
@@ -34,20 +39,124 @@
         width: 100%;
         height: 100%;
     }
+
+    .title--text h2 {
+        font-size: 2vw;
+    }
+
+    .title--text p {
+        font-size: 1.3vw;
+    }
+
+    @media screen and (max-width:500.98px) {
+
+        .title {
+            flex-direction: column;
+            text-align: center;
+            padding: 0;
+            gap: 2rem;
+        }
+
+        .title>.img {
+            width: 100%;
+            height: 50%;
+        }
+
+        .title--text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title--text h2 {
+            font-size: 8vw;
+            margin-top: 2rem;
+        }
+
+        .title--text p {
+            font-size: 5vw;
+            margin-top: 2rem;
+        }
+
+        .titleRight {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
 </style>
 <div class="container">
+    <h1>TIÊU ĐỀ </h1>
     <div class="row">
-        <div class="col-12 title">
+        <script>
+            var arr = [
+
+                {
+                    img: "https://picsum.photos/200/300",
+                    title: "Tiêu để bài viết 1",
+                    content:
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio possimus recusandae fuga nostrum id molestiae! Et excepturi cum magni autem repellendus? Molestiae libero placeat deserunt laboriosam. Itaque quisquam adipisci reiciendis?",
+                },
+                {
+                    img: "https://picsum.photos/200/300",
+                    title: "Tiêu để bài viết 2",
+                    content:
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio possimus recusandae fuga nostrum id molestiae! Et excepturi cum magni autem repellendus? Molestiae libero placeat deserunt laboriosam. Itaque quisquam adipisci reiciendis?",
+                },
+                {
+                    img: "https://picsum.photos/200/300",
+                    title: "Tiêu để bài viết 3",
+                    content:
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio possimus recusandae fuga nostrum id molestiae! Et excepturi cum magni autem repellendus? Molestiae libero placeat deserunt laboriosam. Itaque quisquam adipisci reiciendis?",
+                },
+
+
+
+            ];
+            for (let i = 0; i < arr.length; i++) {
+                var _img = arr[i].img;
+                var _title = arr[i].title;
+                var _content = arr[i].content;
+                if (i % 2 === 0) {
+
+                    document.write(renderImgleft(_img, _title, _content));
+                }
+                else {
+                    document.write(renderImgright(_img, _title, _content));
+                }
+            }
+
+
+            function renderImgleft(img, title, content) {
+                return `  <div class="col-12 title">
             <div class="img">
-                <img src="https://picsum.photos/200/300" alt="photo">
+                <img src="${img}" alt="photo">
             </div>
             <div class="title--text">
-                <h2>Tiêu để bài viết 1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio possimus recusandae fuga nostrum
-                    id molestiae! Et excepturi cum magni autem repellendus? Molestiae libero placeat deserunt
-                    laboriosam. Itaque quisquam adipisci reiciendis?</p>
+
+                <h2>${title}</h2>
+                <p>${content}</p>
             </div>
-        </div>
+            </div>`;
+            }
+            function renderImgright(img, title, content) {
+                return `   <div class="col-12 title titleRight">
+            
+            <div class="title--text">
+
+                <h2>${title}</h2>
+                <p>${content}</p>
+            </div>
+            <div class="img">
+                <img src="${img}" alt="photo">
+            </div>
+            </div>`;
+            }
+
+
+
+
+        </script>
+
     </div>
 
 </div>
@@ -56,7 +165,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="../js/ex04.js"></script>
 </body>
 
 </html>
