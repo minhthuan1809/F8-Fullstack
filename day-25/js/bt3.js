@@ -28,4 +28,5 @@ const user1 = handleRegister("Nguyen Van A", "123456", "nguyenvana@email.com");
 const user2 = handleRegister("Nguyen Van B", "123456", "nguyenvanb@email.com");
 const dataLogin = handleLogin("nguyenvanb@email.com", "123456");
 
-console.log("minhthuan = ", data);
+console.log("data = ", data);
+console.log("dataLogin = ", dataLogin);
