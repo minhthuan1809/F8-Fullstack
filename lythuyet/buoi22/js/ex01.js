@@ -62,11 +62,11 @@
 // console.log(obj3);
 
 // // object.keys()==> Trả về 1 array chứa các key của Object
-// var users = {
-//   name: "Minh Thuận",
-//   email: "thuan18092003@gmail.com",
-// };
-// // console.log(Object.keys(users));
+var users = {
+  name: "Minh Thuận",
+  email: "thuan18092003@gmail.com",
+};
+// console.log(Object.keys(users));
 
 // if (Object.keys(users).length) {
 //   console.log("không rỗng");
@@ -75,7 +75,7 @@
 // }
 
 // Object.values() == > trả về 1 mảng chứa các value của object
-// console.log(Object.values(users));
+console.log(Object.values(users));
 
 // Object.entries(
 
@@ -119,16 +119,16 @@
 // console.log(_queryString);
 
 // obbject.assign(target, cource1,cource2,...,courceN) == > nối các source vào target(thay đổi object ban đầu)
-var user = {
-  name: "minhthuan",
-  Email: "thuan@gmail.com",
-};
-var cource = {
-  name: "minhthuan",
-  courseName: "Fullstack",
-};
+// var user = {
+//   name: "minhthuan",
+//   Email: "thuan@gmail.com",
+// };
+// var cource = {
+//   name: "minhthuan",
+//   courseName: "Fullstack",
+// };
 
-var result = Object.assign({}, user, cource);
-console.log(user);
+// var result = Object.assign({}, user, cource);
+// console.log(user);
 
-console.log(result);
+// console.log(result);
