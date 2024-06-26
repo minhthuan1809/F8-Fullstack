@@ -42,11 +42,11 @@ Custom Element , Web Component ,Custom Even , ....
 
 //
 // var username = document.querySelector('[name="Username"]');
-// var username = document.login_form.Username;
-// console.log(username);
+// var username = document.lo
+// console.loggin_form.Username;(username);
 
 // var h2box = document.querySelector(".box .title");
 // console.log(h2box);
-var h2box = document.querySelector(".box");
-var title = h2box.querySelector(".title");
-console.log(title);
+// var h2box = document.querySelector(".box");
+// var title = h2box.querySelector(".title");
+// console.log(title);
