@@ -13,7 +13,7 @@
 
 <body>
     <div class="btn--main">
-        <button>Đăng nhập</button>
+        <button class="main--login" onclick="getShow()">Đăng nhập</button>
     </div>
     <span class="bg--cover"></span>
     <div class="box">
@@ -21,8 +21,8 @@
             <img src="https://cdnweb.dantri.com.vn/dist/c7b827391b2f30b6fbaf.png" alt="logos">
         </div>
         <div class="btn">
-            <button class="btn--box__login ">Đăng Nhập</button>
-            <button class="btn--box__register">Đăng Kí</button>
+            <button class="btn--box__login " onclick="getConver(loginEL, registerEL);">Đăng Nhập</button>
+            <button class="btn--box__register" onclick="getConver(registerEL, loginEL);">Đăng Kí</button>
         </div>
         <div class="login">
             <form action="">
@@ -34,15 +34,34 @@
                 </div>
                 <div class="line"><span>Hoặc</span></div>
 
-                <label for="">Email</label>
-                <input type="Email" placeholder="Email">
+                <label for="loginEmail">Email</label>
+                <input type="Email" placeholder="Email" id="loginEmail">
                 <span class="Notification--email"></span>
-                <label for="">Mật Khẩu</label>
-                <input type="password" placeholder="Mật khẩu">
+                <label for="loginPassword">Mật Khẩu</label>
+                <input type="password" class="password" id="loginPassword" placeholder="Mật khẩu">
                 <span class="Notification--password"></span>
                 <div class="show--pass">
-                    <i class="fa-solid fa-eye"></i>
-                    <i class="fa-solid fa-eye-slash" style="display: none;"></i>
+                    <i class="fa-solid fa-eye" id="eye-button" onclick="showpass(hideEyeEL, eyeEL, true);"></i>
+                    <i class="fa-solid fa-eye-slash" onclick=" showpass(eyeEL, hideEyeEL, false);"></i>
+                </div>
+                <button class="submit">Đăng Nhập</button>
+            </form>
+        </div>
+        <div class="register" style="display: none;">
+            <form action="">
+                <p class="text--box">Hoàn thành đăng ký, và bắt đầu trải nghiệm ngay!</p>
+
+                <label for="fullname">Họ và tên</label>
+                <input type="text" placeholder="Họ và tên" id="fullname">
+                <label for="Email">Email</label>
+                <input type="Email" placeholder="Email" id="registerEmail">
+                <span class="Notification--email"></span>
+                <label for="registerPassword">Mật Khẩu</label>
+                <input type="password" class="password" id="registerPassword" placeholder="Mật khẩu">
+                <span class="Notification--password"></span>
+                <div class="show--pass">
+                    <i class="fa-solid fa-eye" id="eye-button"></i>
+                    <i class="fa-solid fa-eye-slash"></i>
                 </div>
                 <button class="submit">Đăng Nhập</button>
             </form>
