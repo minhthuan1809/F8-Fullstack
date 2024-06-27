@@ -157,3 +157,7 @@ form label {
   margin-top: 1rem;
   border: none;
 }
+.Notification {
+  color: red;
+  font-size: 0.7rem;
+}

@@ -15,16 +15,16 @@
     <div class="btn--main">
         <button class="main--login" onclick="getShow()">Đăng nhập</button>
     </div>
-    <span class="bg--cover"></span>
+    <span class="bg--cover" onclick="hideForm()"></span>
     <div class="box">
         <div class="img">
             <img src="https://cdnweb.dantri.com.vn/dist/c7b827391b2f30b6fbaf.png" alt="logos">
         </div>
         <div class="btn">
-            <button class="btn--box__login " onclick="getConver(loginEL, registerEL);">Đăng Nhập</button>
-            <button class="btn--box__register" onclick="getConver(registerEL, loginEL);">Đăng Kí</button>
+            <button class="btn--box__login " onclick="getConver(loginEL, registerEL,true);">Đăng Nhập</button>
+            <button class="btn--box__register" onclick="getConver(registerEL, loginEL , false);">Đăng Kí</button>
         </div>
-        <div class="login">
+        <div class="login" style="display: none;">
             <form action="">
                 <p class="text--box">với các tài khoản mạng xã hội</p>
                 <div class="society">
@@ -35,14 +35,14 @@
                 <div class="line"><span>Hoặc</span></div>
 
                 <label for="loginEmail">Email</label>
-                <input type="Email" placeholder="Email" id="loginEmail">
-                <span class="Notification--email"></span>
+                <input type="Email" placeholder="Email" class="Email" id="loginEmail">
+                <span class="Notification--email Notification"></span>
                 <label for="loginPassword">Mật Khẩu</label>
                 <input type="password" class="password" id="loginPassword" placeholder="Mật khẩu">
-                <span class="Notification--password"></span>
+                <span class="Notification--password Notification"></span>
                 <div class="show--pass">
-                    <i class="fa-solid fa-eye" id="eye-button" onclick="showpass(hideEyeEL, eyeEL, true);"></i>
-                    <i class="fa-solid fa-eye-slash" onclick=" showpass(eyeEL, hideEyeEL, false);"></i>
+                    <i class="fa-solid fa-eye" onclick="showpass( true);"></i>
+                    <i class="fa-solid fa-eye-slash" onclick=" showpass(false);" style="display: none;"></i>
                 </div>
                 <button class="submit">Đăng Nhập</button>
             </form>
@@ -53,15 +53,15 @@
 
                 <label for="fullname">Họ và tên</label>
                 <input type="text" placeholder="Họ và tên" id="fullname">
-                <label for="Email">Email</label>
-                <input type="Email" placeholder="Email" id="registerEmail">
-                <span class="Notification--email"></span>
-                <label for="registerPassword">Mật Khẩu</label>
-                <input type="password" class="password" id="registerPassword" placeholder="Mật khẩu">
-                <span class="Notification--password"></span>
+                <label for="loginEmail">Email</label>
+                <input type="Email" placeholder="Email" class="Email" id="loginEmail">
+                <span class="Notification Notification--email"></span>
+                <label for="loginPassword">Mật Khẩu</label>
+                <input type="password" class="password" id="loginPassword" placeholder="Mật khẩu">
+                <span class="Notification Notification--password"></span>
                 <div class="show--pass">
-                    <i class="fa-solid fa-eye" id="eye-button"></i>
-                    <i class="fa-solid fa-eye-slash"></i>
+                    <i class="fa-solid fa-eye" id="eye-button" onclick="showpass(true);"></i>
+                    <i class="fa-solid fa-eye-slash" onclick=" showpass(false);" style="display: none;"></i>
                 </div>
                 <button class="submit">Đăng Nhập</button>
             </form>
