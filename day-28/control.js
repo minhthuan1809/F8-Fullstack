@@ -18,12 +18,20 @@ console.log(
   `Thông tin đăng nhập : username:  ${userName} password : ${_password}`
 );
 
+function reset() {
+  inputs.forEach(function (value) {
+    value.style.border = "1px solid rgb(246, 246, 246)";
+    value.value = "";
+  });
+}
+
 var getShow = function () {
   // hiện form
   console.log("bạn muốn đăng nhập ! ");
   bgCover.style.visibility = "visible";
   modelLogin.style.visibility = "visible";
   getConver(loginEL, registerEL, true);
+  reset();
 };
 
 var getConver = function (_add, _remove, getBoolen) {
@@ -38,6 +46,7 @@ var getConver = function (_add, _remove, getBoolen) {
   _add.classList.add("btn--color");
   console.log("nút này đang được click");
   _remove.classList.remove("btn--color");
+  reset();
 };
 
 var hideForm = function () {
