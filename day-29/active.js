@@ -8,14 +8,14 @@ function addTask(event) {
   if (input.value.length >= 1) {
     countRandom++;
 
-    var taskHTML = `<div class="Todo" data-number="${countRandom}">
+    var text = `<div class="Todo" data-number="${countRandom}">
             <p class="text">${input.value}</p>
             <div class="icon">
                 <i class="fa-solid fa-wrench" data-number="${countRandom}"></i>
                 <i class="fa-solid fa-trash" data-number="${countRandom}"></i>
             </div>
         </div>`;
-    listEl.innerHTML += taskHTML;
+    listEl.innerHTML += text;
 
     console.log("Thêm thành công -->", input.value);
     input.value = "";
