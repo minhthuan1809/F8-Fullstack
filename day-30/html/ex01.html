@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .progress-bar {
+        position: relative;
+        height: 10px;
+        background: gray;
+        width: 100%;
+        margin: 30px auto;
+        cursor: pointer;
+        /* overflow: hidden; */
+
+    }
+
+    .progress-bar:hover {
+        background: goldenrod;
+    }
+
+    .progress-bar .progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: red;
+    }
+
+    .progress-bar .progress span {
+        position: absolute;
+        top: -1px;
+        right: -6px;
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: blueviolet;
+        border-radius: 50%;
+    }
+
+    .player {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .play-action {
+        text-align: center;
+    }
+
+    i {
+        cursor: pointer;
+    }
+
+    .player .play-timer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+</style>
+<div class="player">
+    <div class="play-action">
+        <i class="fas fa-play"></i>
+    </div>
+    <div class="play-timer">
+        <span>00:00</span>
+        <div class="progress-bar">
+            <div class="progress">
+                <span></span>
+            </div>
+        </div>
+        <span>00:00</span>
+    </div>
+</div>
+<audio src="../mp3/1553f06de5bad51b29eaff85c7376aea.mp3" controls></audio>
+
+<body>
+    <script src="../js/ex01.js"></script>
+</body>
+
+</html>
