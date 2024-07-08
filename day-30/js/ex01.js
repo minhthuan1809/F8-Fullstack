@@ -4,6 +4,7 @@ var progressSpan = document.querySelector("span");
 var initialClinetX = 0;
 var moveSpace = 0;
 var lastMoveSpace = 0;
+var tooltip = document.querySelector(".tooltip");
 
 progressBar.addEventListener("mousedown", function (e) {
   if (e.which !== 1) {
@@ -12,10 +13,16 @@ progressBar.addEventListener("mousedown", function (e) {
   var width = progressBar.clientWidth;
   var offsetX = e.offsetX;
   var rate = (offsetX / width) * 100;
+  var time = (rate / 100) * audio.duration;
+  tooltip.style.display = "block";
+  tooltip.style.left = `${e.offsetX}px`;
+  tooltip.style.top = `${-20}px`; // Adjust as needed
+  tooltip.innerText = getTimeFormat(time);
   progress.style.width = `${rate}%`;
   initialClinetX = e.clientX;
   moveSpace = offsetX;
   lastMoveSpace = offsetX;
+  audio.currentTime = (rate / 100) * audio.duration;
   document.addEventListener("mousemove", handleDrag);
 });
 
@@ -26,6 +33,8 @@ progressSpan.addEventListener("mousedown", function (e) {
 });
 document.addEventListener("mouseup", function (a) {
   document.removeEventListener("mousemove", handleDrag);
+  audio.currentTime = (rate / 100) * audio.duration;
+
   lastMoveSpace = moveSpace;
 });
 function handleDrag(e) {
@@ -40,6 +49,7 @@ function handleDrag(e) {
     rate = 100;
   }
   progress.style.width = `${rate}%`;
+  audio.currentTime = (rate / 100) * audio.duration;
 }
 
 /// sử lý audio
@@ -80,4 +90,19 @@ audio.addEventListener("timeupdate", function () {
 });
 window.addEventListener("load", function () {
   durationEL.innerText = getTimeFormat(audio.duration);
+});
+
+progressBar.addEventListener("mousemove", function (e) {
+  var width = progressBar.clientWidth;
+  var offsetX = e.offsetX;
+  var rate = (offsetX / width) * 100;
+  var time = (rate / 100) * audio.duration;
+  tooltip.style.display = "block";
+  tooltip.style.left = `${e.offsetX}px`;
+  tooltip.style.top = `${-20}px`;
+  tooltip.innerText = getTimeFormat(time);
+});
+
+progressBar.addEventListener("mouseleave", function () {
+  tooltip.style.display = "none";
 });

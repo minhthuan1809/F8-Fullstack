@@ -23,8 +23,6 @@
         width: 100%;
         margin: 30px auto;
         cursor: pointer;
-        /* overflow: hidden; */
-
     }
 
     .progress-bar:hover {
@@ -50,6 +48,17 @@
         border-radius: 50%;
     }
 
+    .tooltip {
+        position: absolute;
+        background: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        display: none;
+        pointer-events: none;
+        transform: translate(-50%, -100%);
+    }
+
     .player {
         width: 80%;
         margin: 30px auto;
@@ -70,23 +79,24 @@
         gap: 10px;
     }
 </style>
-<div class="player">
-    <div class="play-action">
-        <i class="fas fa-play"></i>
-    </div>
-    <div class="play-timer">
-        <span>00:00</span>
-        <div class="progress-bar">
-            <div class="progress">
-                <span></span>
-            </div>
-        </div>
-        <span>00:00</span>
-    </div>
-</div>
-<audio src="../mp3/1553f06de5bad51b29eaff85c7376aea.mp3" controls></audio>
 
 <body>
+    <div class="player">
+        <div class="play-action">
+            <i class="fas fa-play"></i>
+        </div>
+        <div class="play-timer">
+            <span>00:00</span>
+            <div class="progress-bar">
+                <div class="progress">
+                    <span></span>
+                </div>
+                <div class="tooltip"></div>
+            </div>
+            <span>00:00</span>
+        </div>
+    </div>
+    <audio src="../mp3/1553f06de5bad51b29eaff85c7376aea.mp3" controls hidden></audio>
     <script src="../js/ex01.js"></script>
 </body>
 
