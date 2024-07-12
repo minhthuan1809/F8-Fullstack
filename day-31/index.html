@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .name {
+            width: 20rem;
+        }
+
+        table {
+            margin: 2rem auto;
+            font-size: 1.5rem;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        button {
+            font-size: 1.5rem;
+        }
+
+        input {
+            height: 1.5rem;
+            margin: 0 auto;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            width: 5rem;
+        }
+
+        h1,
+        .at_hidden {
+            text-align: center;
+            margin: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th class="name">Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Thêm vào giỏ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="name">Sản phẩm 1</td>
+                <td class="price--produce">2000</td>
+                <td>
+                    <div class="add">
+                        <input class="quantity" type="number" value="1">
+                        <button class="add-to-cart" onclick="addToCart(this)">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="name">Sản phẩm 2</td>
+                <td class="price--produce">2000</td>
+                <td>
+                    <div class="add">
+                        <input class="quantity" type="number" value="1">
+                        <button class="add-to-cart" onclick="addToCart(this)">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="name">Sản phẩm 3</td>
+                <td class="price--produce">3000</td>
+                <td>
+                    <div class="add">
+                        <input class="quantity" type="number" value="1">
+                        <button class="add-to-cart" onclick="addToCart(this)">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="name">Sản phẩm 4</td>
+                <td class="price--produce">4000</td>
+                <td>
+                    <div class="add">
+                        <input class="quantity" type="number" value="1">
+                        <button class="add-to-cart" onclick="addToCart(this)">Thêm Vào Giỏ Hàng</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>GIỎ HÀNG</h1>
+    <p class="at_hidden">Giỏ hàng không có sản phẩm</p>
+    <table hidden>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th class="name">Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Số Lượng</th>
+                <th>Thành Tiền</th>
+                <th>Xóa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="total-row">
+                <td colspan="3">Tổng</td>
+                <td class="total-sl"></td>
+                <td class="total-price" colspan="2"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
