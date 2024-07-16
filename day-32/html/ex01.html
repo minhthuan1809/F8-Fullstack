@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        position: relative;
+        height: 10px;
+        background: gray;
+        width: 100%;
+        margin: 30px auto;
+        cursor: pointer;
+    }
+
+    .progress-bar:hover {
+        background: goldenrod;
+    }
+
+    .progress-bar .progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: red;
+    }
+
+    .progress-bar .progress span {
+        position: absolute;
+        top: -1px;
+        right: -6px;
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: blueviolet;
+        border-radius: 50%;
+    }
+
+    .tooltip {
+        position: absolute;
+        background: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        display: none;
+        pointer-events: none;
+        transform: translate(-50%, -100%);
+    }
+
+    .player {
+        width: 80%;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .play-action {
+        text-align: center;
+    }
+
+    i {
+        cursor: pointer;
+    }
+
+    .player .play-timer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-Karaoke {
+        font-size: 1.2rem;
+        border: none;
+        background-color: #8a2be2;
+        color: white;
+        padding: 1rem;
+    }
+
+    .lyric {
+        position: absolute;
+        background-color: #8a2be2;
+        inset: 0;
+        transition: all 0.3s linear;
+        transform: translate(0, 1000px);
+        display: none;
+    }
+
+    .title {
+        display: flex;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+    }
+
+    .text-karaoke {
+        width: 80%;
+        margin: 1rem auto;
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .text-karaoke p {
+        line-height: 6rem;
+    }
+</style>
+
+<body>
+    <div class="player">
+        <div class="play-action">
+            <i class="fas fa-play"></i>
+        </div>
+        <div class="play-timer">
+            <span>00:00</span>
+            <div class="progress-bar">
+                <div class="progress">
+                    <span></span>
+                </div>
+                <div class="tooltip"></div>
+            </div>
+            <span>00:00</span>
+        </div>
+        <button class="btn-Karaoke" onclick="clickKaraoke()">Hát Karaoke</button>
+        <div class="lyric">
+            <div class="title">
+                <h1>Karaoke</h1>
+                <i class="fa-solid fa-chevron-down" onclick="backKaraoke()"></i>
+            </div>
+            <div class="text-karaoke">
+
+            </div>
+        </div>
+        <audio src="../mp3/04b660e12792148553b7f7b82751dd1d.mp3" controls hidden></audio>
+    </div>
+    <script src="../js/lyric.js"></script>
+    <script src="../js/ex01.js"></script>
+</body>
+
+</html>
