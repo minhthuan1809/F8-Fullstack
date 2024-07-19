@@ -680,30 +680,74 @@ var lyric = {
   },
   timestamp: 1721083188167,
 };
-
 const lyricsContainer = document.querySelector(".text-karaoke");
 
-// Hàm hiển thị từ lên trang
-function displayWord(word) {
-  const wordElement = document.createElement("p");
-  wordElement.textContent = word;
-  lyricsContainer.appendChild(wordElement);
+// Hàm để tạo mảng kết hợp các từ của câu
+function combineSentences(sentences) {
+  return sentences.map((sentence) =>
+    sentence.words.map((word) => word.data).join(" ")
+  );
+}
+
+// Hàm hiển thị các câu lên trang
+function displaySentences(currentSentence, nextSentence) {
+  // Xóa lời cũ
+  lyricsContainer.innerHTML = "";
+
+  // Hiển thị câu hiện tại
+  if (currentSentence) {
+    const currentSentenceElement = document.createElement("div");
+    currentSentenceElement.className = "current-sentence";
+
+    const currentTextElement = document.createElement("p");
+    currentTextElement.textContent = currentSentence;
+    currentSentenceElement.appendChild(currentTextElement);
+
+    lyricsContainer.appendChild(currentSentenceElement);
+  }
+
+  // Hiển thị câu tiếp theo
+  if (nextSentence) {
+    const nextSentenceElement = document.createElement("div");
+    nextSentenceElement.className = "next-sentence";
+
+    const nextTextElement = document.createElement("p");
+    nextTextElement.textContent = nextSentence;
+    nextSentenceElement.appendChild(nextTextElement);
+
+    lyricsContainer.appendChild(nextSentenceElement);
+  }
 }
 
 // Hàm để hiển thị lời bài hát theo thời gian
 function playLyrics(lyric) {
-  const words = [];
-  lyric.data.sentences.forEach((sentence) => {
-    sentence.words.forEach((word) => {
-      words.push(word);
-    });
-  });
+  setInterval(() => {
+    const currentTime = audio.currentTime * 1000;
+    const currentSentences = [];
+    let nextSentence = "";
 
-  words.forEach((word) => {
-    setTimeout(() => {
-      displayWord(word.data);
-    }, word.startTime);
-  });
+    // Tìm câu gần nhất và câu tiếp theo
+    lyric.data.sentences.forEach((sentence, index) => {
+      if (
+        currentTime >= sentence.words[0].startTime &&
+        currentTime <= sentence.words[sentence.words.length - 1].endTime
+      ) {
+        currentSentences.push(sentence);
+        if (index + 1 < lyric.data.sentences.length) {
+          // Tìm câu tiếp theo
+          nextSentence = lyric.data.sentences[index + 1].words
+            .map((word) => word.data)
+            .join(" ");
+        }
+      }
+    });
+
+    // Chỉ giữ một câu hiện tại
+    const currentSentence = combineSentences(currentSentences).join(" ");
+
+    // Hiển thị câu hiện tại và câu tiếp theo
+    displaySentences(currentSentence, nextSentence);
+  }, 100);
 }
 
 // Bắt đầu phát lời bài hát
@@ -730,17 +774,4 @@ audio.addEventListener("timeupdate", function () {
   currentTimeEL.innerText = getTimeFormat(currenTime);
   var rate = (audio.currentTime / audio.duration) * 100;
   progress.style.width = `${rate}%`;
-
-  // Hiển thị từ theo thời gian
-  lyricsContainer.innerHTML = "";
-  lyric.data.sentences.forEach((sentence) => {
-    sentence.words.forEach((word) => {
-      if (
-        audio.currentTime * 1000 >= word.startTime &&
-        audio.currentTime * 1000 <= word.endTime
-      ) {
-        displayWord(word.data);
-      }
-    });
-  });
 });
