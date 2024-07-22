@@ -136,21 +136,4 @@ document.addEventListener("DOMContentLoaded", function () {
       cartEmptyMessage.hidden = true;
     }
   }
-  function clearCart() {
-    // Xóa hết các sản phẩm trong giỏ hàng
-    var rows = cartTable.querySelectorAll("tbody tr:not(.total-row)");
-    rows.forEach((row) => {
-      row.remove();
-    });
-
-    // Sau khi xóa hết, cập nhật lại số lượng và tổng tiền
-    updateSTT();
-    updateTotal();
-
-    // Kiểm tra nếu không còn sản phẩm trong giỏ hàng, ẩn bảng giỏ hàng và hiển thị thông báo
-    if (cartTable.querySelectorAll("tbody tr").length === 1) {
-      cartTable.hidden = true;
-      cartEmptyMessage.hidden = false;
-    }
-  }
 });

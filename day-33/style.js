@@ -1,16 +1,13 @@
-var list = document.querySelector(".list");
-var listItem = document.querySelector(".list-item");
-var Module = 1;
-var moduleTitle = 1;
+const list = document.querySelector(".list");
+let Module = 1;
+let moduleTitle = 1;
 
 courseData.forEach((value) => {
-  list.innerHTML += `<div class=" active list-item" data-module = "${Module++}">Module: ${Module++}: ${
-    value.name
-  }</div>`;
+  list.innerHTML += `<div class="active list-item" data-module="${Module}">Module: ${Module}: ${value.name}</div>`;
+  Module++;
   value.lessons.forEach((valueEl) => {
-    return (list.innerHTML += `<div class="list-item" data-title = "${moduleTitle++}">Bài ${moduleTitle++}  : ${
-      valueEl.title
-    }</div>`);
+    list.innerHTML += `<div class="list-item" data-title="${moduleTitle}">Bài ${moduleTitle}  : ${valueEl.title}</div>`;
+    moduleTitle++;
   });
 });
 
@@ -22,17 +19,34 @@ document.querySelectorAll(".list-item").forEach((item) => {
       "text/plain",
       event.target.dataset.title || event.target.dataset.module
     );
-    console.log("Drag started:", event.target);
+    event.dataTransfer.effectAllowed = "move";
+    event.target.classList.add("dragging");
   });
 
   item.addEventListener("dragend", (event) => {
-    console.log("Drag ended:", event.target);
+    event.target.classList.remove("dragging");
   });
 });
 
 list.addEventListener("dragover", (event) => {
   event.preventDefault();
-  console.log("Drag over:", event.target);
+  event.dataTransfer.dropEffect = "move";
+  const draggingItem = document.querySelector(".dragging");
+  const elementOver = event.target;
+
+  if (
+    elementOver.classList.contains("list-item") &&
+    elementOver !== draggingItem
+  ) {
+    const bounding = elementOver.getBoundingClientRect();
+    const offset = bounding.y + bounding.height / 2;
+
+    if (event.clientY - offset > 0) {
+      elementOver.insertAdjacentElement("afterend", draggingItem);
+    } else {
+      elementOver.insertAdjacentElement("beforebegin", draggingItem);
+    }
+  }
 });
 
 list.addEventListener("drop", (event) => {
