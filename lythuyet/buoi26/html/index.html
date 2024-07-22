@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    body {
+        background-color: blueviolet;
+    }
+
+    .karaoke h1 {
+        text-align: center;
+        margin-top: 2rem;
+        color: white;
+        line-height: 2rem;
+    }
+
+    .karaoke__inner {
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 3rem;
+        line-height: 4.5rem;
+    }
+
+    .audio {
+        width: 70%;
+        margin: 0 auto;
+
+    }
+
+    .audio audio {
+        width: 100%;
+    }
+
+    p {
+        position: relative;
+    }
+
+    .word {
+        position: relative;
+    }
+
+    .word span {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        color: yellow;
+        width: 0;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <div class="karaoke">
+        <h1>Hát Karaoke</h1>
+        <div class="karaoke__inner">
+            <p class="line1">Nhạc không lời</p>
+            <p class="line2">Ca sỹ : Tự do</p>
+        </div>
+    </div>
+    <div class="audio">
+        <audio id="audio" src="../mp3/04b660e12792148553b7f7b82751dd1d.mp3" controls></audio>
+    </div>
+    <script src="../js/lyric.js"></script>
+    <script src="../js/style.js"></script>
+</body>
+
+</html>
