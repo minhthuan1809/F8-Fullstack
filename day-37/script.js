@@ -95,7 +95,7 @@ if ("webkitSpeechRecognition" in window) {
 
     if (!found) {
       messEl.classList.remove("active");
-      messEl.innerText = `"${value}" không có trong từ điển của tôi, nhưng tôi có thể gọi ý cho bạn`;
+      messEl.innerText = `"${value}" không có trong từ điển của tôi, nhưng tôi có thể gợi ý cho bạn`;
       setTimeout(() => {
         window.open(`https://www.google.com/search?q=${value}`, "_blank");
       }, 1000);
