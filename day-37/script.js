@@ -11,27 +11,33 @@ var data = {
     "https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjR77f5zt6HAxXmOHsHHcY-K1gYABAAGgJ0bQ&co=1&ase=2&gclid=Cj0KCQjw8MG1BhCoARIsAHxSiQkwcLw5I35wCvZFcvK6o_PalITQhMAmztur3FzY2Dh8i0h7MNy-7XIaAoj3EALw_wcB&ohost=www.google.com&cid=CAESVuD2NwJDWBIDX8AMuNLcduToDx5bC2Hf4K90lQAn9z7RAF6KMuMIeNVaMaZ3o7XBDPgO2CL72xRMJlatMTmMJqmeB8zqXMZ4kNrIHBMSLLtZNGo4uIfZ&sig=AOD64_3cNrXP17JmQGz3wStYtRfrIX9bBg&q&nis=4&adurl&ved=2ahUKEwi0mLP5zt6HAxWZkVYBHVjZF2QQ0Qx6BAgJEAE",
 };
 if ("webkitSpeechRecognition" in window) {
+  // kiểm tra mic
   const recognition = new webkitSpeechRecognition();
   recognition.continuous = false;
   recognition.interimResults = false;
   recognition.lang = "vi-VN";
 
   btnEl.addEventListener("click", () => {
+    // bắt sự kiện click của btn để lấy dữ liệu
+
     cancelEl.style.display = "inline-block";
     btnEl.classList.add("active--btn");
     btnEl.innerText = "Tôi đăng lắng nghe bạn nói ....";
     recognition.start();
   });
   cancelEl.addEventListener("click", () => {
+    // bắt sự kiện click của btn hủy
     cancelEl.style.display = "none";
     recognition.onend();
   });
   recognition.onresult = function (event) {
+    // lấy dữ liệu từ míc
     const transcript = event.results[0][0].transcript;
     listenerEl(transcript);
   };
 
   function listenerEl(value) {
+    // sử lý sự kiện
     const found = false;
 
     Object.keys(data).forEach((key) => {
@@ -44,6 +50,8 @@ if ("webkitSpeechRecognition" in window) {
         messEl.innerText = `${key} đang được mở`;
         found = true;
       } else if (
+        // xử lý mở map
+
         (value.toLowerCase().trim().includes("đi") &&
           value.toLowerCase().trim().includes("đường")) ||
         (value.toLowerCase().trim().includes("đi") &&
@@ -66,6 +74,7 @@ if ("webkitSpeechRecognition" in window) {
         }, 1000);
         found = true;
       } else if (
+        // xử lý mở mp3
         value.toLowerCase().trim().includes("bài hát") ||
         value.toLowerCase().trim().includes("mở bài") ||
         value.toLowerCase().trim().includes("hát") ||
@@ -94,6 +103,7 @@ if ("webkitSpeechRecognition" in window) {
   }
 
   recognition.onend = function () {
+    // đóng mic
     btnEl.classList.remove("active--btn");
     cancelEl.style.display = "none";
     btnEl.innerText = " Bấm vào đây để nói";
