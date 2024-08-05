@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    .search-box {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%);
+        line-height: 3rem;
+    }
+
+    h1 {
+        font-size: clamp(1rem, 4vw, 2rem);
+    }
+
+    .btn {
+        margin-top: 1.5rem;
+        padding-block: 0.5rem;
+        padding-inline: 1.5rem;
+        font-size: clamp(1rem, 1.6vw, 2rem);
+        border-radius: 50px;
+        color: white;
+        background-color: red;
+        border: none;
+        outline: none;
+        transition: background 0.3s linear;
+    }
+
+    .btn:hover {
+        background: green;
+    }
+
+    .mess {
+        color: red;
+
+        font-size: 1rem;
+    }
+
+    .active {
+        color: green;
+    }
+
+    .active--btn {
+        background-color: green;
+    }
+
+    .cancel {
+        background-color: red;
+        color: white;
+        border: 1px solid red;
+        transition: all 0.3s linear;
+        font-size: 1.3rem;
+        border-radius: 1000px;
+        padding: 0.5rem 1rem;
+        display: none;
+
+    }
+
+    .cancel:hover {
+        background-color: white;
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="search-box">
+        <h1>Bạn muốn làm gì? Hãy nói cho tôi biết</h1>
+        <div class="box">
+            <button class="btn">Bấm vào đây để nói</button>
+            <button class="cancel">&times;</button>
+
+        </div>
+        <div class="mess">Bạn muốn làm gì</div>
+        <iframe src="https://www.google.com/search?q=alo%20alo" frameborder="0" width="100%" height="500px"></iframe>
+
+        <script src="./script.js"></script>
+    </div>
+</body>
+
+</html>
