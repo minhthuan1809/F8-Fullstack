@@ -58,7 +58,6 @@ if ("webkitSpeechRecognition" in window) {
           value.toLowerCase().trim().includes("đến")) ||
         (value.toLowerCase().trim().includes("chỉ") &&
           value.toLowerCase().trim().includes("đường")) ||
-        value.toLowerCase().trim().includes("đi") ||
         value.toLowerCase().trim().includes("đến")
       ) {
         const map = value
@@ -97,6 +96,8 @@ if ("webkitSpeechRecognition" in window) {
       messEl.classList.remove("active");
       messEl.innerText = `"${value}" không có trong từ điển của tôi, nhưng tôi có thể gợi ý cho bạn`;
       setTimeout(() => {
+        console.log(value);
+
         window.open(`https://www.google.com/search?q=${value}`, "_blank");
       }, 1000);
     }
@@ -106,6 +107,6 @@ if ("webkitSpeechRecognition" in window) {
     // đóng mic
     btnEl.classList.remove("active--btn");
     cancelEl.style.display = "none";
-    btnEl.innerText = " Bấm vào đây để nói";
+    btnEl.innerText = "Bấm vào đây để nói";
   };
 }

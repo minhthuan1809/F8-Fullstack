@@ -29,8 +29,14 @@
         font-size: clamp(1rem, 4vw, 2rem);
     }
 
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
     .btn {
-        margin-top: 1.5rem;
         padding-block: 0.5rem;
         padding-inline: 1.5rem;
         font-size: clamp(1rem, 1.6vw, 2rem);
@@ -48,8 +54,7 @@
 
     .mess {
         color: red;
-
-        font-size: 1rem;
+        margin-top: 0.5rem;
     }
 
     .active {
@@ -67,8 +72,11 @@
         transition: all 0.3s linear;
         font-size: 1.3rem;
         border-radius: 1000px;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.8rem;
         display: none;
+        font-size: clamp(1rem, 1.6vw, 2rem);
+        margin-left: 0.5rem;
+
 
     }
 
@@ -84,9 +92,8 @@
         <div class="box">
             <button class="btn">Bấm vào đây để nói</button>
             <button class="cancel">&times;</button>
-
         </div>
-        <div class="mess">Bạn muốn làm gì</div>
+        <div class="mess">Tôi có thể giúp gì cho bạn ? </div>
 
         <script src="./script.js"></script>
     </div>
