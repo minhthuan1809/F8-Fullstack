@@ -5,38 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Zoom on Hover</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <style>
-    h1 {
-        font-size: 3rem;
-        text-align: center;
-        margin-top: 1rem;
-    }
 
-    .img {
-        border: 10px solid red;
-        width: 40%;
-        overflow: hidden;
-        margin-top: 2rem;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 </style>
 
 <body>
-    <div class="image-container">
-        <h1>Zoom ảnh</h1>
-        <div class="img">
-            <img src="https://toquoc.mediacdn.vn/280518851207290880/2024/7/20/photo-1721456557919-17214565608261623672842.jpg"
-                alt="https://tq7.mediacdn.vn/thumb_w/640/134505113543774208/2022/7/10/img1057-1657415862002341424664.jpg">
+    <div class="container">
+
+        <h1>Smatyx Todos App</h1>
+        <div class="box">
+            <div class="search">
+                <input type="text" id="search">
+                <button class="fount"><ion-icon name="search"></ion-icon></button>
+            </div>
+            <button class="add"> Add Todos</button>
+        </div>
+        <div class="list">
+            <div class="item">
+                <div class="text">
+                    <span>MinhThuan</span>
+                </div>
+                <div class="btn">
+                    <button class="btn-item delete"><ion-icon name="trash"></ion-icon></button>
+                    <button class="btn-item edit"><ion-icon name="create"></ion-icon></button>
+                    <button class="btn-item add-conpleted"><ion-icon name="cloud-done"></ion-icon></button>
+                </div>
+            </div>
+        </div>
+        <div class="conpleted ">
+            <button class="btn--conpleted">Completed Todos
+                <span class="number">0</span>
+                <ion-icon class="icon" name="chevron-forward-circle-outline"></ion-icon>
+            </button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
