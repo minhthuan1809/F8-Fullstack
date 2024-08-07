@@ -134,6 +134,7 @@ h1 {
   gap: 0.5rem;
   font-size: 1rem;
   border-radius: 10px;
+  transition: all 0.3s linear;
 }
 .conpleted .active--btn {
   background-color: rgb(10, 103, 38);
@@ -141,6 +142,7 @@ h1 {
 .icon {
   display: flex;
   align-items: center;
+  transition: all 0.3s linear;
 }
 .active--icon {
   transform: rotate(90deg);
