@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom on Hover</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .img {
+        border: 10px solid red;
+        width: 40%;
+        overflow: hidden;
+        margin-top: 2rem;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+    <div class="image-container">
+        <h1>Zoom ảnh</h1>
+        <div class="img">
+            <img src="https://toquoc.mediacdn.vn/280518851207290880/2024/7/20/photo-1721456557919-17214565608261623672842.jpg"
+                alt="https://tq7.mediacdn.vn/thumb_w/640/134505113543774208/2022/7/10/img1057-1657415862002341424664.jpg">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
