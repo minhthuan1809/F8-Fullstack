@@ -39,7 +39,7 @@ function getRender(value) {
             <div class="btn">
               <button class="btn--item__conpleted delete" data-number="${e.id}"><ion-icon name="trash"></ion-icon></button>
               <button class="btn--item__conpleted edit" data-edit="${e.id}"><ion-icon name="create"></ion-icon></button>
-              <button class="btn--item__conpleted remove"><ion-icon name="cloud-done"></ion-icon></button>
+              <button class="btn--item__conpleted remove" data-remove="${e.id}"><ion-icon name="cloud-done"></ion-icon></button>
             </div>
           </div>`;
       document.querySelector(".number").innerText = ++count;
@@ -47,7 +47,7 @@ function getRender(value) {
     }
   });
   getDelete();
-  getEdit();
+  getRemove();
 }
 
 function addData() {
@@ -107,35 +107,45 @@ function getDelete() {
     });
   });
 }
-function getEdit() {
-  const edit = document.querySelectorAll(".edit");
-  edit.forEach((value) => {
-    value.addEventListener("click", (e) => {
-      var dataEdit = e.target.getAttribute("data-edit");
-      console.log(dataEdit);
-      var html = `
-   <span class="overlay" onclick="getCancel()"></span>
-          <div class="form">
-              <input type="text" class="list--add" placeholder="add Todo">
-              <div class="line"></div>
-              <div class="btn--modal">
-                  <button class="btn--modal__add">Add</button>
-                  <button class="btn--modal__Cancel" onclick="getCancel()">Cancel</button>
-              </div>
-          </div>
-  `;
-    });
-  });
-}
+
+//tìm kiếm
 var foundEl = document.querySelector("#search");
 foundEl.addEventListener("input", (e) => {
   if (foundEl.value.trim() === "") {
     getMain();
   } else {
-    getFound();
+    getFound(foundEl.value);
   }
 });
-function getFound() {
-  console.log("đang tìm đợi tí");
+function getFound(keyword) {
+  fetch(`${url}/data`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Lỗi: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((json) => {
+      const filteredData = json.filter((item) =>
+        item.name.toLowerCase().includes(keyword.toLowerCase())
+      );
+      getRender(filteredData);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
+//chuyển chỗ
+function getRemove() {
+  const remove = document.querySelectorAll(".remove");
+  remove.forEach((value) => {
+    console.log(remove);
+
+    value.addEventListener("click", (e) => {
+      var dataRemove = e.target.getAttribute("data-remove");
+      console.log(dataRemove);
+    });
+  });
+}
+// thực thi
 getMain();
