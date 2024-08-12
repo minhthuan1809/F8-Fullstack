@@ -5,7 +5,7 @@ const modal = document.querySelector(".modal");
 let counts = 0;
 let dataDele = 0;
 let cachedData = null;
-const url = "https://yjks7g-8080.csb.app/data";
+const url = "http://localhost:3000/data";
 
 class User {
   constructor(id, supperId, name) {
