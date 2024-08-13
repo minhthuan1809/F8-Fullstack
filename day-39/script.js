@@ -3,7 +3,6 @@ const boxCompleted = document.querySelector(".box--conpleted");
 const modal = document.querySelector(".modal");
 const iconEl = document.querySelector(".icon");
 const addEl = document.querySelector(".add");
-const edit = document.querySelectorAll(".edit");
 
 const numberEl = document.querySelector(".number");
 
@@ -48,6 +47,15 @@ addEl.addEventListener("click", (e) => {
 //     });
 //   });
 // }
+// loadding
+function showLoading() {
+  document.getElementById("loadingModal").style.display = "flex";
+}
+
+function hideLoading() {
+  document.getElementById("loadingModal").style.display = "none";
+}
+
 btnCompleted.addEventListener("click", () => {
   btnCompleted.classList.toggle("active--btn");
   iconEl.classList.toggle("active--icon");

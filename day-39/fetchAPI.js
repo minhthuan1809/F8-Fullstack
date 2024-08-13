@@ -1,6 +1,8 @@
+// var url = "https://yjks7g-8080.csb.app";
 var url = "http://localhost:3000";
 const container = document.querySelector(".container");
 async function getMain() {
+  showLoading();
   const response = await fetch(`${url}/data`);
   try {
     if (!response.ok) {
@@ -10,6 +12,8 @@ async function getMain() {
     getRender(json);
   } catch (err) {
     console.log(err);
+  } finally {
+    hideLoading();
   }
 }
 
@@ -27,7 +31,7 @@ function getRender(value) {
             <div class="btn">
               <button class="btn--item delete" data-number="${e.id}"><ion-icon name="trash"></ion-icon></button>
               <button class="btn--item edit" data-edit="${e.id}"><ion-icon name="create"></ion-icon></button>
-              <button class="btn--item add-completed"><ion-icon name="cloud-done"></ion-icon></button>
+              <button class="btn--item add-completed remove" data-remove="${e.id}"> <ion-icon name="cloud-done"></ion-icon></button>
             </div>
           </div>`;
       document.querySelector(".list").innerHTML += _html;
@@ -142,10 +146,63 @@ function getRemove() {
     console.log(remove);
 
     value.addEventListener("click", (e) => {
+      // showLoading();
       var dataRemove = e.target.getAttribute("data-remove");
-      console.log(dataRemove);
+      handelRemove(dataRemove);
     });
   });
+
+  async function handelRemove(number) {
+    const response = await fetch(`${url}/data/${number}`);
+    try {
+      if (!response.ok) {
+        throw new Error(`Lỗi: ${response.status}`);
+      }
+      const json = await response.json();
+      changer(json);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  function changer(value) {
+    Object.keys(value).forEach((e) => {
+      if (value.supperId == 1) {
+        editSupperId({
+          id: value.id,
+          supperId: 2,
+          name: value.name,
+        });
+      } else if (value.supperId == 2) {
+        editSupperId({
+          id: value.id,
+          supperId: 1,
+          name: value.name,
+        });
+      }
+    });
+  }
+  async function editSupperId(_value) {
+    try {
+      const response = await fetch(`${url}/data/${_value.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(_value),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Lỗi: ${response.status}`);
+      }
+
+      const json = await response.json();
+      // hideLoading();
+      getMain();
+    } catch (err) {
+      console.log("Có lỗi xảy ra:", err);
+    }
+  }
 }
 // thực thi
 getMain();

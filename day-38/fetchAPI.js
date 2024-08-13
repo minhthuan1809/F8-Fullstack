@@ -86,7 +86,7 @@ function render(data) {
           <div class="btn">
             <button class="btn--item__conpleted delete" data-number="${user.getId()}"><ion-icon name="trash"></ion-icon></button>
             <button class="btn--item__conpleted edit"><ion-icon name="create"></ion-icon></button>
-            <button class="btn--item__conpleted remove"><ion-icon name="cloud-done"></ion-icon></button>
+            <button class="btn--item__conpleted remove" ><ion-icon name="cloud-done"></ion-icon></button>
           </div>
         </div>
       `;
