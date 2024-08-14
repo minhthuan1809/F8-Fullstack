@@ -1,13 +1,13 @@
 const view = document.querySelector(".container");
-var url = "https://vqx63q-8080.csb.app";
-// var url = "http://localhost:3000";
+var url = "https://run.mocky.io/v3/2ae1fc77-5ef0-44d5-a84f-b27352367889";
 
 async function connectApi() {
   try {
-    const response = await fetch(`${url}/data`);
+    const response = await fetch(`${url}`);
     if (response.ok) {
-      //   console.log(response.json());
-      render(await response.json());
+      const data = await response.json();
+      console.log(data.data);
+      render(data.data);
     } else {
       console.log(`Lỗi HTTP: ${response.status}`);
       throw new Error("Lỗi kết nối");
@@ -20,7 +20,7 @@ async function connectApi() {
 const render = function (value) {
   let count = 0;
   var html = value.map((e) => {
-    return ` 
+    return `
         <div class="flex justify-center gap-5 items-center mt-10">
           <div class="img w-14 h-14 rounded-full overflow-hidden">
               <img class="w-full h-full object-cover" src="${e.logo}" alt="">
@@ -32,7 +32,7 @@ const render = function (value) {
         </div>
         <div class = "text-center mt-10">${count++}</div>
         <div class="line h-0 w-2/4 border-solid border border-black m-auto "></div>
-  
+
       `;
   });
   view.innerHTML = html.join("");
