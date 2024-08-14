@@ -1,0 +1,274 @@
+{
+  "data": [
+    {
+      "logo": "https://images.unsplash.com/photo-1609042758948-bd9959946837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww",
+      "name": "Nguyễn Minh Thuận",
+      "content": "Đường Mỹ Phước - Tân Vạn dài hơn 60 km, nối quốc lộ 1A đến Khu công nghiệp Bàu Bàng. Một phần của tuyến đường trùng với dự án Vành đai 3 TP HCM, kết nối với các trục giao thông lớn như đường Hồ Chí Minh, quốc 1, 1K... Trên tuyến còn có vòng xoay Mỹ Phước (TP Bến Cát) cũng hay xảy ra tình trạng lật xe, đang được cơ quan chức năng Bình Dương lên phương án xử lý."
+    },
+    {
+      "logo": "https://vcdn1-vnexpress.vnecdn.net/2024/08/12/hun-vang-3-jpg-1723451412-5789-1723451708.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=sOX1FxxBzv9PpQBw_OBeIw",
+      "name": "Trần Văn Hòa",
+      "content": "Trần Văn Hòa là một kỹ sư phần mềm đến từ Hà Nội. Anh đã tham gia phát triển nhiều dự án lớn nhỏ trong lĩnh vực công nghệ thông tin và hiện đang làm việc cho một công ty công nghệ hàng đầu tại Việt Nam."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=500&auto=format&fit=crop&q=60",
+      "name": "Lê Thị Lan",
+      "content": "Lê Thị Lan là một giáo viên dạy tiếng Anh tại trường trung học phổ thông. Cô có hơn 10 năm kinh nghiệm giảng dạy và đam mê giúp đỡ học sinh cải thiện kỹ năng ngôn ngữ của mình."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1444720895098-cbd6b640c909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Nguyễn Thị Mai",
+      "content": "Nguyễn Thị Mai là một đầu bếp nổi tiếng, chuyên về ẩm thực Việt Nam. Cô đã làm việc tại nhiều nhà hàng danh tiếng và hiện đang sở hữu một chuỗi nhà hàng riêng với phong cách ẩm thực truyền thống."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=60",
+      "name": "Phạm Anh Tuấn",
+      "content": "Phạm Anh Tuấn là một nhà thiết kế đồ họa với kinh nghiệm hơn 15 năm. Anh đã từng hợp tác với nhiều thương hiệu quốc tế và hiện đang điều hành một studio thiết kế tại TP. Hồ Chí Minh."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=500&auto=format&fit=crop&q=60",
+      "name": "Đỗ Quang Huy",
+      "content": "Đỗ Quang Huy là một nhiếp ảnh gia chuyên nghiệp, đam mê chụp ảnh thiên nhiên và đời sống thường nhật. Tác phẩm của anh đã được triển lãm tại nhiều nơi trên thế giới."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1609042758948-bd9959946837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww",
+      "name": "Nguyễn Minh Thuận",
+      "content": "Đường Mỹ Phước - Tân Vạn dài hơn 60 km, nối quốc lộ 1A đến Khu công nghiệp Bàu Bàng. Một phần của tuyến đường trùng với dự án Vành đai 3 TP HCM, kết nối với các trục giao thông lớn như đường Hồ Chí Minh, quốc 1, 1K... Trên tuyến còn có vòng xoay Mỹ Phước (TP Bến Cát) cũng hay xảy ra tình trạng lật xe, đang được cơ quan chức năng Bình Dương lên phương án xử lý."
+    },
+    {
+      "logo": "https://vcdn1-vnexpress.vnecdn.net/2024/08/12/hun-vang-3-jpg-1723451412-5789-1723451708.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=sOX1FxxBzv9PpQBw_OBeIw",
+      "name": "Trần Văn Hòa",
+      "content": "Trần Văn Hòa là một kỹ sư phần mềm đến từ Hà Nội. Anh đã tham gia phát triển nhiều dự án lớn nhỏ trong lĩnh vực công nghệ thông tin và hiện đang làm việc cho một công ty công nghệ hàng đầu tại Việt Nam."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=500&auto=format&fit=crop&q=60",
+      "name": "Lê Thị Lan",
+      "content": "Lê Thị Lan là một giáo viên dạy tiếng Anh tại trường trung học phổ thông. Cô có hơn 10 năm kinh nghiệm giảng dạy và đam mê giúp đỡ học sinh cải thiện kỹ năng ngôn ngữ của mình."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1444720895098-cbd6b640c909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Nguyễn Thị Mai",
+      "content": "Nguyễn Thị Mai là một đầu bếp nổi tiếng, chuyên về ẩm thực Việt Nam. Cô đã làm việc tại nhiều nhà hàng danh tiếng và hiện đang sở hữu một chuỗi nhà hàng riêng với phong cách ẩm thực truyền thống."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=60",
+      "name": "Phạm Anh Tuấn",
+      "content": "Phạm Anh Tuấn là một nhà thiết kế đồ họa với kinh nghiệm hơn 15 năm. Anh đã từng hợp tác với nhiều thương hiệu quốc tế và hiện đang điều hành một studio thiết kế tại TP. Hồ Chí Minh."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=500&auto=format&fit=crop&q=60",
+      "name": "Đỗ Quang Huy",
+      "content": "Đỗ Quang Huy là một nhiếp ảnh gia chuyên nghiệp, đam mê chụp ảnh thiên nhiên và đời sống thường nhật. Tác phẩm của anh đã được triển lãm tại nhiều nơi trên thế giới."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1609042758948-bd9959946837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww",
+      "name": "Nguyễn Minh Thuận",
+      "content": "Đường Mỹ Phước - Tân Vạn dài hơn 60 km, nối quốc lộ 1A đến Khu công nghiệp Bàu Bàng. Một phần của tuyến đường trùng với dự án Vành đai 3 TP HCM, kết nối với các trục giao thông lớn như đường Hồ Chí Minh, quốc 1, 1K... Trên tuyến còn có vòng xoay Mỹ Phước (TP Bến Cát) cũng hay xảy ra tình trạng lật xe, đang được cơ quan chức năng Bình Dương lên phương án xử lý."
+    },
+    {
+      "logo": "https://vcdn1-vnexpress.vnecdn.net/2024/08/12/hun-vang-3-jpg-1723451412-5789-1723451708.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=sOX1FxxBzv9PpQBw_OBeIw",
+      "name": "Trần Văn Hòa",
+      "content": "Trần Văn Hòa là một kỹ sư phần mềm đến từ Hà Nội. Anh đã tham gia phát triển nhiều dự án lớn nhỏ trong lĩnh vực công nghệ thông tin và hiện đang làm việc cho một công ty công nghệ hàng đầu tại Việt Nam."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=500&auto=format&fit=crop&q=60",
+      "name": "Lê Thị Lan",
+      "content": "Lê Thị Lan là một giáo viên dạy tiếng Anh tại trường trung học phổ thông. Cô có hơn 10 năm kinh nghiệm giảng dạy và đam mê giúp đỡ học sinh cải thiện kỹ năng ngôn ngữ của mình."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1444720895098-cbd6b640c909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Nguyễn Thị Mai",
+      "content": "Nguyễn Thị Mai là một đầu bếp nổi tiếng, chuyên về ẩm thực Việt Nam. Cô đã làm việc tại nhiều nhà hàng danh tiếng và hiện đang sở hữu một chuỗi nhà hàng riêng với phong cách ẩm thực truyền thống."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=60",
+      "name": "Phạm Anh Tuấn",
+      "content": "Phạm Anh Tuấn là một nhà thiết kế đồ họa với kinh nghiệm hơn 15 năm. Anh đã từng hợp tác với nhiều thương hiệu quốc tế và hiện đang điều hành một studio thiết kế tại TP. Hồ Chí Minh."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=500&auto=format&fit=crop&q=60",
+      "name": "Đỗ Quang Huy",
+      "content": "Đỗ Quang Huy là một nhiếp ảnh gia chuyên nghiệp, đam mê chụp ảnh thiên nhiên và đời sống thường nhật. Tác phẩm của anh đã được triển lãm tại nhiều nơi trên thế giới."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1609042758948-bd9959946837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww",
+      "name": "Nguyễn Minh Thuận",
+      "content": "Đường Mỹ Phước - Tân Vạn dài hơn 60 km, nối quốc lộ 1A đến Khu công nghiệp Bàu Bàng. Một phần của tuyến đường trùng với dự án Vành đai 3 TP HCM, kết nối với các trục giao thông lớn như đường Hồ Chí Minh, quốc 1, 1K... Trên tuyến còn có vòng xoay Mỹ Phước (TP Bến Cát) cũng hay xảy ra tình trạng lật xe, đang được cơ quan chức năng Bình Dương lên phương án xử lý."
+    },
+    {
+      "logo": "https://vcdn1-vnexpress.vnecdn.net/2024/08/12/hun-vang-3-jpg-1723451412-5789-1723451708.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=sOX1FxxBzv9PpQBw_OBeIw",
+      "name": "Trần Văn Hòa",
+      "content": "Trần Văn Hòa là một kỹ sư phần mềm đến từ Hà Nội. Anh đã tham gia phát triển nhiều dự án lớn nhỏ trong lĩnh vực công nghệ thông tin và hiện đang làm việc cho một công ty công nghệ hàng đầu tại Việt Nam."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=500&auto=format&fit=crop&q=60",
+      "name": "Lê Thị Lan",
+      "content": "Lê Thị Lan là một giáo viên dạy tiếng Anh tại trường trung học phổ thông. Cô có hơn 10 năm kinh nghiệm giảng dạy và đam mê giúp đỡ học sinh cải thiện kỹ năng ngôn ngữ của mình."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1444720895098-cbd6b640c909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Nguyễn Thị Mai",
+      "content": "Nguyễn Thị Mai là một đầu bếp nổi tiếng, chuyên về ẩm thực Việt Nam. Cô đã làm việc tại nhiều nhà hàng danh tiếng và hiện đang sở hữu một chuỗi nhà hàng riêng với phong cách ẩm thực truyền thống."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=60",
+      "name": "Phạm Anh Tuấn",
+      "content": "Phạm Anh Tuấn là một nhà thiết kế đồ họa với kinh nghiệm hơn 15 năm. Anh đã từng hợp tác với nhiều thương hiệu quốc tế và hiện đang điều hành một studio thiết kế tại TP. Hồ Chí Minh."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=500&auto=format&fit=crop&q=60",
+      "name": "Đỗ Quang Huy",
+      "content": "Đỗ Quang Huy là một nhiếp ảnh gia chuyên nghiệp, đam mê chụp ảnh thiên nhiên và đời sống thường nhật. Tác phẩm của anh đã được triển lãm tại nhiều nơi trên thế giới."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1609042758948-bd9959946837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww",
+      "name": "Nguyễn Minh Thuận",
+      "content": "Đường Mỹ Phước - Tân Vạn dài hơn 60 km, nối quốc lộ 1A đến Khu công nghiệp Bàu Bàng. Một phần của tuyến đường trùng với dự án Vành đai 3 TP HCM, kết nối với các trục giao thông lớn như đường Hồ Chí Minh, quốc 1, 1K... Trên tuyến còn có vòng xoay Mỹ Phước (TP Bến Cát) cũng hay xảy ra tình trạng lật xe, đang được cơ quan chức năng Bình Dương lên phương án xử lý."
+    },
+    {
+      "logo": "https://vcdn1-vnexpress.vnecdn.net/2024/08/12/hun-vang-3-jpg-1723451412-5789-1723451708.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=sOX1FxxBzv9PpQBw_OBeIw",
+      "name": "Trần Văn Hòa",
+      "content": "Trần Văn Hòa là một kỹ sư phần mềm đến từ Hà Nội. Anh đã tham gia phát triển nhiều dự án lớn nhỏ trong lĩnh vực công nghệ thông tin và hiện đang làm việc cho một công ty công nghệ hàng đầu tại Việt Nam."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=500&auto=format&fit=crop&q=60",
+      "name": "Lê Thị Lan",
+      "content": "Lê Thị Lan là một giáo viên dạy tiếng Anh tại trường trung học phổ thông. Cô có hơn 10 năm kinh nghiệm giảng dạy và đam mê giúp đỡ học sinh cải thiện kỹ năng ngôn ngữ của mình."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1444720895098-cbd6b640c909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Nguyễn Thị Mai",
+      "content": "Nguyễn Thị Mai là một đầu bếp nổi tiếng, chuyên về ẩm thực Việt Nam. Cô đã làm việc tại nhiều nhà hàng danh tiếng và hiện đang sở hữu một chuỗi nhà hàng riêng với phong cách ẩm thực truyền thống."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=60",
+      "name": "Phạm Anh Tuấn",
+      "content": "Phạm Anh Tuấn là một nhà thiết kế đồ họa với kinh nghiệm hơn 15 năm. Anh đã từng hợp tác với nhiều thương hiệu quốc tế và hiện đang điều hành một studio thiết kế tại TP. Hồ Chí Minh."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=500&auto=format&fit=crop&q=60",
+      "name": "Đỗ Quang Huy",
+      "content": "Đỗ Quang Huy là một nhiếp ảnh gia chuyên nghiệp, đam mê chụp ảnh thiên nhiên và đời sống thường nhật. Tác phẩm của anh đã được triển lãm tại nhiều nơi trên thế giới."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1609042758948-bd9959946837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww",
+      "name": "Nguyễn Minh Thuận",
+      "content": "Đường Mỹ Phước - Tân Vạn dài hơn 60 km, nối quốc lộ 1A đến Khu công nghiệp Bàu Bàng. Một phần của tuyến đường trùng với dự án Vành đai 3 TP HCM, kết nối với các trục giao thông lớn như đường Hồ Chí Minh, quốc 1, 1K... Trên tuyến còn có vòng xoay Mỹ Phước (TP Bến Cát) cũng hay xảy ra tình trạng lật xe, đang được cơ quan chức năng Bình Dương lên phương án xử lý."
+    },
+    {
+      "logo": "https://vcdn1-vnexpress.vnecdn.net/2024/08/12/hun-vang-3-jpg-1723451412-5789-1723451708.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=sOX1FxxBzv9PpQBw_OBeIw",
+      "name": "Trần Văn Hòa",
+      "content": "Trần Văn Hòa là một kỹ sư phần mềm đến từ Hà Nội. Anh đã tham gia phát triển nhiều dự án lớn nhỏ trong lĩnh vực công nghệ thông tin và hiện đang làm việc cho một công ty công nghệ hàng đầu tại Việt Nam."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=500&auto=format&fit=crop&q=60",
+      "name": "Lê Thị Lan",
+      "content": "Lê Thị Lan là một giáo viên dạy tiếng Anh tại trường trung học phổ thông. Cô có hơn 10 năm kinh nghiệm giảng dạy và đam mê giúp đỡ học sinh cải thiện kỹ năng ngôn ngữ của mình."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1444720895098-cbd6b640c909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Nguyễn Thị Mai",
+      "content": "Nguyễn Thị Mai là một đầu bếp nổi tiếng, chuyên về ẩm thực Việt Nam. Cô đã làm việc tại nhiều nhà hàng danh tiếng và hiện đang sở hữu một chuỗi nhà hàng riêng với phong cách ẩm thực truyền thống."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=60",
+      "name": "Phạm Anh Tuấn",
+      "content": "Phạm Anh Tuấn là một nhà thiết kế đồ họa với kinh nghiệm hơn 15 năm. Anh đã từng hợp tác với nhiều thương hiệu quốc tế và hiện đang điều hành một studio thiết kế tại TP. Hồ Chí Minh."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=500&auto=format&fit=crop&q=60",
+      "name": "Đỗ Quang Huy",
+      "content": "Đỗ Quang Huy là một nhiếp ảnh gia chuyên nghiệp, đam mê chụp ảnh thiên nhiên và đời sống thường nhật. Tác phẩm của anh đã được triển lãm tại nhiều nơi trên thế giới."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1609042758948-bd9959946837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww",
+      "name": "Nguyễn Minh Thuận",
+      "content": "Đường Mỹ Phước - Tân Vạn dài hơn 60 km, nối quốc lộ 1A đến Khu công nghiệp Bàu Bàng. Một phần của tuyến đường trùng với dự án Vành đai 3 TP HCM, kết nối với các trục giao thông lớn như đường Hồ Chí Minh, quốc 1, 1K... Trên tuyến còn có vòng xoay Mỹ Phước (TP Bến Cát) cũng hay xảy ra tình trạng lật xe, đang được cơ quan chức năng Bình Dương lên phương án xử lý."
+    },
+    {
+      "logo": "https://vcdn1-vnexpress.vnecdn.net/2024/08/12/hun-vang-3-jpg-1723451412-5789-1723451708.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=sOX1FxxBzv9PpQBw_OBeIw",
+      "name": "Trần Văn Hòa",
+      "content": "Trần Văn Hòa là một kỹ sư phần mềm đến từ Hà Nội. Anh đã tham gia phát triển nhiều dự án lớn nhỏ trong lĩnh vực công nghệ thông tin và hiện đang làm việc cho một công ty công nghệ hàng đầu tại Việt Nam."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=500&auto=format&fit=crop&q=60",
+      "name": "Lê Thị Lan",
+      "content": "Lê Thị Lan là một giáo viên dạy tiếng Anh tại trường trung học phổ thông. Cô có hơn 10 năm kinh nghiệm giảng dạy và đam mê giúp đỡ học sinh cải thiện kỹ năng ngôn ngữ của mình."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1444720895098-cbd6b640c909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Nguyễn Thị Mai",
+      "content": "Nguyễn Thị Mai là một đầu bếp nổi tiếng, chuyên về ẩm thực Việt Nam. Cô đã làm việc tại nhiều nhà hàng danh tiếng và hiện đang sở hữu một chuỗi nhà hàng riêng với phong cách ẩm thực truyền thống."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=60",
+      "name": "Phạm Anh Tuấn",
+      "content": "Phạm Anh Tuấn là một nhà thiết kế đồ họa với kinh nghiệm hơn 15 năm. Anh đã từng hợp tác với nhiều thương hiệu quốc tế và hiện đang điều hành một studio thiết kế tại TP. Hồ Chí Minh."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=500&auto=format&fit=crop&q=60",
+      "name": "Đỗ Quang Huy",
+      "content": "Đỗ Quang Huy là một nhiếp ảnh gia chuyên nghiệp, đam mê chụp ảnh thiên nhiên và đời sống thường nhật. Tác phẩm của anh đã được triển lãm tại nhiều nơi trên thế giới."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1609042758948-bd9959946837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww",
+      "name": "Nguyễn Minh Thuận",
+      "content": "Đường Mỹ Phước - Tân Vạn dài hơn 60 km, nối quốc lộ 1A đến Khu công nghiệp Bàu Bàng. Một phần của tuyến đường trùng với dự án Vành đai 3 TP HCM, kết nối với các trục giao thông lớn như đường Hồ Chí Minh, quốc 1, 1K... Trên tuyến còn có vòng xoay Mỹ Phước (TP Bến Cát) cũng hay xảy ra tình trạng lật xe, đang được cơ quan chức năng Bình Dương lên phương án xử lý."
+    },
+    {
+      "logo": "https://vcdn1-vnexpress.vnecdn.net/2024/08/12/hun-vang-3-jpg-1723451412-5789-1723451708.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=sOX1FxxBzv9PpQBw_OBeIw",
+      "name": "Trần Văn Hòa",
+      "content": "Trần Văn Hòa là một kỹ sư phần mềm đến từ Hà Nội. Anh đã tham gia phát triển nhiều dự án lớn nhỏ trong lĩnh vực công nghệ thông tin và hiện đang làm việc cho một công ty công nghệ hàng đầu tại Việt Nam."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=500&auto=format&fit=crop&q=60",
+      "name": "Lê Thị Lan",
+      "content": "Lê Thị Lan là một giáo viên dạy tiếng Anh tại trường trung học phổ thông. Cô có hơn 10 năm kinh nghiệm giảng dạy và đam mê giúp đỡ học sinh cải thiện kỹ năng ngôn ngữ của mình."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1444720895098-cbd6b640c909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Nguyễn Thị Mai",
+      "content": "Nguyễn Thị Mai là một đầu bếp nổi tiếng, chuyên về ẩm thực Việt Nam. Cô đã làm việc tại nhiều nhà hàng danh tiếng và hiện đang sở hữu một chuỗi nhà hàng riêng với phong cách ẩm thực truyền thống."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=60",
+      "name": "Phạm Anh Tuấn",
+      "content": "Phạm Anh Tuấn là một nhà thiết kế đồ họa với kinh nghiệm hơn 15 năm. Anh đã từng hợp tác với nhiều thương hiệu quốc tế và hiện đang điều hành một studio thiết kế tại TP. Hồ Chí Minh."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=500&auto=format&fit=crop&q=60",
+      "name": "Đỗ Quang Huy",
+      "content": "Đỗ Quang Huy là một nhiếp ảnh gia chuyên nghiệp, đam mê chụp ảnh thiên nhiên và đời sống thường nhật. Tác phẩm của anh đã được triển lãm tại nhiều nơi trên thế giới."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1609042758948-bd9959946837?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww",
+      "name": "Nguyễn Minh Thuận",
+      "content": "Đường Mỹ Phước - Tân Vạn dài hơn 60 km, nối quốc lộ 1A đến Khu công nghiệp Bàu Bàng. Một phần của tuyến đường trùng với dự án Vành đai 3 TP HCM, kết nối với các trục giao thông lớn như đường Hồ Chí Minh, quốc 1, 1K... Trên tuyến còn có vòng xoay Mỹ Phước (TP Bến Cát) cũng hay xảy ra tình trạng lật xe, đang được cơ quan chức năng Bình Dương lên phương án xử lý."
+    },
+    {
+      "logo": "https://vcdn1-vnexpress.vnecdn.net/2024/08/12/hun-vang-3-jpg-1723451412-5789-1723451708.jpg?w=300&h=180&q=100&dpr=1&fit=crop&s=sOX1FxxBzv9PpQBw_OBeIw",
+      "name": "Trần Văn Hòa",
+      "content": "Trần Văn Hòa là một kỹ sư phần mềm đến từ Hà Nội. Anh đã tham gia phát triển nhiều dự án lớn nhỏ trong lĩnh vực công nghệ thông tin và hiện đang làm việc cho một công ty công nghệ hàng đầu tại Việt Nam."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=500&auto=format&fit=crop&q=60",
+      "name": "Lê Thị Lan",
+      "content": "Lê Thị Lan là một giáo viên dạy tiếng Anh tại trường trung học phổ thông. Cô có hơn 10 năm kinh nghiệm giảng dạy và đam mê giúp đỡ học sinh cải thiện kỹ năng ngôn ngữ của mình."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1444720895098-cbd6b640c909?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Nguyễn Thị Mai",
+      "content": "Nguyễn Thị Mai là một đầu bếp nổi tiếng, chuyên về ẩm thực Việt Nam. Cô đã làm việc tại nhiều nhà hàng danh tiếng và hiện đang sở hữu một chuỗi nhà hàng riêng với phong cách ẩm thực truyền thống."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&auto=format&fit=crop&q=60",
+      "name": "Phạm Anh Tuấn",
+      "content": "Phạm Anh Tuấn là một nhà thiết kế đồ họa với kinh nghiệm hơn 15 năm. Anh đã từng hợp tác với nhiều thương hiệu quốc tế và hiện đang điều hành một studio thiết kế tại TP. Hồ Chí Minh."
+    },
+    {
+      "logo": "https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?w=500&auto=format&fit=crop&q=60",
+      "name": "Đỗ Quang Huy",
+      "content": "Đỗ Quang Huy là một nhiếp ảnh gia chuyên nghiệp, đam mê chụp ảnh thiên nhiên và đời sống thường nhật. Tác phẩm của anh đã được triển lãm tại nhiều nơi trên thế giới."
+    }
+  ]
+}
