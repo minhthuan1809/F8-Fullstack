@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "question": "Con vật nào dưới đây không thể bơi?",
+      "a": "A: Con cua",
+      "b": "B: Con chó",
+      "c": "C: Con cá",
+      "d": "D: Voi",
+      "correct": "d"
+    },
+    {
+      "id": 2,
+      "question": "Loài hoa nào được xem là biểu tượng của tình yêu?",
+      "a": "A: Hoa sen",
+      "b": "B: Hoa cúc",
+      "c": "C: Hoa hồng",
+      "d": "D: Hoa mai",
+      "correct": "c"
+    },
+    {
+      "id": 3,
+      "question": "Thủ đô của Việt Nam là gì?",
+      "a": "A: Hồ Chí Minh",
+      "b": "B: Đà Nẵng",
+      "c": "C: Hà Nội",
+      "d": "D: Hải Phòng",
+      "correct": "c"
+    },
+    {
+      "id": 4,
+      "question": "Động vật nào có thể bay?",
+      "a": "A: Con voi",
+      "b": "B: Con cá mập",
+      "c": "C: Con chim",
+      "d": "D: Con rắn",
+      "correct": "c"
+    },
+    {
+      "id": 5,
+      "question": "Loài cây nào dưới đây là cây lương thực chính ở Việt Nam?",
+      "a": "A: Cây xoài",
+      "b": "B: Cây lúa",
+      "c": "C: Cây bưởi",
+      "d": "D: Cây nhãn",
+      "correct": "b"
+    },
+    {
+      "id": 6,
+      "question": "Thành phố nào là trung tâm kinh tế lớn nhất của Việt Nam?",
+      "a": "A: Hà Nội",
+      "b": "B: Hồ Chí Minh",
+      "c": "C: Đà Nẵng",
+      "d": "D: Cần Thơ",
+      "correct": "b"
+    },
+    {
+      "id": 7,
+      "question": "Ai là người đã phát minh ra bóng đèn điện?",
+      "a": "A: Albert Einstein",
+      "b": "B: Nikola Tesla",
+      "c": "C: Thomas Edison",
+      "d": "D: Isaac Newton",
+      "correct": "c"
+    },
+    {
+      "id": 8,
+      "question": "Nước nào có diện tích lớn nhất thế giới?",
+      "a": "A: Hoa Kỳ",
+      "b": "B: Canada",
+      "c": "C: Trung Quốc",
+      "d": "D: Nga",
+      "correct": "d"
+    },
+    {
+      "id": 9,
+      "question": "Nhạc sĩ nào đã sáng tác bài hát 'Tiến quân ca' - quốc ca của Việt Nam?",
+      "a": "A: Phạm Tuyên",
+      "b": "B: Văn Cao",
+      "c": "C: Trịnh Công Sơn",
+      "d": "D: Nguyễn Văn Tý",
+      "correct": "b"
+    },
+    {
+      "id": 10,
+      "question": "Chất nào sau đây là nguồn năng lượng chính cho cơ thể?",
+      "a": "A: Vitamin",
+      "b": "B: Chất béo",
+      "c": "C: Carbohydrate",
+      "d": "D: Chất đạm",
+      "correct": "c"
+    }
+  ]
+}

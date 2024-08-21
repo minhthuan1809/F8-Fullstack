@@ -7,7 +7,15 @@ const loading = document.querySelector(".loadingModal");
 let currentPage = 0;
 const itemsPerPage = 3;
 let data = [];
-console.log(modal);
+
+submitForm.addEventListener("click", () => {
+  var data = {
+    logo: img.value.trim(),
+    name: nameEL.value.trim(),
+    content: title.value.trim(),
+  };
+  getCreate(data);
+});
 
 modal.addEventListener("click", () => {
   document.querySelector("#modal").classList.remove("hidden");
@@ -72,5 +80,4 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Kết nối đến API khi tải trang
 connectApi();

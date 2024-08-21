@@ -32,11 +32,13 @@ POST, PUT, PATCH
 */
 
 const serverApi = `http://localhost:3000`;
-
+const cancelBtn = document.createElement("button");
+cancelBtn.className = `btn btn-danger`;
+cancelBtn.innerText = `Hủy`;
+cancelBtn.type = "button";
 const getUsers = async (query = {}) => {
   try {
     let queryString = new URLSearchParams(query).toString();
-    console.log(queryString);
     if (queryString) {
       queryString = "?" + queryString;
     }
@@ -46,14 +48,11 @@ const getUsers = async (query = {}) => {
     }
     const users = await response.json();
     render(users);
-
-    /// tính số trang = tổng bản ghi / số bản ghi  của 1 trang
-    const totalPage = Math.ceil(
+    //Tính số trang = Math.ceil(Tổng số bản ghi / Số bản ghi của 1 trang)
+    const totalPages = Math.ceil(
       response.headers.get("x-total-count") / query._limit
     );
-    console.log(totalPage);
-
-    renderPagination(totalPage);
+    renderPagination(totalPages);
   } catch (e) {
     console.log(e);
   }
@@ -125,27 +124,43 @@ const render = (users) => {
               <button class="btn btn-warning btn-sm" data-id="${id}" data-action="update">Sửa</button>
             </td>
             <td>
-              <button class=" btn btn-danger btn-sm " data-action="delete">Xóa</button>
+              <button class="btn btn-danger btn-sm" data-id="${id}" data-action="delete">Xóa</button>
             </td>
           </tr>`;
     })
     .join("")}`;
 };
-function renderPagination(totalPage) {
-  const paginationView = document.querySelector(".paginnation-view");
-  paginationView.innerHTML = `  <ul class="pagination d-flex justify-content-end">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              ${Array.from(Array(totalPage).keys())
-                .map(
-                  (_, index) =>
-                    `  <li class="page-item"><a class="page-link" href="#">${
-                      index + 1
-                    }</a></li>`
-                )
-                .join("")}
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>`;
-}
+const renderPagination = (totalPages) => {
+  const paginationViewEl = document.querySelector(".pagination-view");
+  paginationViewEl.innerHTML = `<ul class="pagination d-flex justify-content-end">
+          ${
+            query._page > 1
+              ? `<li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous" data-type="prev">
+              &laquo;
+            </a>
+          </li>`
+              : ""
+          }
+          ${Array.from(Array(totalPages).keys())
+            .map((_, index) => {
+              const page = index + 1;
+              return `<li class="page-item ${
+                page === query._page ? "active" : ""
+              }"><a class="page-link" href="#" data-page="${page}">${page}</a></li>`;
+            })
+            .join("")}
+          ${
+            query._page < totalPages
+              ? `<li class="page-item">
+            <a class="page-link" href="#" aria-label="Next" data-type="next">
+              &raquo;
+            </a>
+          </li>`
+              : ""
+          }
+        </ul>`;
+};
 const handleAddUser = () => {
   const form = document.querySelector(".update-form");
   form.addEventListener("submit", async (e) => {
@@ -156,13 +171,16 @@ const handleAddUser = () => {
       const status = await addUser(formData);
       if (status) {
         //Thêm thành công
-        getUsers();
+        status._page = 1; // CHUYỂN VỀ TRANG 1
+        status._order = "desc"; // chuyển thành sắp xếp mới nhất
+        getUsers(query);
+        renderSort();
         form.reset();
       }
     } else {
       const status = await updateUser(id, formData);
       if (status) {
-        getUsers();
+        getUsers(query);
         switchFormAdd();
       }
     }
@@ -174,6 +192,7 @@ const switchFormAdd = () => {
   const h3 = form.querySelector("h3");
   h3.innerText = `Thêm người dùng`;
   delete form.dataset.id;
+  cancelBtn.remove();
 };
 const handleUpdateUser = () => {
   const tbody = document.querySelector("table tbody");
@@ -197,63 +216,126 @@ const changeFormUpdate = (user) => {
   form.elements.name.value = user.name;
   form.elements.email.value = user.email;
   form.elements.status.value = user.status;
+  form.append(cancelBtn);
 };
-
-const handleDeleteUser = (id) => {
+const cancelUpdateForm = () => {
+  cancelBtn.addEventListener("click", () => {
+    switchFormAdd();
+  });
+};
+const handleDeleteUser = () => {
   const tbody = document.querySelector("tbody");
   tbody.addEventListener("click", async ({ target }) => {
     const { action, id } = target.dataset;
-    console.log(target);
-
-    if (action === "delete" && confirm("chắc chưa ?")) {
-      console.log(id);
-
+    if (action === "delete" && confirm("Chắc chưa?")) {
+      //Call API
       const status = await deleteUser(id);
       if (!status) {
-        alert("đã có lỗi");
+        alert("Đã có lỗi xảy ra");
         return;
       }
-      getUsers();
+      const remainUser = document.querySelectorAll("tbody tr").length - 1;
+      if (remainUser === 0 && query._page > 1) {
+        query._page--;
+        getUsers(query);
+      }
     }
   });
+};
+const debounce = (callback, timeout = 500) => {
+  let timeoutId = null;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      callback(...args);
+    }, timeout);
+  };
 };
 const handleSearch = () => {
   const keywordEl = document.querySelector(".keyword");
-  keywordEl.addEventListener("input", (e) => {
-    const keyword = e.target.value;
-    getUsers({ q: keyword });
-  });
+  keywordEl.addEventListener(
+    "input",
+    debounce((e) => {
+      const keyword = e.target.value;
+      query.q = keyword;
+      getUsers(query);
+    })
+  );
+};
+
+const renderSort = () => {
+  document.querySelector(
+    ".btn-sort"
+  ).innerHTML = ` <div class="btn-group btn-sort">
+                    <button class="btn btn-primary btn-sm active" data-sort="latest">
+                        Mới nhất
+                    </button>
+                    <button class="btn btn-primary btn-sm" data-sort="oldest">
+                        Cũ nhất
+                    </button>
+                </div>`;
 };
 const handleSort = () => {
-  var btnSortEl = document.querySelector(".btn-sort");
-
+  const btnSortEl = document.querySelector(".btn-sort");
   const allowed = ["latest", "oldest"];
   btnSortEl.addEventListener("click", (e) => {
     const sortValue = e.target.dataset.sort;
-    console.log(e.target.dataset);
-
     if (allowed.includes(sortValue)) {
-      getUsers({
-        _sort: "id",
-        _order: sortValue === "latest" ? "desc" : "asc",
-      });
+      //Xử lý gọi API
+      query._order = sortValue === "latest" ? "desc" : "asc";
+      getUsers(query);
+      //Xử lý giao diện
+      const btnActive = btnSortEl.querySelector(".active");
+      if (btnActive) {
+        btnActive.classList.remove("active");
+      }
+      e.target.classList.add("active");
     }
-    const btnActive = document.querySelector(".active");
-    if (btnActive) {
-      btnActive.classList.remove("active");
+  });
+  renderSort();
+};
+const handleNavigatePagination = () => {
+  const paginationViewEl = document.querySelector(".pagination-view");
+  paginationViewEl.addEventListener("click", (e) => {
+    e.preventDefault();
+    const page = e.target.dataset.page;
+    const type = e.target.dataset.type;
+    if (page) {
+      query._page = +page;
+      getUsers(query);
     }
-    e.target.classList.add("active");
+
+    if (type === "prev") {
+      query._page--;
+      getUsers(query);
+    }
+
+    if (type === "next") {
+      query._page++;
+      getUsers(query);
+    }
   });
 };
-
 const query = {
   _sort: "id",
+  _order: "desc",
   _limit: 3,
   _page: 1,
 };
 getUsers(query);
-handleSort();
-handleSearch();
 handleAddUser();
 handleUpdateUser();
+cancelUpdateForm();
 handleDeleteUser();
+handleSearch();
+handleSort();
+handleNavigatePagination();
+renderSort();
+
+// bình thường các api sẽ ở trạng thái public muốn bảo vệ api === > cần phải thống qua các hình thức xác thực
+/*
+- API key
+-Basic Auth
+- Bearer
+- OAuth 2.0
+*/

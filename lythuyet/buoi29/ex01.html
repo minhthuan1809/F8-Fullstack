@@ -11,21 +11,21 @@
 <body>
     <div class="container py-3">
         <div class="row">
-            <div class="col-3">
+            <div class="col-4">
                 <div class="btn-group btn-sort">
-                    <button class="btn btn-primary btn-sms active btn-new" data-sort="latest">
+                    <button class="btn btn-primary btn-sm active" data-sort="latest">
                         Mới nhất
                     </button>
-                    <button class="btn btn-primary btn-sm btn-old" data-sort="oldest">
-                        cũ nhất
+                    <button class="btn btn-primary btn-sm" data-sort="oldest">
+                        Cũ nhất
                     </button>
                 </div>
             </div>
             <div class="col-8">
-                <input type="text" placeholder="nhập từ khóa tìm kiếm ...." class="keyword">
+                <input type="search" class="form-control mb-3 keyword" placeholder="Nhập từ khóa tìm kiếm..." />
             </div>
         </div>
-        <table class="table table-bordered ">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th width="5%">STT</th>
@@ -37,12 +37,8 @@
                 </tr>
             </thead>
             <tbody></tbody>
-
         </table>
-
-        <div class="paginnation-view">
-
-        </div>
+        <div class="pagination-view"></div>
         <form class="update-form" action="">
             <h3>Thêm người dùng</h3>
             <div class="mb-3">

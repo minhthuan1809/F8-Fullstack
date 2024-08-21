@@ -11,11 +11,12 @@
 </head>
 
 <body>
-
+    <!-- // loading  -->
     <div id="loadingModal "
         class="loadingModal fixed z-50 left-0 top-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 hidden  ">
         <div class="spinner border-t-4 border-b-4 border-gray-200 rounded-full w-12 h-12 animate-spin"></div>
     </div>
+    <!-- /// main  -->
     <div class="container"></div>
     <ion-icon
         class=" add fixed text-white bottom-3.5 left-2 rounded-full w-12 h-12 bg-cyan-600 border-cyan-600 border-solid  border hover:bg-white hover:text-cyan-600 "
@@ -28,17 +29,17 @@
             </div>
             <div>
                 <label class="block text-sm font-medium text-gray-700">Name</label>
-                <input type="text" name="name"
+                <input type="text" name="name" id="name"
                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 sm:text-sm">
             </div>
             <div class="mt-4">
                 <label class="block text-sm font-medium text-gray-700">Image URL</label>
-                <input type="text" name="img"
+                <input type="text" name="img" id="img"
                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 sm:text-sm">
             </div>
             <div class="mt-4">
                 <label class="block text-sm font-medium text-gray-700">Tittle</label>
-                <textarea
+                <textarea id="title"
                     class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-cyan-500 focus:border-cyan-500 sm:text-sm">
                     </textarea>
             </div>
@@ -50,7 +51,7 @@
         </div>
     </div>
     </div>
-
+    <!-- /// thư viện  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
