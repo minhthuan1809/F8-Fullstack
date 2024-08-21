@@ -4,14 +4,13 @@ var coverCountdown = document.querySelector(".cover-countdown");
 var containerQuiz = document.querySelector(".container-quiz");
 var countdownElement = document.querySelector("#countdown");
 var questionTimerElement = document.querySelector("#question-timer");
-var resultContainer = document.querySelector(".result-container"); // Thêm phần tử hiển thị kết quả
+var resultContainer = document.querySelector(".result-container");
 var url = "https://c7vf9z-8080.csb.app";
-// var url = "http://localhost:3000";
 var questionIndex = 0;
 var questions = [];
-var score = 0; // Điểm khởi đầu
-var correctStreak = 0; // Đếm số câu trả lời đúng liên tiếp
-var incorrectStreak = 0; // Đếm số câu trả lời sai liên tiếp
+var score = 0;
+var correctStreak = 0;
+var incorrectStreak = 0;
 var timerIntervalId;
 var questionTimeoutId;
 
@@ -21,7 +20,11 @@ async function connectApi() {
 
     if (response.ok) {
       questions = await response.json();
-      console.log(questions);
+
+      // Chỉ lấy 10 câu hỏi đầu tiên
+      if (questions.length > 10) {
+        questions = questions.slice(0, 10);
+      }
 
       render(questions[questionIndex], questionIndex + 1, questions.length);
       startTimer();
@@ -42,7 +45,7 @@ function shuffleArray(array) {
 }
 
 function render(question, num, totalQuestions) {
-  let answered = false; // Biến kiểm tra xem câu hỏi đã được trả lời chưa
+  let answered = false;
   const answers = [
     { key: "a", text: question.a, isCorrect: question.correct === "a" },
     { key: "b", text: question.b, isCorrect: question.correct === "b" },
@@ -77,62 +80,55 @@ function render(question, num, totalQuestions) {
 
   containerQuiz.innerHTML = html;
 
-  // Thêm sự kiện click cho các nút câu trả lời
   document.querySelectorAll(".answer-btn").forEach((button) => {
     button.addEventListener("click", (e) => {
       if (!answered) {
-        answered = true; // Đánh dấu là đã trả lời
+        answered = true;
         const isCorrect = e.target.getAttribute("data-correct") === "true";
         if (isCorrect) {
           e.target.classList.add("bg-green-500");
           correctStreak++;
 
-          // Điều chỉnh điểm khi trả lời đúng
           if (incorrectStreak >= 3) {
-            score += 50; // Cộng 50 điểm nếu đã sai 3 câu trước đó
+            score += 50;
           } else if (correctStreak > 3) {
             score += 150;
           } else {
             score += 100;
           }
-          incorrectStreak = 0; // Reset chuỗi câu sai liên tiếp
+          incorrectStreak = 0;
         } else {
           e.target.classList.add("bg-red-500");
-          correctStreak = 0; // Reset chuỗi câu đúng liên tiếp
+          correctStreak = 0;
           incorrectStreak++;
 
-          // Tìm và hiển thị câu trả lời đúng
           document
             .querySelector('[data-correct="true"]')
             .classList.add("bg-green-500");
         }
-        // Cập nhật điểm trên giao diện
+
         document.querySelector(
           ".absolute .text-xl:nth-child(3)"
         ).textContent = `Điểm: ${score}`;
 
-        // Vô hiệu hóa các nút sau khi chọn
         document.querySelectorAll(".answer-btn").forEach((btn) => {
           btn.disabled = true;
         });
 
-        // Dừng đếm thời gian nếu đã trả lời
         clearInterval(timerIntervalId);
         clearTimeout(questionTimeoutId);
 
-        // Dừng lại 1 giây trước khi chuyển câu hỏi mới hoặc kết thúc
         setTimeout(() => {
-          if (questionIndex + 1 >= 10) {
-            showResult(); // Hiển thị kết quả tổng điểm sau 10 câu
+          if (questionIndex + 1 >= questions.length) {
+            showResult();
           } else {
             nextQuestion();
           }
-        }, 1000); // Dừng 1 giây trước khi chuyển câu hỏi mới
+        }, 1000);
       }
     });
   });
 
-  // Đặt timeout để kiểm tra nếu hết thời gian mà chưa trả lời
   questionTimeoutId = setTimeout(() => {
     if (!answered) {
       answered = true;
@@ -144,18 +140,17 @@ function render(question, num, totalQuestions) {
       });
 
       incorrectStreak++;
-      correctStreak = 0; // Reset chuỗi câu đúng liên tiếp
+      correctStreak = 0;
 
-      // Dừng đếm thời gian
       clearInterval(timerIntervalId);
 
       setTimeout(() => {
-        if (questionIndex + 1 >= 10) {
-          showResult(); // Hiển thị kết quả tổng điểm sau 10 câu
+        if (questionIndex + 1 >= questions.length) {
+          showResult();
         } else {
           nextQuestion();
         }
-      }, 1000); // Dừng 1 giây trước khi chuyển câu hỏi mới
+      }, 1000);
     }
   }, 10000);
 }
@@ -197,7 +192,7 @@ function showResult() {
   });
 
   document.querySelector(".btn--exit").addEventListener("click", () => {
-    location.reload(); // Tải lại trang hoặc chuyển hướng theo nhu cầu của bạn
+    location.reload();
   });
 }
 
