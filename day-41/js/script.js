@@ -21,7 +21,6 @@ async function connectApi() {
     if (response.ok) {
       questions = await response.json();
 
-      // Chỉ lấy 10 câu hỏi đầu tiên
       if (questions.length > 10) {
         questions = questions.slice(0, 10);
       }
