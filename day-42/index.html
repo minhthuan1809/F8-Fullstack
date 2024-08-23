@@ -4,20 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login & Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <div class="logo">
-            <div class="img h-full w-aotu object-cover "><img
-                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIALcAwgMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAAAQIFAwQGBwj/xAA/EAABAwIDBAcECAUEAwAAAAABAAIDBBEFEiETIjFBBjJRYXGBkRQjobEHFTNCUsHR8CRicuHxQ1NjojSCkv/EABkBAQADAQEAAAAAAAAAAAAAAAABAwQCBf/EACMRAQACAgIBBAMBAAAAAAAAAAABAgMRITESBDJBURMUIlL/2gAMAwEAAhEDEQA/APUk0k0DCYSCaJCkopoGmkmgE0IRBoQhA0IQpAhCEAhJCAQhCgCSEIBJCEDQooUjEmkmFAYTSCakCaSaBppJqA0BCpulPSWh6MUHtFa7NI4HY0460pHIdg1FzyuolMLSqqoKKB01XMyGNvWdI4AfFcxN9IOERztZHDWTRk2dNHG3KPIkEjwHNeSYxjWK9J6xr6t0kxuXRU7b5YwbaADhwGp42Ws/D8Sa1zm0kkdiBmF7X8FxN3cUfQmH4xh+Itb7JVxyEi+XNZ3mDqt5fOEAxGGXNC19wTm3bi2vLny9F1GAdP8AE8KqoqWtjMkJuXNkzXHgdSBoNNRqkXJo9nQsNJUxVcDKimkEkMrQ5rhzCzK1WSEIUAQhJAIQkgEk0kAhNCkYE0gmoDTSTCBhMJBMKQwmkE1Aa8f6eU0/ST6QfqtrtmymYxjb9hAcXD1+A7V7AuDxekZH9JcU0bcpmw8Pc78RDi31tl9Fxfp3T3LHAOj9HhUWygjH8zjxce8q3lponMc2RrXBa8mJUNE1vtdXDDpffcBos8FXSVcW1pKiKZh+9G4EeoWeGqWpPTxNZuxsb4NC5LpLhsVTSvc1rWzNBcxw437PA8F0eMY1h2HbtXWwxvPVaXb3oqCurqSvblpKhjswI04jvsodfDa+h+vnqcOr6Sa7mU8jHMvyDgbgenxXoK85+huJ0cGOZuIqmReYaSR8b+a9GWuvTFb3EhCFLkJIQgEkIQBSQhSEhCEGIJhIJqA0wkmEDTSQpEgmoqQUBrm8fotpjdFX5heBro/Frgbg9tiAfMrpFV49FmgZN/tOBd/9D8rri/tWY/c5SpwWdud0DaVzz1pKmMyOcfyWx0dw6popXOn2fvARljjDbntsFcVNfTUlG+ad2jRf+y0IOkGHxys9rqII3vaS1okaQ3uJvx+Cy6bImYc/BQVM1ZWSxyZZg4tY7ZNcQL6cdTosMuE1UNQ2qq8kjx1ZBGGOt2EA6qTel2GR43K2mmZs7kPc6wa7w77q3xbEIpqeKWPeY7Vvgo1pPE8ofR1JJHiNZTxOHs0rpZntDR9pmYLk8b2017F364j6NMOfHFWYhJfJO4tZfnZxuR3aDXx7F261Y9+PLHl15cBJCFYqCSEIBJCFIEkIQCEkIMaaSagNNJNAJpJqQ00gmgkFr4jA6rw6qp29eWJ7G9xLSB8VsJhRKYeB4p0nkxPBvYq2EtqWuaHODrG44gjt4rpKLoVg8e1ixLPNcEskicGnKRpcE8b8wud+k3CW4P0tnqKb7CrtNpwZIb5m+ov5rVxHHvrXAaeGpj/jaZ25Nzc0/dPhp6Ki1J+F9MkT2ucV6MYR7ZFT0DXxx3Od0kjXOcO4DQeOvBc/Jj76TC6egg4RZ80h1vdxIt4XWGkxV1BQTtjaHTzNy7Qu1ANxbxtfVV2HQbSo9qqYTJRU7hJM0uyh4uN29ja/hwSKfabX/wAvojoVC6m6JYRFI1zSKRhc12hBIv8AmrpVHRrpBR9IKD2ii3S2wfCbXYfLiO9W6vZt7JCEkAkhCkCSEIBJCEAhJCCCaQTUBoQgIGmkEwpDCkFAua3rLWmqHb2zUxEy5taIZqqpZTROfJyBOUcbAXKxMq3SM3W5eH3rlVs8m0r4ouWzcXedh+qnQSNbTudI4NEYIc46AWJBJKtikM85ZmdKvFsOo8TlrKLEoxJDPZzL6EECxsRwIuD5lcFi/wBHcsMrvqyrGx1OWW+Ydmo4+i6ir6Q+3426kjw6okw/ZNmhrIrB73XIzNB0LSAQNbm3MFWVPUvq4PcxyutfK5zQ29uXE6rPkxX90NWHNjmvjZ5gOhk8bm+21DXfyxtOvmVY1FFFSUDqeGNrQbDL2+K7NlJ7W10viq6HB5atzs3AOP7Czf1adNe60jbF0DoH4LSvqIXFu1Jc1ubQDgB5rvqXGmyZmzR5SLdV1wQedvG/oqh1OykoGsbu2aGMv28h46LLBF71rnfeYB6H+69GKR4xEvInLPlMx06SOWOTejc1ykqFxdHTyu5tBHmtumrXNldFJvMFh3jRcTTS6uWJ7WSSAWu3m8ElwuNJCSBpISQNCSEEAmEgmFAaYSTQMJhJBO6pJ4hhkOZy1Z93fbwWw5YJDl8O5XxDJaWhGzLVS1Tu1rW9zRb8ym6liqWzxTxskYJC7K5oIvx4FRqDlZk7WlrfIg/ILbH2r+8g/AfoulXbVqoGZqeVrd2xidbkOI+I+KlG3Zudl4nrt5E8nD81llb7h7fwkOb5IcNzPzHyTZpUV8bMOqvbZZtnRFhdM48A8EAEDiS69gBzB7VhpqvF8RyupKePDqPi3bNzSvHIkAgN8NSrGspm1dZT7RuaOG8uvDOQQD5DN6rYiGaBjvxgfFRGOscu7Zb2iKqiXB58RfE/Ea+Z0cT9pFHFZgB5Ekam1+3mrfZ5WOdmLsrDlvbu/RZQFGY+6e7uKnbjWmCul9w5sfXkcxvqRc+QufJSfn6kP2kl3Od+EfqVrWzV/vLWbY68AA0En/sR4FZtptt2FuYyG7nHTTkT2DsHmp0hZ4W5rW7Frs1hfx7fyW8qOGfZ1rHt6gszN29vl+ivFnvHLZitupIQkuVoQkhQBCEIIhMKIUggYTSTQNRl6qahOd3zXVe3Numu8uy7vx1C13uc3rN/9m6/BbDg5Y3q+GSVbJvSta23WB07OB+YVgTveLQqytc2GqglduhzgxzuRvw+ICsr7zfBdS4gx13N/E0hYoTutzcxZyyF281YG9Z7f5rt89UJKjdmb3glvoSEqHeo4G9jcrvEafklQudtahjuDZCW+B1+ZKlhoy0sTndhPxJRDL953Zeywzn3Tm9rgPilTyZqdj/xDN66qMzt1v8AUhPTWc1tTiM7ZPs4gMzfxXtunuJDb9trLfLd3I293G73c7dniq7AHtmlqqhzTnMttewAAfMq3DWt+bvFCvTTrBlaxrfBXdO90kDHu4kDN481UTdba8xcMb2d628HkzUrmOdmMbj8dfndVZI4aMM86b6SElTtpg0kXSQNCSFIQTCiFIIJISCaBhYal7WtzOcGsF8zjoAPFZlSY6M1fR7TO5jA9+UcL6AE94F7eKibeMbPHy4bHtkTvs2ySDho2w+JCTnf8Y17ePyUadjXbzWyO4HRwFufM3Wd8cbsr3OnjfY94+RCq/PaeVkelpHEub6SybOgle5paWDaNc3tGuvDTRXENQ2RrXtdx1atXEmbaJzKtomjcC3d0IHeOfkqiONnR2JrppHupbgNkOrmA6C/d3+quxZ/KdWZ8/pvHmjoy9Y3n37Xdot6LGyWORrXxuzMIu1w1BCcp3e8arWxJRnLiLv+RgPp+wozS+zYNUSt/wBON59LpSPyz0svaSz1/wALVx2VsfR/Eszsu48N8SolERM9NqmOWjg/oA+Cw1b9nE58jmtYAS5x0AC1WYtTbKJsDZJjlAbljNr+J09FzvSV+J4jPspKR7aOOxbG2UNzntcbE+QH9uPy0ieZW/gyTHTouildFVy1jIXaB4dm7btA/ILoSuH6LVMGGTtZs8oqXiPMHXDDoBcmxOunDmF3Tmt+87iPj5Li+ekdLcfprzHPDXkG6jC35ap7PxN+I/ZWhiBb91xba/BxBuudpMVxKnxuiZTZ6iOSoZG+N2rgCQC4HjoCSb30B4cVT+xW3C79W1f6eipJlRK6dC6LpJIHdCSEDCYUQpBBJMKKYQSVH0l937PUcg7I7uvw+ICvFo41Suq8Lnib18uZn9Q1HxC5vG6y6pP9QqGb2V+0lzgXa2ORzbnsJHgs9XjEFMzNJJJT7v8AqtJGvAX4fFVuE1O2izc9D49qtDUQObmk/wAn9bLHvXDYopcTqZJ81NRSSMGrpB1XDuvxWlif1jXucyOkZGwjLrIOPlzXTz1PXy9TQZeHZcg+HyWhBlqM7dWnXd7x/lRzE7T3Gpc/g7cYw6J0MjY3Rl277y1j4W0/farJ1RibsjMsbXu8TcdoW/I5jt3kSB52H+FrOnbH9o7c3vS9x5K6PUZNa2zfq4t70xGCumi/iat7Y2uv7loHhrxCXsEDcrnN2zzve9cSSPE6qvmxprczHdQEeJ46FaseObPO+RpczVrXcgP38lxbJe3a2uKleodTHHFDFl0bm1bewsVWytjqc+aYOsd12lu/wC5jEcfnxF7aXB6R0kw0c46tjHeeXgr/AAnAI6aBsuLSGtmtmynSMGx0AHHhzuuJ4WcKzEKqXK5lFCZngdWKzrEG4OnNdpFO+vyPjcY42jqlu84+PILSklpoWOZDkaHMvutsACDwt4XWrFicbaeLtvky9/7BUbTpvYnUNa3K1vAXb/dUmCTZuktHlv8AaEf9TdTxHEGyMc1ts+qw9EoHO6QU7ncRmf4DKf1C6p7oReP5eklIoKiStzAaV0iUkDQkhBMJhRCkFIkEwohMJIkE0k1A46tpvq7Fnsb9nNvs7ACbket/IhbLoWyRPa12UXBzd9zy7lYdJMNfiMETqbLt4X5mX5g6EfvsC53Ea91NSudo3KbPu61jwsseWurNmO3lVsVk7tg1umdpu5w7O/yWpU4h1Nm7mfG5t+VlSPqnyMz7bLCAT1tT3960jiEEe86baFcRErNxC3rcT/h5W5jYkOa7v/YVNV19TNE1vMX46C5+ararEI5Hb1mi92tG8fQaXWu+WpqXZYWlt9MzuXgBoFZXFa08Kr5qVjlmlqGws99IJHnqtGg8yp0tM/F52Nq5hDBcDZt0NrXFrcAsMPRvEZvetdE59763H6rLU4Ni9NvtpDpbdhkzDTuOoCtnBevwpj1OOfl2GHDDcKoNlTNY3cGftJ0KnU4jmqomNdlDQc3hxHwXEmsqm/8Ak0lTYtGa8ZsoMxB3tDnO2l7WbdpuRqqZxW+YXRlpPUutkm32sdJwHyHD5LQikzNZ/M4nwJufmqeLEnNla7ZvdfR26dQrSioMRxNj30FNJJGHZXOy2sbcD5KJx2+ncZa/baja3audI7+v9+Sv+hEW0xSedvCKK3mTp8AVVRdG8edKx0lFucNZm3+a7To1hTsKo3tmtt5nZn21DQNA2/Pn6rrHjny5c5ckTXULcqJKCUlqYwkhJA0JIQZAmEIXUBhSCEJIYTQhQBxytc7sBK5uvo4apr2zRMkzAjfaChCtxxE9s+a0xrTmqnAKNjcsUDGjuWk7AIM7nZQhCu8YZfO32I+jcLXdVquKPBII8u6EIU60jcz2s4aNjWormthw2oly6iM+pFghChKU9LE5m8wKixKhhbFusF3G36oQg0hRNhyHK3jddZ0Dg2OEzv8A9ypefIWH5FCFXk6XYfc6MqJKEKiWxEpIQoCSuhCAQhCkf//Z"
-                    alt=""></div>
-            <div class="name">
-                Nguyễn minh Thuận
+    <div class="container ">
+        <div class="bg-gray-100 flex items-center justify-center h-screen">
+            <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+                <div class="mb-6">
+                    <ul class="flex justify-center">
+                        <li class="w-1/2">
+                            <button
+                                class="w-full py-2 text-center font-semibold text-gray-700 border-b-2 border-indigo-500 focus:outline-none"
+                                onclick="showLogin()">Login</button>
+                        </li>
+                        <li class="w-1/2">
+                            <button class="w-full py-2 text-center font-semibold text-gray-700 focus:outline-none"
+                                onclick="showRegister()">Register</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="login-form">
+                    <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
+                    <form id="loginForm">
+                        <input type="email" id="loginEmail" placeholder="Email"
+                            class="UserName w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
+                        <input type="password" id="loginPassword" placeholder="Password"
+                            class=" password w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
+                        <button
+                            class="w-full bg-indigo-500 text-white py-2 rounded-lg hover:bg-indigo-600 transition">Login</button>
+                    </form>
+                </div>
+                <div id="register-form" class="hidden">
+                    <h2 class="text-2xl font-bold text-center mb-4">Register</h2>
+                    <form id="registerForm">
+                        <input type="text" id="registerUsername" placeholder="Username"
+                            class="w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
+                        <input type="email" id="registerEmail" placeholder="Email"
+                            class="w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
+                        <input type="password" id="registerPassword" placeholder="Password"
+                            class="w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
+                        <button type="submit"
+                            class="w-full bg-indigo-500 text-white py-2 rounded-lg hover:bg-indigo-600 transition">Register</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./js/script.js"></script>
 </body>
 
 </html>
