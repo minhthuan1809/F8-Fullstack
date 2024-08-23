@@ -83,19 +83,17 @@ let html = `<header class="bg-gradient-to-r from-blue-600 to-indigo-600 text-whi
 `;
 const userNameEl = document.querySelector(".UserName");
 const passEl = document.querySelector(".password");
-// Hàm hiển thị form đăng nhập
+
 function showLogin() {
   document.getElementById("login-form").classList.remove("hidden");
   document.getElementById("register-form").classList.add("hidden");
 }
 
-// Hàm hiển thị form đăng ký
 function showRegister() {
   document.getElementById("register-form").classList.remove("hidden");
   document.getElementById("login-form").classList.add("hidden");
 }
 
-// Xử lý đăng nhập
 const handleLogin = async (e) => {
   e.preventDefault();
 
@@ -110,7 +108,7 @@ const handleLogin = async (e) => {
 
   if (response) {
     console.log(response);
-    // Xử lý đăng nhập thành công
+
     localStorage.setItem("user_token", JSON.stringify(response.data));
     console.log(response.message);
     if (response.code === 200) {
@@ -129,11 +127,11 @@ document.getElementById("login-form").addEventListener("submit", handleLogin);
 const logout = () => {
   localStorage.removeItem("user_token");
   document.querySelector("body").innerHTML = htmlLogin;
-  // Gán lại sự kiện cho nút login sau khi logout
+
   document.getElementById("login-form").addEventListener("submit", handleLogin);
 };
 
-// Kiểm tra token khi tải lại trang
+// kiểm tra login
 if (localStorage.getItem("user_token")) {
   document.querySelector("body").innerHTML = html;
   document.getElementById("logoutButton").addEventListener("click", logout);
