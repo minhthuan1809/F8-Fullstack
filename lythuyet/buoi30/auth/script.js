@@ -89,6 +89,8 @@ const handleLoginFrom = () => {
       const response = await requestlogin(dataLoin);
       btn.disabled = false;
       btn.innerHTML = ` Đăng nhập `;
+      console.log(response);
+
       if (!response) {
         msgEl.innerHTML = `<div class = "alert alert-danger text-center" > thông báo lỗi </div>`;
       } else {

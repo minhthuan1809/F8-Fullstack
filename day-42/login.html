@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập & Đăng ký</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <div class="flex justify-center mb-6">
+            <button id="loginTab"
+                class="px-4 py-2 w-1/2 text-center text-xl font-semibold text-green-500 border-b-2 border-green-500 focus:outline-none">Đăng
+                nhập</button>
+            <button id="registerTab"
+                class="px-4 py-2 w-1/2 text-center text-xl font-semibold text-gray-500 focus:outline-none">Đăng
+                ký</button>
+        </div>
+
+        <!-- Form Đăng nhập -->
+        <form id="loginForm" class="space-y-4">
+            <input type="text" name="username" placeholder="Tên đăng nhập" required
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+            <input type="password" name="password" placeholder="Mật khẩu" required
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+            <button type="submit"
+                class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300">Đăng
+                nhập</button>
+        </form>
+
+        <!-- Form Đăng ký (Ẩn mặc định) -->
+        <form id="registerForm" class="space-y-4 hidden">
+            <input type="text" name="fullname" placeholder="Họ và tên" required
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+            <input type="email" name="email" placeholder="Email" required
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+            <input type="text" name="username" placeholder="Tên đăng nhập" required
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+            <input type="password" name="password" placeholder="Mật khẩu" required
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+            <button type="submit"
+                class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300">Đăng
+                ký</button>
+        </form>
+    </div>
+
+    <script>
+        const loginTab = document.getElementById('loginTab');
+        const registerTab = document.getElementById('registerTab');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        loginTab.addEventListener('click', () => {
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+            loginTab.classList.add('text-green-500', 'border-green-500');
+            registerTab.classList.remove('text-green-500', 'border-green-500');
+            registerTab.classList.add('text-gray-500');
+        });
+
+        registerTab.addEventListener('click', () => {
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+            registerTab.classList.add('text-green-500', 'border-green-500');
+            loginTab.classList.remove('text-green-500', 'border-green-500');
+            loginTab.classList.add('text-gray-500');
+        });
+    </script>
+    <script type="module" src="./js/login.js"></script>
+
+</body>
+
+</html>
