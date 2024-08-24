@@ -11,8 +11,9 @@ console.log("https://fakeapi.platzi.com/en/rest/auth-jwt/");
 
 const render = async () => {
   if (localStorage.getItem("user_token")) {
-    const { access_token: accessToken, refresh_token: _refreshToken } =
-      JSON.parse(localStorage.getItem("user_token"));
+    const { access_token: accessToken, refresh_token } = JSON.parse(
+      localStorage.getItem("user_token")
+    );
 
     root.innerHTML = `
         <div class="profile">
@@ -27,7 +28,7 @@ const render = async () => {
       try {
         const profile = await requestProfile(accessToken);
         if (!profile) {
-          const newToken = await refreshToken(_refreshToken);
+          const newToken = await refreshToken(refresh_token);
           if (!newToken) {
             throw new Error("Lỗi khi làm mới token");
           }
@@ -81,12 +82,12 @@ const handleLoginFrom = () => {
     if (e.target.classList.contains("login")) {
       const msgEl = document.querySelector(".msg");
       msgEl.innerText = ``;
-      const dataLoin = Object.fromEntries(new FormData(e.target));
+      const dataLogin = Object.fromEntries(new FormData(e.target));
       const btn = e.target.querySelector("button");
       btn.disabled = true;
       btn.innerHTML = `  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
       <span class="visually-hidden">Loading...</span>`;
-      const response = await requestlogin(dataLoin);
+      const response = await requestlogin(dataLogin);
       btn.disabled = false;
       btn.innerHTML = ` Đăng nhập `;
       console.log(response);
@@ -126,4 +127,7 @@ request 1 ==> success
 xử lý đang xuất 
 - call API đăng xuất do back-end cung cấp ==> lưu token vào black list ở phía back-end
 - xóa token ở Storage
+
+
+xây dựng class/oject httpclient để xử lý http request
 */
