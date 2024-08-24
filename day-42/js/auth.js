@@ -36,3 +36,20 @@ export const requestlogin = async (data) => {
     return undefined; // Trả về undefined nếu có lỗi
   }
 };
+export const requestRender = async () => {
+  try {
+    const response = await fetch(`${SERVER_API}/blogs`);
+
+    console.log(response); // Kiểm tra phản hồi từ API
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Lỗi không xác định từ server");
+    }
+
+    return await response.json(); // Trả về dữ liệu JSON từ server
+  } catch (err) {
+    console.error("Error:", err.message || "Lỗi không xác định");
+    return undefined; // Trả về undefined nếu có lỗi
+  }
+};

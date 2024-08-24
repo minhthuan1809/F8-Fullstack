@@ -1,5 +1,5 @@
-import { requestlogin } from "./auth.js";
-console.log(requestlogin);
+import { requestlogin, requestRender } from "./auth.js";
+console.log(requestRender);
 
 let htmlLogin = `<div class="bg-gray-100 flex items-center justify-center h-screen">
             <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
