@@ -32,3 +32,22 @@ export const requestlogin = async (data) => {
     console.log(e.message);
   }
 };
+
+export const adddata = async () => {
+  try {
+    const response = await fetch(`${url}/blogs`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    if (!response.ok) {
+      throw new Error("Lỗi: " + response.statusText);
+    }
+    const data = await response.json();
+    return data;
+  } catch (e) {
+    console.log(e.message);
+  }
+};

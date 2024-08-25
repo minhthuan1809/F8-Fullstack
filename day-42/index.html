@@ -4,28 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+    body {
+        font-size: 1rem;
+    }
+</style>
 
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans ">
 
     <!-- Header -->
     <header class="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-md">
         <div class=" mx-auto flex justify-between items-center p-6">
             <h1 class="text-4xl font-extrabold">My Blog</h1>
-            <a href="login.html"
-                class="bg-white text-green-500 px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300">Đăng
-                nhập</a>
+            <div class="btn">
+                <a href="login.html"
+                    class=" bg-white text-green-500 px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300">Đăng
+                    nhập</a>
+            </div>
         </div>
     </header>
-
-    <!-- Main Content -->
-    <div class="container mx-auto mt-12 px-4">
-
-
+    <!-- // add  -->
+    <div class="add--title mx-auto mt-12 px-4 hidden">
+        <h2 class="text-2xl font-bold mb-6">Thêm Bài Viết Mới</h2>
+        <form id="postForm" class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+            <div class="mb-4">
+                <label for="title" class="block text-gray-700 text-sm font-medium mb-2">Tiêu Đề:</label>
+                <input type="text" id="title" name="title" class="w-full p-2 border border-gray-300 rounded-md"
+                    required>
+            </div>
+            <div class="mb-4">
+                <label for="content" class="block text-gray-700 text-sm font-medium mb-2">Nội Dung:</label>
+                <textarea id="content" name="content" rows="4" class="w-full p-2 border border-gray-300 rounded-md"
+                    required></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="author" class="block text-gray-700 text-sm font-medium mb-2">Tác Giả:</label>
+                <input type="text" id="author" name="author" class="w-full p-2 border border-gray-300 rounded-md"
+                    required>
+            </div>
+            <button type="submit"
+                class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300">Gửi</button>
+        </form>
     </div>
+    <!-- Main Content -->
+    <div class="container mx-auto mt-12 px-4"></div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white mt-12 py-6 text-center">
@@ -33,58 +58,16 @@
     </footer>
 
     <script type="module" src="./js/render.js"></script>
-=======
     <title>Login & Register</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
-</head>
+    </head>
 
-<body>
-    <div class="container ">
-        <!-- <div class="bg-gray-100 flex items-center justify-center h-screen">
-            <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-                <div class="mb-6">
-                    <ul class="flex justify-center">
-                        <li class="w-1/2">
-                            <button
-                                class="w-full py-2 text-center font-semibold text-gray-700 border-b-2 border-indigo-500 focus:outline-none"
-                                onclick="showLogin()">Login</button>
-                        </li>
-                        <li class="w-1/2">
-                            <button class="w-full py-2 text-center font-semibold text-gray-700 focus:outline-none"
-                                onclick="showRegister()">Register</button>
-                        </li>
-                    </ul>
-                </div>
-                <div id="login-form">
-                    <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
-                    <form id="loginForm">
-                        <input type="email" id="loginEmail" placeholder="Email"
-                            class="UserName w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
-                        <input type="password" id="loginPassword" placeholder="Password"
-                            class=" password w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
-                        <button
-                            class="w-full bg-indigo-500 text-white py-2 rounded-lg hover:bg-indigo-600 transition">Login</button>
-                    </form>
-                </div>
-                <div id="register-form" class="hidden">
-                    <h2 class="text-2xl font-bold text-center mb-4">Register</h2>
-                    <form id="registerForm">
-                        <input type="text" id="registerUsername" placeholder="Username"
-                            class="w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
-                        <input type="email" id="registerEmail" placeholder="Email"
-                            class="w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
-                        <input type="password" id="registerPassword" placeholder="Password"
-                            class="w-full p-3 mb-4 bg-gray-100 border border-gray-300 rounded-lg" required>
-                        <button type="submit"
-                            class="w-full bg-indigo-500 text-white py-2 rounded-lg hover:bg-indigo-600 transition">Register</button>
-                    </form>
-                </div>
-            </div>
-        </div> -->
-    </div>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="./js/script.js"></script>
->>>>>>> 6ab35526a001c4a9dae00f25fab4feb5e8e837c4
-</body>
+    <body>
+        <div class="container ">
+
+        </div>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script type="module" src="./js/script.js"></script>
+    </body>
 
 </html>
