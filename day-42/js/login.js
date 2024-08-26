@@ -1,11 +1,11 @@
 import { requestlogin } from "./callApi.js";
-
+const Notification = document.querySelector(".text-Notification");
 const userName = document.querySelector('input[name="username"]');
 const userPass = document.querySelector('input[name="password"]');
 
 document.querySelector("#loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-
+  Notification.innerHTML = ``;
   const dataLogin = {
     email: userName.value,
     password: userPass.value,
@@ -26,9 +26,13 @@ document.querySelector("#loginForm").addEventListener("submit", async (e) => {
       console.log("Đăng nhập thành công");
 
       window.location.href = "./index.html";
-      document.querySelector(".Notification").classList.add("hidden");
     } else {
-      document.querySelector(".Notification").classList.remove("hidden");
+      Notification.innerHTML = `   <div class=" bg-red-100 border border-red-400 text-yellow-700 px-4 py-3 rounded relative mb-4 "
+            role="alert">
+            <strong class="font-bold">Cảnh báo!</strong> 
+            <span class="block sm:inline">Thông tin tài khoản hoặc mật khẩu không chính xác.</span>
+        </div>`;
+
       console.log("Lỗi: Đăng nhập không thành công hoặc dữ liệu không hợp lệ.");
     }
   } catch (error) {

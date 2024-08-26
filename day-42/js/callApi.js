@@ -37,14 +37,12 @@ export const requestlogin = async (data) => {
 
 // thêm data
 export const addData = async (newData, accessToken) => {
-  console.log(accessToken);
-
   try {
     const response = await fetch(`${url}/blogs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`, // Sử dụng accessToken ở đây
+        Authorization: `Bearer ${accessToken}`, // Thêm "Bearer " trước accessToken
       },
       body: JSON.stringify(newData),
     });
@@ -57,5 +55,53 @@ export const addData = async (newData, accessToken) => {
     return data;
   } catch (e) {
     console.error(e.message);
+  }
+};
+
+// refreshToken
+
+export const refreshToken = async (refreshToken) => {
+  try {
+    const response = await fetch(`${url}/auth/refresh-token`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ refreshToken: refreshToken }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Lỗi làm mới token: " + response.statusText);
+    }
+
+    const data = await response.json();
+    return data.data.token;
+  } catch (e) {
+    console.error(e.message);
+  }
+};
+// tạo tài khoản
+export const createAcc = async (data) => {
+  try {
+    console.log("Đang tạo tài khoản...");
+
+    const response = await fetch(`${url}/auth/register`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    console.log(response);
+
+    if (!response.ok) {
+      throw new Error("Lỗi: " + response.statusText);
+    }
+
+    const responseData = await response.json();
+    return responseData;
+  } catch (e) {
+    console.error("Error creating account:", e.message);
   }
 };

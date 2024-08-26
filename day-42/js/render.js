@@ -17,7 +17,9 @@ function render() {
                 <p class="text-gray-600 mb-4">${post.content
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")}</p>
-                <a href="#" class="text-green-600 hover:underline font-medium">Đọc thêm</a>
+                <a href="#" class="text-green-600 hover:underline font-medium">Xem thêm về ${
+                  post.userId.name
+                }</a>
             </div>
         </section>`;
         document.querySelector(".container").innerHTML += html;
