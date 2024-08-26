@@ -5,13 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<style>
-    body {
-        font-size: 1rem;
-    }
-</style>
+
 
 <body class="bg-gray-50 text-gray-900 font-sans ">
 
@@ -31,6 +27,11 @@
         <h2 class="text-2xl font-bold mb-6">Thêm Bài Viết Mới</h2>
         <form id="postForm" class="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
             <div class="mb-4">
+                <label for="author" class="block text-gray-700 text-sm font-medium mb-2">Tác Giả :
+                    <span class="name--user"></span></label>
+
+            </div>
+            <div class="mb-4">
                 <label for="title" class="block text-gray-700 text-sm font-medium mb-2">Tiêu Đề:</label>
                 <input type="text" id="title" name="title" class="w-full p-2 border border-gray-300 rounded-md"
                     required>
@@ -39,11 +40,6 @@
                 <label for="content" class="block text-gray-700 text-sm font-medium mb-2">Nội Dung:</label>
                 <textarea id="content" name="content" rows="4" class="w-full p-2 border border-gray-300 rounded-md"
                     required></textarea>
-            </div>
-            <div class="mb-4">
-                <label for="author" class="block text-gray-700 text-sm font-medium mb-2">Tác Giả:</label>
-                <input type="text" id="author" name="author" class="w-full p-2 border border-gray-300 rounded-md"
-                    required>
             </div>
             <button type="submit"
                 class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300">Gửi</button>
@@ -57,17 +53,9 @@
         <p>&copy; 2024 My Blog. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="./js/render.js"></script>
-    <title>Login & Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.4/dist/tailwind.min.css" rel="stylesheet">
-    </head>
-
-    <body>
-        <div class="container ">
-
-        </div>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script type="module" src="./js/script.js"></script>
-    </body>
+    <script type="module" src="./js/addcontent.js"></script>
+</body>
 
 </html>

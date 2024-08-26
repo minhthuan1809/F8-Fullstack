@@ -21,10 +21,7 @@ document.querySelector("#loginForm").addEventListener("submit", async (e) => {
 
     if (response && response.status_code === "SUCCESS") {
       // Lưu dữ liệu vào localStorage
-      localStorage.setItem(
-        "user_token",
-        JSON.stringify(response.data.accessToken)
-      );
+      localStorage.setItem("user_token", JSON.stringify(response.data));
       e.target.reset();
       console.log("Đăng nhập thành công");
 

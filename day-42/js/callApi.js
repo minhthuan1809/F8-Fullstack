@@ -8,6 +8,8 @@ export const connectApi = async () => {
       throw new Error("Lỗi: " + response.statusText);
     }
     const data = await response.json();
+    console.log(data);
+
     return data;
   } catch (e) {
     console.log(e.message);
@@ -33,21 +35,27 @@ export const requestlogin = async (data) => {
   }
 };
 
-export const adddata = async () => {
+// thêm data
+export const addData = async (newData, accessToken) => {
+  console.log(accessToken);
+
   try {
     const response = await fetch(`${url}/blogs`, {
-      method: "PUT",
+      method: "POST",
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`, // Sử dụng accessToken ở đây
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(newData),
     });
+
     if (!response.ok) {
       throw new Error("Lỗi: " + response.statusText);
     }
+
     const data = await response.json();
     return data;
   } catch (e) {
-    console.log(e.message);
+    console.error(e.message);
   }
 };

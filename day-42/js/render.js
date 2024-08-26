@@ -2,14 +2,12 @@ import { connectApi } from "./callApi.js";
 
 function render() {
   connectApi().then((data) => {
-    console.log(data); // In ra dữ liệu để kiểm tra
-
     if (data && data.data) {
       // Kiểm tra nếu có dữ liệu
       data.data.map((post) => {
         let html = `<section class="mb-8">
             <div
-                class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition-transform transform hover:scale-105">
+                class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition-transform transform ">
                 <h2 class="text-cyan-600 text-2xl font-bold mb-3">${post.title
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")}</h2>
@@ -37,6 +35,11 @@ if (localStorage.getItem("user_token")) {
   ).innerHTML = `<button   class=" logout bg-red-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-red-400 transition duration-300"> Đăng xuất </button>`;
   // hiện thị from post
   document.querySelector(".add--title").classList.remove("hidden");
+
+  // chuyển json về JavaScript
+  const userTokenObject = JSON.parse(localStorage.getItem("user_token"));
+
+  document.querySelector(".name--user").innerText = userTokenObject.email;
 } else {
   // thay đổi nút đăng xuất
   document.querySelector(".btn").innerHTML = `  <a href="login.html"
