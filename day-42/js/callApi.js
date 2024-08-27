@@ -41,7 +41,7 @@ export const addData = async (newData, accessToken) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`, // Thêm "Bearer " trước accessToken
+        Authorization: `Bearer ${accessToken}`,
       },
       body: JSON.stringify(newData),
     });
@@ -59,14 +59,14 @@ export const addData = async (newData, accessToken) => {
 
 // refreshToken
 
-export const refreshToken = async (refreshToken) => {
+export const refreshToken = async (_refreshToken) => {
   try {
     const response = await fetch(`${url}/auth/refresh-token`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ refreshToken: refreshToken }),
+      body: JSON.stringify({ _refreshToken }),
     });
 
     if (!response.ok) {

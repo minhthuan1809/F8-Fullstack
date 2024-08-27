@@ -1,4 +1,6 @@
 import { addData } from "./callApi.js";
+const token = JSON.parse(localStorage.getItem("user_token"));
+const { accessToken: _accessToken } = token;
 const titleEl = document.querySelector("#title");
 const contentEl = document.querySelector("#content");
 
@@ -16,5 +18,5 @@ const newEntry = {
 document.querySelector("#postForm").addEventListener("submit", async (e) => {
   e.preventDefault();
   console.log(newEntry);
-  const data = await addData(newEntry, userTokenObject.accessToken);
+  const data = await addData(newEntry, _accessToken);
 });

@@ -58,24 +58,20 @@ if (document.querySelector(".logout")) {
     try {
       const logoutApi = await logout(userTokenObject.accessToken);
 
-      if (logoutApi) {
-        // Nếu logout thành công
+      if (logoutApi.status_code === "SUCCESS") {
         localStorage.removeItem("user_token");
         alert("Đã đăng xuất thành công");
 
-        // Thay đổi nút đăng xuất thành nút đăng nhập
         document.querySelector(".btn").innerHTML = `
           <a href="login.html"
              class="bg-white text-green-500 px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
              Đăng nhập
           </a>`;
 
-        // Ẩn form post (nếu cần)
         document.querySelector(".add--title").classList.add("hidden");
       }
     } catch (error) {
       console.error("Lỗi khi đăng xuất:", error.message);
-      // Bạn có thể thêm thông báo lỗi cho người dùng ở đây
     }
   });
 }
