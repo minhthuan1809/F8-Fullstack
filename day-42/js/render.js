@@ -1,4 +1,6 @@
-import { connectApi } from "./callApi.js";
+import { connectApi, logout } from "./callApi.js";
+const datatoken = localStorage.getItem("user_token");
+const userTokenObject = JSON.parse(datatoken);
 
 function render() {
   connectApi().then((data) => {
@@ -40,7 +42,6 @@ if (localStorage.getItem("user_token")) {
   document.querySelector(".add--title").classList.remove("hidden");
 
   // chuyển json về JavaScript
-  const userTokenObject = JSON.parse(localStorage.getItem("user_token"));
 
   document.querySelector(".name--user").innerText = userTokenObject.email;
 } else {
@@ -51,18 +52,32 @@ if (localStorage.getItem("user_token")) {
   // hiện thị from post
   document.querySelector(".add--title").classList.add("hidden");
 }
+// đăng xuất
 if (document.querySelector(".logout")) {
-  document.querySelector(".logout").addEventListener("click", () => {
-    localStorage.removeItem("user_token");
-    console.log("đã đăng xuất thành công");
-    if (!localStorage.getItem("user_token")) {
-      // thay đổi nút đăng xuất
-      document.querySelector(".btn").innerHTML = `  <a href="login.html"
-            class=" bg-white text-green-500 px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300">Đăng
-            nhập</a>`;
-      // hiện thị from post
-      document.querySelector(".add--title").classList.add("hidden");
+  document.querySelector(".logout").addEventListener("click", async () => {
+    try {
+      const logoutApi = await logout(userTokenObject.accessToken);
+
+      if (logoutApi) {
+        // Nếu logout thành công
+        localStorage.removeItem("user_token");
+        alert("Đã đăng xuất thành công");
+
+        // Thay đổi nút đăng xuất thành nút đăng nhập
+        document.querySelector(".btn").innerHTML = `
+          <a href="login.html"
+             class="bg-white text-green-500 px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300">
+             Đăng nhập
+          </a>`;
+
+        // Ẩn form post (nếu cần)
+        document.querySelector(".add--title").classList.add("hidden");
+      }
+    } catch (error) {
+      console.error("Lỗi khi đăng xuất:", error.message);
+      // Bạn có thể thêm thông báo lỗi cho người dùng ở đây
     }
   });
 }
+
 render(); // Gọi hàm render

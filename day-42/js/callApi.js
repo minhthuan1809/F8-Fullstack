@@ -8,7 +8,6 @@ export const connectApi = async () => {
       throw new Error("Lỗi: " + response.statusText);
     }
     const data = await response.json();
-    console.log(data);
 
     return data;
   } catch (e) {
@@ -103,5 +102,32 @@ export const createAcc = async (data) => {
     return responseData;
   } catch (e) {
     console.error("Error creating account:", e.message);
+  }
+};
+
+// logout
+export const logout = async (token) => {
+  try {
+    console.log("Đang đăng xuất...");
+    console.log("AccessToken:", token);
+
+    const response = await fetch(`${url}/auth/logout`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(
+        `Lỗi: ${response.statusText || response.status} - ${errorText}`
+      );
+    }
+
+    const responseData = await response.json();
+    return responseData;
+  } catch (e) {
+    console.error("Error during logout:", e.message);
   }
 };
