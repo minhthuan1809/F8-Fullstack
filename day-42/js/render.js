@@ -20,7 +20,7 @@ function render() {
                 <a href="#" class="text-green-600 hover:underline font-medium">Xem thêm về ${post.userId.name
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")}
-                }</a>
+                </a>
             </div>
         </section>`;
         document.querySelector(".container").innerHTML += html;
