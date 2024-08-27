@@ -66,7 +66,7 @@ export const refreshToken = async (refreshToken) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ refreshToken: refreshToken }),
+      body: JSON.stringify({ refreshToken }),
     });
 
     if (!response.ok) {
@@ -79,6 +79,7 @@ export const refreshToken = async (refreshToken) => {
     console.error(e.message);
   }
 };
+
 // tạo tài khoản
 export const createAcc = async (data) => {
   try {
@@ -109,7 +110,6 @@ export const createAcc = async (data) => {
 export const logout = async (token) => {
   try {
     console.log("Đang đăng xuất...");
-    console.log("AccessToken:", token);
 
     const response = await fetch(`${url}/auth/logout`, {
       method: "POST",
