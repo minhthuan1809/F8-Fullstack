@@ -34,7 +34,9 @@ export function render() {
                 )
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")
-                  .replace(/</g, "Sáng")}</b>
+                  .replace(/SA/g, "Sáng,")}</b>
+                  
+                  
             </div>
         </div>
     </section>`;
