@@ -1,6 +1,8 @@
-import { connectApi, logout } from "./callApi.js";
+import { connectApi, logout, refreshToken } from "./callApi.js";
+
 const datatoken = localStorage.getItem("user_token");
 const userTokenObject = JSON.parse(datatoken);
+console.log(userTokenObject);
 
 export function render() {
   console.log(`render(); đã được gọi`);
@@ -120,5 +122,14 @@ if (document.querySelector(".logout")) {
     }
   });
 }
-
 render(); // Gọi hàm render
+
+const { refreshToken: _refreshToken } = userTokenObject;
+console.log(_refreshToken);
+
+// const newAccessToken = refreshToken(userTokenObject.refreshToken);
+// if (newAccessToken) {
+//   console.log("Mã accessToken mới là:", newAccessToken);
+// } else {
+//   console.log("Lỗi khi làm mới token");
+// }
