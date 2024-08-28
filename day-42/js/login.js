@@ -3,8 +3,14 @@ const Notification = document.querySelector(".text-Notification");
 const userName = document.querySelector('input[name="username"]');
 const userPass = document.querySelector('input[name="password"]');
 
+const btnLogin = document.querySelector(".btn--login");
+const btnLoading = document.querySelector(".loading-login ");
 document.querySelector("#loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
+  // hiệu úng loading
+  btnLogin.classList.add("hidden");
+  btnLoading.classList.remove("hidden");
+
   Notification.innerHTML = ``;
   const dataLogin = {
     email: userName.value,
@@ -23,7 +29,6 @@ document.querySelector("#loginForm").addEventListener("submit", async (e) => {
       // Lưu dữ liệu vào localStorage
       localStorage.setItem("user_token", JSON.stringify(response.data));
       e.target.reset();
-      console.log("Đăng nhập thành công");
 
       window.location.href = "./index.html";
     } else {
@@ -37,5 +42,9 @@ document.querySelector("#loginForm").addEventListener("submit", async (e) => {
     }
   } catch (error) {
     console.error("Lỗi:", error.message);
+  } finally {
+    // hiệu ứng loading
+    btnLogin.classList.remove("hidden");
+    btnLoading.classList.add("hidden");
   }
 });

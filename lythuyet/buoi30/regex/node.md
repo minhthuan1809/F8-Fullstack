@@ -41,5 +41,5 @@ ký hiệu viêt tắt cả độ dài
 + ==> thương ứng với {1,}
 * ==> thương ứng với {0,}
 ? ==> thương ứng với {0,1}
-conslog()
+
 ```

@@ -34,27 +34,32 @@
                 class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
 
             <button type="submit"
-                class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300">Đăng
+                class="btn--login w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300">Đăng
                 nhập
             </button>
+            <!-- nút loading  -->
+            <button type="button"
+                class="loading-login  w-full bg-green-600 text-white py-2 rounded-md transition duration-300 hidden"
+                disabled>
+                Processing...
+    </div>
 
 
+    </form>
 
-        </form>
+    <!-- Form Đăng ký (Ẩn mặc định) -->
+    <form id="registerForm" class="space-y-4 hidden">
+        <input type="email" name="email" placeholder="Email" required
+            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
 
-        <!-- Form Đăng ký (Ẩn mặc định) -->
-        <form id="registerForm" class="space-y-4 hidden">
-            <input type="email" name="email" placeholder="Email" required
-                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
-
-            <input type="password" name="password" placeholder="Mật khẩu" required
-                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
-            <input type="text" name="name" placeholder="Họ và tên" required
-                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
-            <button type="submit"
-                class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300">Đăng
-                ký</button>
-        </form>
+        <input type="password" name="password" placeholder="Mật khẩu" required
+            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+        <input type="text" name="name" placeholder="Họ và tên" required
+            class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
+        <button type="submit"
+            class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300">Đăng
+            ký</button>
+    </form>
     </div>
 
     <script>

@@ -2,35 +2,80 @@ import { connectApi, logout } from "./callApi.js";
 const datatoken = localStorage.getItem("user_token");
 const userTokenObject = JSON.parse(datatoken);
 
-function render() {
+export function render() {
+  console.log(`render(); đã được gọi`);
+  document.querySelector(".container").innerHTML = "";
   connectApi().then((data) => {
     if (data && data.data) {
       // Kiểm tra nếu có dữ liệu
       data.data.map((post) => {
-        let html = `<section class="mb-8">
-            <div
-                class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 transition-transform transform ">
-                <h2 class="text-cyan-600 text-2xl font-bold mb-3">${post.title
-                  .replace(/</g, "&lt;")
-                  .replace(/>/g, "&gt;")}</h2>
-                <p class="text-gray-700 mb-4">Được đăng bởi: <span class="font-semibold">${post.userId.name
-                  .replace(/</g, "&lt;")
-                  .replace(/>/g, "&gt;")}</span></p>
-                <p class="text-gray-600 mb-4">${post.content
-                  .replace(/</g, "&lt;")
-                  .replace(/>/g, "&gt;")}</p>
+        const converTime = post.createdAt;
+
+        let htmls = `
+        <section class="container mx-auto mb-8">
+        <div
+            class="bg-white p-6 w-11/12s m-auto rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
+            <h2 class="text-cyan-600 text-2xl font-bold mb-3">${post.title
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")}</h2>
+            <p class="text-gray-700"> <b >Được đăng bởi : </b>${post.userId.name
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")}</p>
+            <p class="text-gray-600 mb-4 mt-2"><b>Bài viết :</b> ${post.content
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")}</p>
+            <div class="flex justify-between items-center mb-4">
                 <a href="#" class="text-green-600 hover:underline font-medium">Xem thêm về ${post.userId.name
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")}
                 </a>
+                <b class="text-gray-500 text-sm text-right">Đăng vào ${changetime(
+                  converTime
+                )
+                  .replace(/</g, "&lt;")
+                  .replace(/>/g, "&gt;")
+                  .replace(/SA/g, "Sáng")}</b>
             </div>
-        </section>`;
-        document.querySelector(".container").innerHTML += html;
+        </div>
+    </section>`;
+
+        document.querySelector(".container").innerHTML += htmls;
       });
     } else {
       console.log("Không có dữ liệu để hiển thị.");
     }
   });
+}
+// thay đổi thời gian
+function changetime(time) {
+  const ngayUTC = new Date(time);
+
+  const lechGioVietNam = 7 * 60;
+
+  const thoiGianDiaPhuong = ngayUTC.getTime();
+
+  const lechGioHeThong = ngayUTC.getTimezoneOffset();
+
+  const ngayGioVietNam = new Date(
+    thoiGianDiaPhuong + (lechGioVietNam + lechGioHeThong) * 60000
+  );
+
+  const tuyChonDinhDang = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+    timeZone: "Asia/Ho_Chi_Minh",
+  };
+  const thoiGianVietNam = ngayGioVietNam.toLocaleString(
+    "vi-VN",
+    tuyChonDinhDang
+  );
+
+  return thoiGianVietNam;
 }
 
 if (localStorage.getItem("user_token")) {
