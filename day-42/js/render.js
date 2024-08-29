@@ -3,15 +3,12 @@ const datatoken = localStorage.getItem("user_token");
 const userTokenObject = JSON.parse(datatoken);
 
 export function render() {
-  console.log(`render(); đã được gọi`);
   document.querySelector(".container").innerHTML = "";
   connectApi().then((data) => {
     if (data && data.data) {
       // Kiểm tra nếu có dữ liệu
       data.data.map((post) => {
         console.log(post);
-
-        const converTime = post.createdAt;
 
         let htmls = `
         <section class="container mx-auto mb-8">
@@ -35,7 +32,7 @@ export function render() {
                 </button>
                 <button data-blogs-id = "${
                   post._id
-                }" class=" text-green-600 hover:underline font-medium">Xem bài viết
+                }" class="btn-blogs-id text-green-600 hover:underline font-medium">Xem bài viết
                 </button>
                 <b class="text-gray-500 text-sm text-right">Đăng vào ${new Date(
                   post.createdAt
@@ -51,7 +48,6 @@ export function render() {
 
         document.querySelector(".container").innerHTML += htmls;
         userBlogs();
-        dataBlogs();
       });
     } else {
       console.log("Không có dữ liệu để hiển thị.");
@@ -60,55 +56,25 @@ export function render() {
 }
 // userBlogs
 function userBlogs() {
+  // Xử lý cho các nút với class 'data-id-blog'
   const idBlogElements = document.querySelectorAll(".data-id-blog");
   idBlogElements.forEach((element) => {
     element.addEventListener("click", function () {
-      localStorage.setItem("data_blogs", this.getAttribute("data-blogs-id"));
+      localStorage.setItem("data_blogs", this.getAttribute("data-id"));
       window.location = "./user.html";
     });
   });
-}
-// Blogs
-function dataBlogs() {
-  const idBlogElements = document.querySelectorAll(".data-id-blog");
-  idBlogElements.forEach((element) => {
+
+  // Xử lý cho các nút với class 'btn-blogs-id'
+  const btnBlogElements = document.querySelectorAll(".btn-blogs-id");
+  btnBlogElements.forEach((element) => {
     element.addEventListener("click", function () {
-      const userId = this.getAttribute("data-id");
-      localStorage.setItem("userId", userId);
-      window.location = "./user.html";
+      const blogsId = this.getAttribute("data-blogs-id");
+      localStorage.setItem("blogsId", blogsId);
+
+      window.location = "./blog.html";
     });
   });
-}
-// thay đổi thời gian
-function changetime(time) {
-  const ngayUTC = new Date(time);
-
-  const lechGioVietNam = 7 * 60;
-
-  const thoiGianDiaPhuong = ngayUTC.getTime();
-
-  const lechGioHeThong = ngayUTC.getTimezoneOffset();
-
-  const ngayGioVietNam = new Date(
-    thoiGianDiaPhuong + (lechGioVietNam + lechGioHeThong) * 60000
-  );
-
-  const tuyChonDinhDang = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-    timeZone: "Asia/Ho_Chi_Minh",
-  };
-  const thoiGianVietNam = ngayGioVietNam.toLocaleString(
-    "vi-VN",
-    tuyChonDinhDang
-  );
-
-  return thoiGianVietNam;
 }
 
 if (localStorage.getItem("user_token")) {

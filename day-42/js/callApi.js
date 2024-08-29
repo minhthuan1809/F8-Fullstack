@@ -149,3 +149,21 @@ export const usersApi = async (user_id) => {
     return false;
   }
 };
+/// blogs
+export const blogs = async (blogs_id) => {
+  try {
+    console.log(blogs_id);
+
+    const response = await fetch(`${url}/blogs/${blogs_id}`);
+
+    if (!response.ok) {
+      throw new Error(Error);
+    }
+    const responseData = await response.json();
+    console.log(responseData);
+    return responseData;
+  } catch (e) {
+    console.log(e);
+    return false;
+  }
+};

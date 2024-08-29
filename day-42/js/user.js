@@ -1,7 +1,7 @@
 import { usersApi } from "./callApi.js";
 
 const getUser = async () => {
-  const _userId = localStorage.getItem("userId");
+  const _userId = localStorage.getItem("data_blogs");
   if (_userId) {
     const response = await usersApi(_userId);
 
@@ -15,6 +15,8 @@ const getUser = async () => {
         blogsContainer.innerHTML = "";
 
         user.blogs.forEach((blog) => {
+          console.log(blog);
+
           const blogElement = document.createElement("section");
           blogElement.classList.add("mx-auto", "mb-8");
 
@@ -29,7 +31,9 @@ const getUser = async () => {
                 }</span></p>
                 <p class="text-gray-600 mb-4">${blog.content}</p>
                 <div class="flex justify-between items-center mb-4">
-                    <p class="text-green-600 hover:underline font-medium">Xem thêm</p>
+                    <button class="btn-blogs text-green-600 hover:underline font-medium" data-blogs-id = "${
+                      blog._id
+                    }">Xem thêm</button>
                     <p class="text-gray-500 text-sm text-right">Đăng vào: ${new Date(
                       blog.createdAt
                     ).toLocaleString("vi-VN", {
@@ -42,11 +46,22 @@ const getUser = async () => {
 
           blogsContainer.appendChild(blogElement);
         });
+
+        btnBlogs();
       } else {
         console.log("No blogs available.");
       }
     }
   }
 };
+
+function btnBlogs() {
+  document.querySelectorAll(".btn-blogs").forEach((e) => {
+    e.addEventListener("click", () => {
+      localStorage.setItem("blogsId", e.getAttribute("data-blogs-id"));
+      window.location = "./blog.html";
+    });
+  });
+}
 
 getUser();
