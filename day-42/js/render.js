@@ -9,6 +9,8 @@ export function render() {
     if (data && data.data) {
       // Kiểm tra nếu có dữ liệu
       data.data.map((post) => {
+        console.log(post);
+
         const converTime = post.createdAt;
 
         let htmls = `
@@ -25,16 +27,22 @@ export function render() {
               .replace(/</g, "&lt;")
               .replace(/>/g, "&gt;")}</p>
             <div class="flex justify-between items-center mb-4">
-                <a href="#" class="text-green-600 hover:underline font-medium">Xem thêm về ${post.userId.name
-                  .replace(/</g, "&lt;")
-                  .replace(/>/g, "&gt;")}
-                </a>
-                <b class="text-gray-500 text-sm text-right">Đăng vào ${changetime(
-                  converTime
-                )
-                  .replace(/</g, "&lt;")
-                  .replace(/>/g, "&gt;")
-                  .replace(/SA/g, "Sáng,")}</b>
+                <button data-id = "${
+                  post.userId._id
+                }"  class=" data-id-blog text-green-600 hover:underline font-medium">Xem thêm về #${post.userId.name
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")}
+                </button>
+                <button data-blogs-id = "${
+                  post._id
+                }" class=" text-green-600 hover:underline font-medium">Xem bài viết
+                </button>
+                <b class="text-gray-500 text-sm text-right">Đăng vào ${new Date(
+                  post.createdAt
+                ).toLocaleString("vi-VN", {
+                  dateStyle: "long",
+                  timeStyle: "short",
+                })}</b>
                   
                   
             </div>
@@ -42,10 +50,33 @@ export function render() {
     </section>`;
 
         document.querySelector(".container").innerHTML += htmls;
+        userBlogs();
+        dataBlogs();
       });
     } else {
       console.log("Không có dữ liệu để hiển thị.");
     }
+  });
+}
+// userBlogs
+function userBlogs() {
+  const idBlogElements = document.querySelectorAll(".data-id-blog");
+  idBlogElements.forEach((element) => {
+    element.addEventListener("click", function () {
+      localStorage.setItem("data_blogs", this.getAttribute("data-blogs-id"));
+      window.location = "./user.html";
+    });
+  });
+}
+// Blogs
+function dataBlogs() {
+  const idBlogElements = document.querySelectorAll(".data-id-blog");
+  idBlogElements.forEach((element) => {
+    element.addEventListener("click", function () {
+      const userId = this.getAttribute("data-id");
+      localStorage.setItem("userId", userId);
+      window.location = "./user.html";
+    });
   });
 }
 // thay đổi thời gian

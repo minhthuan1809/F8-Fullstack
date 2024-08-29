@@ -9,6 +9,7 @@ export const connectApi = async () => {
     }
     const data = await response.json();
 
+    console.log(data);
     return data;
   } catch (e) {
     console.log(e.message);
@@ -129,5 +130,22 @@ export const logout = async (token) => {
     return responseData;
   } catch (e) {
     console.error("Error during logout:", e.message);
+  }
+};
+
+/// users
+export const usersApi = async (user_id) => {
+  try {
+    const response = await fetch(`${url}/users/${user_id}`);
+
+    if (!response.ok) {
+      throw new Error(Error);
+    }
+    const responseData = await response.json();
+    console.log(responseData);
+    return responseData;
+  } catch (e) {
+    console.log(e);
+    return false;
   }
 };
