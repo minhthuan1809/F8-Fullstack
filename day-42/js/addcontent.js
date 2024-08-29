@@ -6,7 +6,6 @@ const titleEl = document.querySelector("#title");
 const contentEl = document.querySelector("#content");
 
 const userTokenObject = JSON.parse(localStorage.getItem("user_token"));
-console.log(userTokenObject);
 
 // thêm blogs
 document.querySelector("#postForm").addEventListener("submit", async (e) => {

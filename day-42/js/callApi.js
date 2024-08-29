@@ -67,7 +67,9 @@ export const refreshToken = async (_refreshToken) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ _refreshToken }),
+      body: JSON.stringify({
+        refreshToken: _refreshToken,
+      }),
     });
 
     if (!response.ok) {
@@ -77,7 +79,7 @@ export const refreshToken = async (_refreshToken) => {
     const data = await response.json();
     return data.data.token;
   } catch (e) {
-    console.error(e.message);
+    console.error("Lỗi làm mới token:", e.message);
   }
 };
 
