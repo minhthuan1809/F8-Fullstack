@@ -3,10 +3,14 @@ import { render } from "./render.js";
 
 const titleEl = document.querySelector("#title");
 const contentEl = document.querySelector("#content");
+const btncreate = document.querySelector(".btn-create");
+const loadingCreate = document.querySelector(".btn-loading-create");
 
 // thêm blogs
 document.querySelector("#postForm").addEventListener("submit", async (e) => {
   e.preventDefault();
+  loadingCreate.classList.remove("hidden");
+  btncreate.classList.add("hidden");
   const token = JSON.parse(localStorage.getItem("user_token"));
   const { accessToken: _accessToken } = token;
   const newEntry = {
@@ -48,4 +52,6 @@ document.querySelector("#postForm").addEventListener("submit", async (e) => {
       }, 2000);
     }, 1000);
   }
+  loadingCreate.classList.add("hidden");
+  btncreate.classList.remove("hidden");
 });

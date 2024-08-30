@@ -1,6 +1,12 @@
 import { refreshToken } from "./callApi.js";
 
-export function hanlerefreshToken() {
+function handleLogout() {
+  // Xóa token và chuyển hướng đến trang đăng nhập
+  localStorage.removeItem("user_token");
+  window.location = "./login.html";
+}
+
+function hanlerefreshToken() {
   const token = JSON.parse(localStorage.getItem("user_token"));
   const { refreshToken: _refreshToken } = token;
 
@@ -9,28 +15,27 @@ export function hanlerefreshToken() {
       try {
         const newAccessToken = await refreshToken(_refreshToken);
         if (newAccessToken) {
-          console.log("Mã accessToken mới là:", newAccessToken);
-          // Lưu accessToken mới vào localStorage
           token.accessToken = newAccessToken.accessToken;
           token.refreshToken = newAccessToken.refreshToken;
           localStorage.setItem("user_token", JSON.stringify(token));
         } else {
-          localStorage.removeItem("user_token");
-          window.location = "./login.html";
+          // Nếu làm mới token thất bại, đăng xuất người dùng
+          handleLogout();
         }
       } catch (error) {
         console.error("Lỗi khi gọi refreshToken:", error);
+        handleLogout();
       }
     };
 
     getNewAccessToken();
   } else {
-    window.location = "./login.html";
+    // Nếu không có refreshToken, đăng xuất người dùng
+    handleLogout();
   }
 }
 
 function parseJwt(token) {
-  // kiểm tra cấp lại token
   try {
     const base64Url = token.split(".")[1];
     const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
@@ -57,21 +62,22 @@ function checkTokenExpiryAndRefresh() {
     const decoded = parseJwt(token.accessToken);
 
     if (decoded && decoded.exp) {
-      const currentTime = Date.now() / 1000; // Thời gian hiện tại theo giây
+      const currentTime = Date.now() / 1000;
       const timeLeft = decoded.exp - currentTime;
 
-      console.log(`Token sẽ hết hạn sau ${Math.floor(timeLeft)} giây`);
-
-      // Làm mới token nếu còn ít hơn 60 giây trước khi hết hạn
-      if (Math.floor(timeLeft) < 10) {
+      if (timeLeft < 5) {
         hanlerefreshToken();
       }
     } else {
-      console.log(
-        "Không thể giải mã hoặc không có thông tin hết hạn trong token"
-      );
+      console.log("Token không hợp lệ hoặc không có thông tin hết hạn.");
+      handleLogout();
     }
+  } else {
+    handleLogout();
   }
 }
 
 setInterval(checkTokenExpiryAndRefresh, 1000);
+
+// Thêm sự kiện để người dùng có thể đăng xuất ngay lập tức
+document.getElementById("logoutButton").addEventListener("click", handleLogout);

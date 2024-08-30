@@ -1,4 +1,3 @@
-import { hanlerefreshToken } from "./refreshToken.js";
 let url = "https://api-auth-two.vercel.app";
 
 // render
@@ -48,9 +47,7 @@ export const addData = async (newData, accessToken) => {
       },
       body: JSON.stringify(newData),
     });
-    if (response.status === 401) {
-      hanlerefreshToken();
-    }
+
     if (!response.ok) {
       throw new Error("Lỗi: " + response.statusText);
     }

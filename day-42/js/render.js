@@ -1,11 +1,17 @@
 import { connectApi, logout } from "./callApi.js";
+const linkWeb = /(http.?:\/\/[^\s]+)/g;
+const email =
+  /(^[a-zA-Z][a-zA-Z0-9-_.]+[a-zA-Z0-9]@(([a-zA-Z][a-zA-Z0-9-_]*[a-zA-Z0-9]|[a-zA-Z])\.)+[a-zA-Z]{2,}$)/;
 
 export function render() {
   document.querySelector(".container").innerHTML = "";
+  localStorage.getItem("");
   connectApi().then((data) => {
     if (data && data.data) {
       // Kiểm tra nếu có dữ liệu
       data.data.map((post) => {
+        console.log(data.data.content);
+
         let htmls = `
         <section class="container mx-auto mb-8">
         <div
@@ -18,7 +24,9 @@ export function render() {
               .replace(/>/g, "&gt;")}</p>
             <p class="text-gray-600 mb-4 mt-2"><b>Bài viết :</b> ${post.content
               .replace(/</g, "&lt;")
-              .replace(/>/g, "&gt;")}</p>
+              .replace(/>/g, "&gt;")
+              .replace(linkWeb, `<a href="$1"  target="_blank"><u>$1</u></a>`)
+              .replace(email, `<a href="mailto:$1"><u>$1</u></a>`)}</p>
             <div class="flex justify-between items-center mb-4">
                 <button data-id = "${
                   post.userId._id

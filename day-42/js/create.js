@@ -3,11 +3,13 @@ import { createAcc } from "./callApi.js";
 // khai báo html
 const Notification = document.querySelector(".text-Notification");
 const registerForm = document.getElementById("registerForm");
-
+const loadingRegister = document.querySelector(".loading-register");
+const btnRegister = document.querySelector(".btn-register");
 // submit
 registerForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-
+  loadingRegister.classList.remove("hidden");
+  btnRegister.classList.add("hidden");
   // Lấy dữ liệu từ form
   const formData = new FormData(registerForm);
   const data = Object.fromEntries(formData.entries());
@@ -35,4 +37,6 @@ registerForm.addEventListener("submit", async (e) => {
     <span class="block sm:inline">Mật khẩu phải chứ kí tự viết hoa và số</span>
 </div>`;
   }
+  loadingRegister.classList.add("hidden");
+  btnRegister.classList.remove("hidden");
 });
