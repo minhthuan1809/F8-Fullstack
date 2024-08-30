@@ -5,7 +5,6 @@ function hanlerefreshToken() {
 
   if (token && token.refreshToken) {
     const { refreshToken: _refreshToken } = token;
-    console.log("_refreshToken:", _refreshToken);
 
     const getNewAccessToken = async () => {
       try {
@@ -13,7 +12,8 @@ function hanlerefreshToken() {
         if (newAccessToken) {
           console.log("Mã accessToken mới là:", newAccessToken);
           // Lưu accessToken mới vào localStorage nếu cần
-          token.accessToken = newAccessToken;
+          token.accessToken = newAccessToken.accessToken;
+          token.refreshToken = newAccessToken.refreshToken;
           localStorage.setItem("user_token", JSON.stringify(token));
         } else {
           console.log("Lỗi khi làm mới token");
@@ -28,3 +28,6 @@ function hanlerefreshToken() {
     console.log("Không tìm thấy refreshToken trong localStorage.");
   }
 }
+hanlerefreshToken();
+// setInterval(() => {
+// }, 6000);

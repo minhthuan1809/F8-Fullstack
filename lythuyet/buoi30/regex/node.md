@@ -43,3 +43,17 @@ ký hiệu viêt tắt cả độ dài
 ? ==> thương ứng với {0,1}
 
 ```
+
+Hoặc (|) - phủ định (^)
+Ký hiệu đại diện cho tất cả các ký tự .
+
+Các ký hiệu viết tắt
+
+```
+\w : thường, hoa , số ,_
+\W : ngược lại của w
+\d : số
+\D : Ngược lại của số
+\s : Khoảng trắng
+\S : ngược lại của \s
+```
