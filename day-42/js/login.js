@@ -23,11 +23,16 @@ document.querySelector("#loginForm").addEventListener("submit", async (e) => {
     const response = await requestlogin(dataLogin);
 
     // Kiểm tra dữ liệu trả về
-    console.log(response);
 
     if (response && response.status_code === "SUCCESS") {
       // Lưu dữ liệu vào localStorage
-      localStorage.setItem("user_token", JSON.stringify(response.data));
+      localStorage.setItem(
+        "user_token",
+        JSON.stringify({
+          accessToken: response.data.accessToken,
+          refreshToken: response.data.refreshToken,
+        })
+      );
       e.target.reset();
 
       window.location.href = "./index.html";

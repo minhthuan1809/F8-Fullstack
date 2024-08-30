@@ -1,15 +1,14 @@
 import { addData } from "./callApi.js";
 import { render } from "./render.js";
-const token = JSON.parse(localStorage.getItem("user_token"));
-const { accessToken: _accessToken } = token;
+
 const titleEl = document.querySelector("#title");
 const contentEl = document.querySelector("#content");
-
-const userTokenObject = JSON.parse(localStorage.getItem("user_token"));
 
 // thêm blogs
 document.querySelector("#postForm").addEventListener("submit", async (e) => {
   e.preventDefault();
+  const token = JSON.parse(localStorage.getItem("user_token"));
+  const { accessToken: _accessToken } = token;
   const newEntry = {
     title: titleEl.value,
     content: contentEl.value,

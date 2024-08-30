@@ -15,8 +15,6 @@ const getUser = async () => {
         blogsContainer.innerHTML = "";
 
         user.blogs.forEach((blog) => {
-          console.log(blog);
-
           const blogElement = document.createElement("section");
           blogElement.classList.add("mx-auto", "mb-8");
 

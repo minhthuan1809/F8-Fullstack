@@ -1,6 +1,4 @@
 import { connectApi, logout } from "./callApi.js";
-const datatoken = localStorage.getItem("user_token");
-const userTokenObject = JSON.parse(datatoken);
 
 export function render() {
   document.querySelector(".container").innerHTML = "";
@@ -82,10 +80,6 @@ if (localStorage.getItem("user_token")) {
   ).innerHTML = `<button   class=" logout bg-red-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-red-400 transition duration-300"> Đăng xuất </button>`;
   // hiện thị from post
   document.querySelector(".add--title").classList.remove("hidden");
-
-  // chuyển json về JavaScript
-
-  document.querySelector(".name--user").innerText = userTokenObject.email;
 } else {
   // thay đổi nút đăng xuất
   document.querySelector(".btn").innerHTML = `  <a href="login.html"
@@ -97,6 +91,7 @@ if (localStorage.getItem("user_token")) {
 // đăng xuất
 if (document.querySelector(".logout")) {
   document.querySelector(".logout").addEventListener("click", async () => {
+    const userTokenObject = JSON.parse(localStorage.getItem("user_token"));
     try {
       const logoutApi = await logout(userTokenObject.accessToken);
 
