@@ -8,8 +8,6 @@ export function render() {
     if (data && data.data) {
       // Kiểm tra nếu có dữ liệu
       data.data.map((post) => {
-        console.log(post);
-
         document.querySelector(".container").innerHTML += html(post, true);
         userBlogs();
       });
