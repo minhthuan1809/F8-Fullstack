@@ -3,7 +3,6 @@ import { refreshToken } from "./callApi.js";
 function handleLogout() {
   // Xóa token và chuyển hướng đến trang đăng nhập
   localStorage.removeItem("user_token");
-  window.location = "./login.html";
 }
 
 function hanlerefreshToken() {
@@ -77,7 +76,9 @@ function checkTokenExpiryAndRefresh() {
   }
 }
 
-setInterval(checkTokenExpiryAndRefresh, 1000);
+if (localStorage.getItem("user_token")) {
+  setInterval(checkTokenExpiryAndRefresh, 1000);
+}
 
 // Thêm sự kiện để người dùng có thể đăng xuất ngay lập tức
-document.getElementById("logoutButton").addEventListener("click", handleLogout);
+// document.getElementById("logoutButton").addEventListener("click", handleLogout);

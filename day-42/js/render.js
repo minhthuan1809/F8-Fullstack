@@ -1,7 +1,5 @@
 import { connectApi, logout } from "./callApi.js";
-const linkWeb = /(http.?:\/\/[^\s]+)/g;
-const email =
-  /(^[a-zA-Z][a-zA-Z0-9-_.]+[a-zA-Z0-9]@(([a-zA-Z][a-zA-Z0-9-_]*[a-zA-Z0-9]|[a-zA-Z])\.)+[a-zA-Z]{2,}$)/;
+import { html } from "./regex.js";
 
 export function render() {
   document.querySelector(".container").innerHTML = "";
@@ -10,47 +8,9 @@ export function render() {
     if (data && data.data) {
       // Kiểm tra nếu có dữ liệu
       data.data.map((post) => {
-        console.log(data.data.content);
+        console.log(post);
 
-        let htmls = `
-        <section class="container mx-auto mb-8">
-        <div
-            class="bg-white p-6 w-11/12s m-auto rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
-            <h2 class="text-cyan-600 text-2xl font-bold mb-3">${post.title
-              .replace(/</g, "&lt;")
-              .replace(/>/g, "&gt;")}</h2>
-            <p class="text-gray-700"> <b >Được đăng bởi : </b>${post.userId.name
-              .replace(/</g, "&lt;")
-              .replace(/>/g, "&gt;")}</p>
-            <p class="text-gray-600 mb-4 mt-2"><b>Bài viết :</b> ${post.content
-              .replace(/</g, "&lt;")
-              .replace(/>/g, "&gt;")
-              .replace(linkWeb, `<a href="$1"  target="_blank"><u>$1</u></a>`)
-              .replace(email, `<a href="mailto:$1"><u>$1</u></a>`)}</p>
-            <div class="flex justify-between items-center mb-4">
-                <button data-id = "${
-                  post.userId._id
-                }"  class=" data-id-blog text-green-600 hover:underline font-medium">Xem thêm về #${post.userId.name
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")}
-                </button>
-                <button data-blogs-id = "${
-                  post._id
-                }" class="btn-blogs-id text-green-600 hover:underline font-medium">Xem bài viết
-                </button>
-                <b class="text-gray-500 text-sm text-right">Đăng vào ${new Date(
-                  post.createdAt
-                ).toLocaleString("vi-VN", {
-                  dateStyle: "long",
-                  timeStyle: "short",
-                })}</b>
-                  
-                  
-            </div>
-        </div>
-    </section>`;
-
-        document.querySelector(".container").innerHTML += htmls;
+        document.querySelector(".container").innerHTML += html(post, true);
         userBlogs();
       });
     } else {
