@@ -7,8 +7,6 @@ const youtubeLinkRegex =
 
 // thêm nội dùng cho reder
 export function html(post, boolen) {
-  console.log("đang được gọi");
-
   let finalContent = post.content
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")

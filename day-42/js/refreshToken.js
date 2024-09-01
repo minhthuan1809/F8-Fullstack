@@ -3,6 +3,7 @@ import { refreshToken } from "./callApi.js";
 function handleLogout() {
   // Xóa token và chuyển hướng đến trang đăng nhập
   localStorage.removeItem("user_token");
+  window.location = "./login.html";
 }
 
 function hanlerefreshToken() {
@@ -17,6 +18,7 @@ function hanlerefreshToken() {
           token.accessToken = newAccessToken.accessToken;
           token.refreshToken = newAccessToken.refreshToken;
           localStorage.setItem("user_token", JSON.stringify(token));
+          console.log("đã cấp lại token mới !");
         } else {
           // Nếu làm mới token thất bại, đăng xuất người dùng
           handleLogout();
@@ -64,7 +66,7 @@ function checkTokenExpiryAndRefresh() {
       const currentTime = Date.now() / 1000;
       const timeLeft = decoded.exp - currentTime;
 
-      if (timeLeft < 5) {
+      if (timeLeft < 10) {
         hanlerefreshToken();
       }
     } else {
@@ -76,9 +78,4 @@ function checkTokenExpiryAndRefresh() {
   }
 }
 
-if (localStorage.getItem("user_token")) {
-  setInterval(checkTokenExpiryAndRefresh, 1000);
-}
-
-// Thêm sự kiện để người dùng có thể đăng xuất ngay lập tức
-// document.getElementById("logoutButton").addEventListener("click", handleLogout);
+setInterval(checkTokenExpiryAndRefresh, 1000);
