@@ -30,9 +30,6 @@ function hanlerefreshToken() {
     };
 
     getNewAccessToken();
-  } else {
-    // Nếu không có refreshToken, đăng xuất người dùng
-    handleLogout();
   }
 }
 
