@@ -32,7 +32,7 @@ export function html(post, boolen) {
                 </button>`;
   }
   return `
-    <section class="container mx-auto mb-8">
+    <section class="container mx-auto mt-8 mb-8">
         <div class="bg-white p-6  m-auto rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
             <h2 class="text-cyan-600 text-2xl font-bold mb-3">${post.title
               .replace(/</g, "&lt;")
@@ -71,7 +71,7 @@ export function htmluser(blog, userName) {
     .replace(email, `<a href="mailto:$1"><u>$1</u></a>`);
 
   let youtubeEmbeds = "";
-  finalContent = finalContent.replace(youtubeLinkRegex, (p2) => {
+  finalContent = finalContent.replace(youtubeLinkRegex, (match, p1, p2) => {
     if (!youtubeEmbeds.includes(p2)) {
       // Kiểm tra nếu video chưa được thêm vào
       youtubeEmbeds += `<iframe width="420" height="315" src="https://www.youtube.com/embed/${p2}" frameborder="0" allowfullscreen></iframe><br/>`;
@@ -80,7 +80,7 @@ export function htmluser(blog, userName) {
   });
   return `
             <div
-                class="bg-white p-6  m-auto rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
+                class="bg-white p-6  m-auto mt-10 rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
                 <h2 class="text-cyan-600 text-2xl font-bold mb-3">${blog.title
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")}</h2>
