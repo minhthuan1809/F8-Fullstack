@@ -65,6 +65,7 @@ function checkTokenExpiryAndRefresh() {
     if (decoded && decoded.exp) {
       const currentTime = Date.now() / 1000;
       const timeLeft = decoded.exp - currentTime;
+      console.log(timeLeft);
 
       if (timeLeft < 10) {
         hanlerefreshToken();
@@ -73,8 +74,6 @@ function checkTokenExpiryAndRefresh() {
       console.log("Token không hợp lệ hoặc không có thông tin hết hạn.");
       handleLogout();
     }
-  } else {
-    handleLogout();
   }
 }
 

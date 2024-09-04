@@ -30,16 +30,15 @@ export function html(post, boolen) {
                 </button>`;
   }
   return `
-        <section class="container mx-auto mb-8">
-        <div
-            class="bg-white p-6 w-11/12s m-auto rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
+    <section class="container mx-auto mb-8">
+        <div class="bg-white p-6  m-auto rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
             <h2 class="text-cyan-600 text-2xl font-bold mb-3">${post.title
               .replace(/</g, "&lt;")
               .replace(/>/g, "&gt;")}</h2>
             <p class="text-gray-700"><b>Được đăng bởi: </b>${post.userId.name
               .replace(/</g, "&lt;")
               .replace(/>/g, "&gt;")}</p>
-            <p class="text-gray-600 mb-4 mt-2"><b>Bài viết:</b> ${finalContent}</p>
+            <p class="text-gray-600 mb-4 mt-2 w-4/5 break-words" ><b>Bài viết:</b> ${finalContent}</p>
             ${youtubeEmbeds}
             <div class="flex justify-between items-center mb-4">
                 <button data-id="${
@@ -55,8 +54,6 @@ export function html(post, boolen) {
                   dateStyle: "long",
                   timeStyle: "short",
                 })}</b>
-                  
-                  
             </div>
         </div>
     </section>`;
@@ -81,14 +78,14 @@ export function htmluser(blog, userName) {
   });
   return `
             <div
-                class="bg-white p-6 w-4/5 m-auto rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
+                class="bg-white p-6  m-auto rounded-xl shadow-lg border border-gray-200 transition-transform duration-300">
                 <h2 class="text-cyan-600 text-2xl font-bold mb-3">${blog.title
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")}</h2>
                 <p class="text-gray-700">Được đăng bởi: <span class="font-semibold">${userName
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")}</span></p>
-                <p class="text-gray-600 mb-4">${finalContent}</p>
+                <p class="text-gray-600 mb-4 break-words">${finalContent}</p>
                   ${youtubeEmbeds}
                 <div class="flex justify-between items-center mb-4">
                     <button class="btn-blogs text-green-600 hover:underline font-medium" data-blogs-id = "${
