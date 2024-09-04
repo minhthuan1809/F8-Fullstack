@@ -1,4 +1,6 @@
-const linkWeb = /(http.?:\/\/[^\s]+)/g;
+const linkWeb =
+  /(https?:\/\/[a-zA-Z0-9\-\.]+(?:\.[a-zA-Z]{2,})+(?:\/[^\s]*)?)/g;
+
 const checkSdt = /((^\+84|84|0)[3|9|8|7|2]\d{8})/g;
 const email =
   /([a-zA-Z][a-zA-Z0-9-_.]+[a-zA-Z0-9]@(([a-zA-Z][a-zA-Z0-9-_]*[a-zA-Z0-9]|[a-zA-Z])\.)+[a-zA-Z]{2,})/g;
