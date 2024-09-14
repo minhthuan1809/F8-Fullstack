@@ -13,7 +13,7 @@ function Nav() {
 
   const Mobile = () => (
     <React.Fragment>
-      <div className="navMenu lg:hidden w-4/5 m-auto animate__animated animate__bounceInDown">
+      <div className="navMenu lg:hidden w-[90%] m-auto animate__animated animate__bounceInDown">
         <div className="flex flex-col">
           <span className="bg-zinc-400 h-[1px] mt-2"></span>
           <a href="#" className="p-4">
