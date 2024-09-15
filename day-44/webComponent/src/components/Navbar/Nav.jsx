@@ -44,7 +44,9 @@ function Nav() {
   return (
     <nav className="mt-4">
       <div className="flex justify-evenly items-center max-lg:justify-around">
-        <p className="text-xl font-bold">Material Tailwind</p>
+        <p className="text-xl font-bold">
+          <a href="#">Material Tailwind</a>
+        </p>
         <div className="max-lg:hidden">
           <a href="#" className="p-4">
             <i className="fa-regular fa-paste p-2 text-lg"></i>
