@@ -20,7 +20,7 @@ export default function ClientsSay() {
           </h1>
           <p className="block antialiased font-sans text-xl leading-relaxed text-inherit mx-auto w-full px-4 font-normal !text-gray-500 lg:w-8/12">
             Discover what clients have to say about their experiences working
-            with me. My client's satisfaction is my greatest achievement!
+            with me. My client satisfaction is my greatest achievement!
           </p>
         </div>
         {/* end */}
