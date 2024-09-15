@@ -1,83 +1,102 @@
 const view = document.querySelector(".container");
-var url = "https://run.mocky.io/v3/39784a30-3db6-4b3e-b851-62c3a27a5b8f";
+const url = "https://vqx63q-8080.csb.app";
 const modal = document.querySelector(".add");
 const cancel = document.querySelector("#cancel");
 const loading = document.querySelector(".loadingModal");
+const submitForm = document.querySelector("#submitForm"); // Phần tử form submit
+const img = document.querySelector("#img");
+const nameEL = document.querySelector("#name");
+const title = document.querySelector("#title");
 
 let currentPage = 0;
 const itemsPerPage = 3;
 let data = [];
 
+// Sự kiện submit form
 submitForm.addEventListener("click", () => {
-  var data = {
+  const formData = {
     logo: img.value.trim(),
     name: nameEL.value.trim(),
     content: title.value.trim(),
   };
-  getCreate(data);
+
+  if (formData.logo && formData.name && formData.content) {
+    getCreate(formData);
+  } else {
+    console.log("Vui lòng điền đầy đủ thông tin.");
+  }
 });
 
+// Sự kiện mở modal
 modal.addEventListener("click", () => {
   document.querySelector("#modal").classList.remove("hidden");
 });
 
+// Sự kiện đóng modal
 cancel.addEventListener("click", () => {
   document.querySelector("#modal").classList.add("hidden");
 });
+
 document.querySelector("#closeModal").addEventListener("click", () => {
   document.querySelector("#modal").classList.add("hidden");
 });
 
+// Kết nối đến API
 async function connectApi() {
   try {
     loading.classList.remove("hidden");
-    const response = await fetch(`${url}`);
+    const response = await fetch(`${url}/data`);
+
     if (response.ok) {
       data = await response.json();
       render();
     } else {
-      console.log(`Lỗi HTTP: ${response.status}`);
+      console.error(`Lỗi HTTP: ${response.status}`);
       throw new Error("Lỗi kết nối");
     }
   } catch (e) {
-    console.log("Lỗi bắt được:", e);
+    console.error("Lỗi bắt được:", e);
   } finally {
     loading.classList.add("hidden");
   }
 }
 
-const render = function () {
+// Hàm render nội dung
+function render() {
   const start = currentPage * itemsPerPage;
   const end = start + itemsPerPage;
-  const itemsToRender = data.data.slice(start, end);
-  console.log(itemsToRender);
+  const itemsToRender = data.slice(start, end);
 
-  let html = itemsToRender.map((e, index) => {
-    return `
-        <div class="flex justify-center gap-5 items-center mt-10">
-          <div class="img w-14 h-14 rounded-full overflow-hidden">
-              <img class="w-full h-full object-cover" src="${e.logo}" alt="">
-          </div>
-          <h1 class="text-2xl">${e.name}</h1>
+  let html = itemsToRender
+    .map((e, index) => {
+      return `
+      <div class="flex justify-center gap-5 items-center mt-10">
+        <div class="img w-14 h-14 rounded-full overflow-hidden">
+            <img class="w-full h-full object-cover" src="${e.logo}" alt="">
         </div>
-        <div class="content text-center w-2/4 m-auto mt-5">
-           ${e.content}
-        </div>
-        <div class = "text-center mt-10">${start + index + 1}</div>
-        <div class="line h-0 w-2/4 border-solid border border-black m-auto "></div>
-      `;
-  });
+        <h1 class="text-2xl">${e.name}</h1>
+      </div>
+      <div class="content text-center w-2/4 m-auto mt-5">
+         ${e.content}
+      </div>
+      <div class="text-center mt-10">${start + index + 1}</div>
+      <div class="line h-0 w-2/4 border-solid border border-black m-auto"></div>
+    `;
+    })
+    .join("");
 
-  view.innerHTML += html.join("");
+  view.innerHTML += html;
   currentPage++;
-};
+}
 
-window.addEventListener("scroll", () => {
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    if (currentPage * itemsPerPage < data.data.length) {
+// Sự kiện cuộn trong container
+view.addEventListener("scroll", () => {
+  if (view.scrollTop + view.clientHeight >= view.scrollHeight) {
+    if (currentPage * itemsPerPage < data.length) {
       render();
     }
   }
 });
 
+// Gọi hàm kết nối API
 connectApi();
