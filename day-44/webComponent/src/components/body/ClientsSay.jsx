@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function ClientsSay() {
   // State to store the URL of the large image
-  const [largeImageSrc, setLargeImageSrc] = useState(
+  const [largeImageSrc, setLargeImageSrc] = React.useState(
     "https://demos.creative-tim.com/nextjs-tailwind-portfolio-page/image/avatar1.jpg"
   );
 
