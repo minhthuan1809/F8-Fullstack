@@ -55,8 +55,6 @@ export async function getDelete(apiKey, id) {
 
 // update
 export const getUpdate = async (apiKey, id, updatedTodo) => {
-  console.log("Update todo ID:", id, "data:", updatedTodo);
-
   try {
     const response = await fetch(`${urlApi}/todos/${id}`, {
       method: "PATCH",
