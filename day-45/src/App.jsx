@@ -64,6 +64,7 @@ function App() {
       <h1 className="text-2xl font-semibold text-center">
         Welcome to Todo App!
       </h1>
+      <Index />
       <Todolist todos={todos} />
     </div>
   );
