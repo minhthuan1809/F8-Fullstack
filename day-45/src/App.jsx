@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { getCallApi, getList } from "./api/TodoApi";
-import "./index.css";
 import Index from "./components/Index";
 import Todolist from "./components/Todolist";
+import "./index.css";
 
 function App() {
   const [todos, setTodos] = useState([]);
