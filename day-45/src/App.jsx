@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { getCallApi, getList } from "./api/TodoApi";
 import "./index.css";
-import Index from "./components";
 import Todolist from "./components/Todolist";
 
 function App() {
