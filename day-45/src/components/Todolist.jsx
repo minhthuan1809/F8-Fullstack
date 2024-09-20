@@ -7,6 +7,7 @@ export default function Todolist({ todos }) {
   const [_todos, setTodos] = useState(todos);
   const [editingTodo, setEditingTodo] = useState(null);
   const [newTodoValue, setNewTodoValue] = useState("");
+  const [Loading, setLoading] = useState(false);
 
   useEffect(() => {
     setTodos(todos);
@@ -16,12 +17,15 @@ export default function Todolist({ todos }) {
   const handleDelete = async (id) => {
     if (confirm("Bạn chắc chắn muốn xóa?")) {
       try {
+        setLoading(true);
         const deleteResponse = await getDelete(apiKey, id);
         if (deleteResponse.status_code === "SUCCESS") {
           setTodos(_todos.filter((todo) => todo._id !== id));
         }
       } catch (error) {
         console.error("Lỗi khi xóa:", error);
+      } finally {
+        setLoading(false);
       }
     }
   };
@@ -98,7 +102,7 @@ export default function Todolist({ todos }) {
                     onClick={() => handleDelete(todo._id)}
                     className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   >
-                    Xóa
+                    {Loading ? "Loading..." : "Xóa"}
                   </button>
                 </div>
               </>

@@ -6,7 +6,7 @@ export default function Index() {
   const [create, setCreate] = useState("");
   const apikey = localStorage.getItem("API_KEY");
   const [todos, setTodos] = useState([]);
-
+  const [Loading, setLoading] = useState(false);
   const getEmail = async () => {
     const testEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const enterEmail = prompt("Nhập Gmail của bạn:", "thuan18092003@gmail.com");
@@ -57,11 +57,13 @@ export default function Index() {
     } else {
       getEmail();
     }
-  }, []); // Empty dependency array to run only once on mount
+  }, []);
 
+  // thêm mới
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const add = await getAdd(apikey, { todo: create });
       console.log(add);
       fetchTodos(apikey);
@@ -69,6 +71,8 @@ export default function Index() {
     } catch (error) {
       console.error("Error adding todo:", error);
       alert("Có lỗi xảy ra khi thêm todo mới. Vui lòng thử lại.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -77,6 +81,7 @@ export default function Index() {
       <form onSubmit={handleCreate} className="w-full flex space-x-2">
         <input
           value={create}
+          maxLength={50}
           onChange={(e) => setCreate(e.target.value)}
           type="text"
           placeholder="Nhập ..."
@@ -86,7 +91,7 @@ export default function Index() {
           type="submit"
           className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none"
         >
-          Thêm mới
+          {Loading ? "Loading..." : "Thêm mới"}
         </button>
         <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none">
           Tìm kiếm
