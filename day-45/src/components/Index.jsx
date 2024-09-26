@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAdd, getCallApi, getList, getFound } from "../api/TodoApi";
+import { Toaster, toast } from "react-hot-toast";
+
 import Todolist from "./Todolist";
 
 export default function Index() {
@@ -68,12 +70,12 @@ export default function Index() {
     try {
       setLoading(true);
       const add = await getAdd(apikey, { todo: create });
-      console.log(add);
       fetchTodos(apikey);
       setCreate("");
+      toast.success("Đã thêm thành công !");
     } catch (error) {
       console.error("Error adding todo:", error);
-      alert("Có lỗi xảy ra khi thêm todo mới. Vui lòng thử lại.");
+      toast.error("Có lỗi xảy ra khi thêm todo mới. Vui lòng thử lại.");
     } finally {
       setLoading(false);
     }
@@ -97,12 +99,13 @@ export default function Index() {
       const data = await getFound(apikey, debouncedValue);
       if (data.code === 200) {
         setTodos(data.data.listTodo);
+        toast.success("Đã được tìm thấy !");
       } else {
         setTodos([]);
       }
     } catch (error) {
       console.log(error);
-      alert("Có lỗi xảy ra khi tìm kiếm. Vui lòng thử lại.");
+      toast.error("Có lỗi xảy ra khi tìm kiếm. Vui lòng thử lại.");
     } finally {
       setSearchLoading(false);
     }
@@ -110,6 +113,7 @@ export default function Index() {
 
   return (
     <div className="container mt-6 max-w-md mx-auto bg-slate-700 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center space-y-4">
+      <Toaster position="top-right" reverseOrder={false} />
       <form onSubmit={handleCreate} className="w-full flex space-x-2">
         <input
           value={create}
