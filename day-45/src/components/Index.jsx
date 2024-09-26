@@ -68,6 +68,10 @@ export default function Index() {
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
+      if (create === "") {
+        toast.error("Bạn đang để trống!");
+        return;
+      }
       setLoading(true);
       const add = await getAdd(apikey, { todo: create });
       fetchTodos(apikey);
@@ -96,8 +100,17 @@ export default function Index() {
   const handleFount = async () => {
     setSearchLoading(true);
     try {
+      if (create === "") {
+        toast.error("Bạn đang để trống!");
+        return;
+      }
       const data = await getFound(apikey, debouncedValue);
       if (data.code === 200) {
+        if (!data.data.listTodo.length) {
+          toast.error("Không tìm thấy kết quả mà bạn muốn ");
+          setTodos(data.data.listTodo);
+          return;
+        }
         setTodos(data.data.listTodo);
         toast.success("Đã được tìm thấy !");
       } else {
@@ -120,7 +133,6 @@ export default function Index() {
           maxLength={50}
           onChange={(e) => setCreate(e.target.value)}
           type="text"
-          required
           placeholder="Nhập ..."
           className="appearance-none bg-slate-800 border border-slate-600 rounded-lg w-full py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
