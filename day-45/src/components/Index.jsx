@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAdd, getCallApi, getList } from "../api/TodoApi";
+import { getAdd, getCallApi, getList, getFound } from "../api/TodoApi";
 import Todolist from "./Todolist";
 
 export default function Index() {
@@ -7,6 +7,9 @@ export default function Index() {
   const apikey = localStorage.getItem("API_KEY");
   const [todos, setTodos] = useState([]);
   const [Loading, setLoading] = useState(false);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [debouncedValue, setDebouncedValue] = useState(create);
+
   const getEmail = async () => {
     const testEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const enterEmail = prompt("Nhập Gmail của bạn:", "thuan18092003@gmail.com");
@@ -76,6 +79,35 @@ export default function Index() {
     }
   };
 
+  // debounce logic
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(create);
+    }, 500);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [create]);
+
+  // tìm kiếm
+  const handleFount = async () => {
+    setSearchLoading(true);
+    try {
+      const data = await getFound(apikey, debouncedValue);
+      if (data.code === 200) {
+        setTodos(data.data.listTodo);
+      } else {
+        setTodos([]);
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Có lỗi xảy ra khi tìm kiếm. Vui lòng thử lại.");
+    } finally {
+      setSearchLoading(false);
+    }
+  };
+
   return (
     <div className="container mt-6 max-w-md mx-auto bg-slate-700 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center space-y-4">
       <form onSubmit={handleCreate} className="w-full flex space-x-2">
@@ -95,8 +127,13 @@ export default function Index() {
         >
           {Loading ? "Loading..." : "Thêm mới"}
         </button>
-        <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none">
-          Tìm kiếm
+        <button
+          onClick={handleFount}
+          type="button"
+          className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none"
+          disabled={searchLoading}
+        >
+          {searchLoading ? "Searching..." : "Tìm kiếm"}
         </button>
       </form>
       <Todolist todos={todos} />
