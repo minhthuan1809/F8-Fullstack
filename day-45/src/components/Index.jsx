@@ -100,10 +100,6 @@ export default function Index() {
   const handleFount = async () => {
     setSearchLoading(true);
     try {
-      if (create === "") {
-        toast.error("Bạn đang để trống!");
-        return;
-      }
       const data = await getFound(apikey, debouncedValue);
       if (data.code === 200) {
         if (!data.data.listTodo.length) {
