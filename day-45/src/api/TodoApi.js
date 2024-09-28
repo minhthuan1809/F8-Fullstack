@@ -104,3 +104,23 @@ export const getUpdate = async (apiKey, id, updatedTodo) => {
     return { error: err.message };
   }
 };
+// found
+export const getFound = async (apiKey, value) => {
+  try {
+    const response = await fetch(`${urlApi}/todos?q=${value}`, {
+      headers: {
+        "X-Api-Key": apiKey,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Error found ${response.status}: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.error("Error found todo:", err);
+    return { error: err.message };
+  }
+};
