@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AppContext } from "../../App";
+import { AppContext } from "../../App06";
 
 // eslint-disable-next-line react/prop-types
 export default function CommentForm({ onSubmit }) {
