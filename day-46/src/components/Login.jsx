@@ -3,14 +3,16 @@ import { loginApi } from "../api/shopApi";
 import { toast } from "react-toastify";
 
 export default function Login({ onLoginSuccess }) {
+  const [_loading, setLoading] = useState(false);
   const regex =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const [input, setInput] = useState("");
-
   const login = async (e) => {
     e.preventDefault();
+    setLoading(true);
     if (!regex.test(input)) {
       toast.error("Gmail không đúng!");
+      setLoading(false);
       return;
     }
 
@@ -20,7 +22,7 @@ export default function Login({ onLoginSuccess }) {
 
       if (data.status_code === "SUCCESS") {
         localStorage.setItem("apikey", data.data.apiKey);
-        toast.success("Đăng Nhập Thành công!");
+        setInput("");
         onLoginSuccess(); // Gọi hàm để cập nhật trạng thái đăng nhập
       } else {
         toast.error("Đăng Nhập thất bại!");
@@ -28,6 +30,8 @@ export default function Login({ onLoginSuccess }) {
     } catch (error) {
       console.error(error);
       toast.error("Đã xảy ra lỗi!");
+    } finally {
+      setLoading(false); // loading
     }
   };
 
@@ -49,7 +53,7 @@ export default function Login({ onLoginSuccess }) {
           type="submit"
           className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300"
         >
-          Đăng Nhập
+          {_loading ? "loading..." : "Đăng Nhập "}
         </button>
       </form>
     </div>
