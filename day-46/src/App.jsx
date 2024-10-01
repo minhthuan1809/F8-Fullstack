@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { profileApi } from "./api/shopApi";
-import Product from "./components/product";
+import Product from "./components/Product";
 
 export const nameContext = createContext();
 
