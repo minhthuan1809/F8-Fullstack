@@ -27,7 +27,6 @@ export default function Product() {
       updatedCart = [...prevCart, { ...item, quantity: 1 }];
     }
 
-    // Lưu giỏ hàng cập nhật vào localStorage
     localStorage.setItem("cart", JSON.stringify(updatedCart));
 
     return updatedCart;
@@ -57,7 +56,7 @@ export default function Product() {
             <h2 className="text-2xl text-center m-5 ">WELCOME TO SHOP</h2>
             <div
               className="flex items-center gap-2 cursor-pointer"
-              onClick={() => setLogout((prev) => !prev)} // Tạo toggle cho logout
+              onClick={() => setLogout((prev) => !prev)}
             >
               <b>{_nameProfile.profileName.name}</b>
               <div className="max-w-10 rounded-full overflow-hidden border-black border-solid border-[1px]">
