@@ -14,10 +14,18 @@ export default function Auth0() {
   const regex =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  const [testEmail, setTestEmail] = useState("");
-  // check thông tin
   const handleSendEmail = async (e) => {
     e.preventDefault();
+
+    if (!name || !email || !message) {
+      toast.error("Vui lòng điền đầy đủ thông tin!");
+      return;
+    }
+
+    if (!regex.test(email)) {
+      toast.error("Email không hợp lệ!");
+      return;
+    }
 
     if (confirm("Bạn chắn chắn muốn gửi ? ")) {
       const data = await sendEmail(form.current);
@@ -28,16 +36,6 @@ export default function Auth0() {
     }
   };
 
-  const handleEmailBlur = (e) => {
-    if (!e.test === regex) {
-      setTestEmail("Gmail không đúng ");
-    }
-    if (e === "") {
-      setTestEmail("Bạn chưa nhập Gmail");
-    }
-    console.log(e);
-  };
-
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -45,6 +43,7 @@ export default function Auth0() {
       </div>
     );
   }
+
   useEffect(() => {
     if (user) {
       setName(user.name);
@@ -100,12 +99,11 @@ export default function Auth0() {
             name="user_email"
             ref={_email}
             id="email"
-            onBlur={(e) => handleEmailBlur(e.target.value)}
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             className="mb-4 p-2 border border-gray-300 rounded w-full focus:outline-none focus:ring-2 focus:ring-red-400"
           />
-          <span className="text-red-500">{testEmail}</span>
+
           <label
             className="block mb-2 text-sm font-medium text-gray-700"
             htmlFor="message"
