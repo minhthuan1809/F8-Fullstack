@@ -10,7 +10,6 @@ export default function Auth0() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const form = useRef();
-  const _email = useRef();
   const regex =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -27,11 +26,27 @@ export default function Auth0() {
       return;
     }
 
-    if (confirm("Bạn chắn chắn muốn gửi ? ")) {
-      const data = await sendEmail(form.current);
-      if (data.status === 200) {
-        toast.success("Gửi Gmail Thành Công ! ");
-        setMessage("");
+    if (confirm("Bạn chắn chắn muốn gửi?")) {
+      console.log(email);
+
+      const value = {
+        user_name: name,
+        to_email: email,
+        message: message,
+      };
+
+      try {
+        const data = await sendEmail(value); // Gọi hàm sendEmail
+
+        if (data && data.status === 200) {
+          toast.success("Gửi Gmail Thành Công!");
+          setMessage("");
+        } else {
+          toast.error("Có lỗi xảy ra khi gửi email.");
+        }
+      } catch (error) {
+        console.error("Lỗi:", error); // Ghi log lỗi
+        toast.error("Có lỗi xảy ra khi gửi email.");
       }
     }
   };
@@ -64,10 +79,13 @@ export default function Auth0() {
               />
             </div>
             <h1 className="text-xl font-semibold text-center mb-2">
-              Have a nice day {user.name}!
+              Have a nice day, {user.name}!
             </h1>
             {user.email && (
-              <a className="text-red-500 hover:underline" href={`mailto`}>
+              <a
+                className="text-red-500 hover:underline"
+                href={`mailto:${user.email}`}
+              >
                 Email: {user.email}
               </a>
             )}
@@ -97,7 +115,6 @@ export default function Auth0() {
           <input
             type="email"
             name="user_email"
-            ref={_email}
             id="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -115,7 +132,7 @@ export default function Auth0() {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Enter your message ... "
+            placeholder="Enter your message..."
             className="mb-4 p-2 border border-gray-300 rounded w-full h-24 focus:outline-none focus:ring-2 focus:ring-red-400"
           />
           <button className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 w-full">
