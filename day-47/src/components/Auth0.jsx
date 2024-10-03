@@ -27,8 +27,6 @@ export default function Auth0() {
     }
 
     if (confirm("Bạn chắn chắn muốn gửi?")) {
-      console.log(email);
-
       const value = {
         user_name: name,
         to_email: email,
