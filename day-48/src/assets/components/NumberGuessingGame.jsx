@@ -8,14 +8,12 @@ import { toast } from "react-toastify";
 import { Button } from "@mui/material";
 
 export default function NumberGuessingGame() {
-  // Kiểm tra dữ liệu từ localStorage hoặc khởi tạo giá trị mặc định
   const dataLocal = JSON.parse(localStorage.getItem("data")) || {
-    SliderTrack: 10, // Giá trị mặc định
+    SliderTrack: 10,
     darkMode: true,
     payload: [],
   };
 
-  // Sử dụng dữ liệu từ localStorage nếu có
   const [numberTrack, setNumberTrack] = useState(dataLocal.SliderTrack);
   const [darkMode, setDarkMode] = useState(dataLocal.darkMode);
   const saveNumber = useRef([]);
