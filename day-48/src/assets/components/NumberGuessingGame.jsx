@@ -35,7 +35,7 @@ export default function NumberGuessingGame() {
       enterMax: `${saveNumber.current.length + 1}/7`,
       ratio: `${Math.round(((7 - count) / 7) * 100)}%`,
     };
-    if (count < 1) {
+    if (count < 2) {
       handleData(numberTrack, darkMode, newEntry);
       setInput(false);
       saveNumber.current = [];
@@ -62,6 +62,9 @@ export default function NumberGuessingGame() {
   useEffect(() => {
     setRandomNumber(newRandomNumber);
     handleData(numberTrack, darkMode);
+    setCount(7);
+    toast("Bắt đầu");
+    saveNumber.current = [];
   }, [numberTrack]);
 
   useEffect(() => {
@@ -124,6 +127,8 @@ export default function NumberGuessingGame() {
             setRandomNumber(newRandomNumber);
             setInput(true);
             saveNumber.current = [];
+            setCount(7);
+            toast("Bắt đầu");
           }}
         >
           Chơi lại
