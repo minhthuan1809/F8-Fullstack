@@ -90,7 +90,7 @@ export default function History() {
                   <span className="font-semibold">{value.enterMax}</span>
                 </p>
                 <p className="text-red-400">
-                  Tỷ lệ đúng:{" "}
+                  Tỷ lệ sai:{" "}
                   <span className="font-semibold">{value.ratio}</span>
                 </p>
               </div>
