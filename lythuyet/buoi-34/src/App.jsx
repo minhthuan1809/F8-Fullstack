@@ -12,9 +12,9 @@ export default function App() {
   }, []);
   return (
     <div>
-      {/* {todoList.map((e, key) => {
-        return <p key={key}>{e}</p>;
-      })} */}
+      {todoList.map((e, key) => {
+        return <p key={key}>{e.title}</p>;
+      })}
     </div>
   );
 }
