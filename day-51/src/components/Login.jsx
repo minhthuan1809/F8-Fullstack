@@ -38,7 +38,10 @@ export default function Login() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-black">
       <form className="bg-white p-6 rounded shadow-md" onSubmit={handleLogin}>
-        <label htmlFor="email" className="block text-lg font-medium mb-2">
+        <label
+          htmlFor="email"
+          className="block text-lg font-medium mb-2 w-[20rem]"
+        >
           Đăng nhập
         </label>
         <input
