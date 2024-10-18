@@ -18,10 +18,13 @@ function DraggableItem({ id, content }) {
 
   return (
     <div
+      contentEditable={true}
+      suppressContentEditableWarning={true}
       ref={setNodeRef}
       style={style}
       {...listeners}
       {...attributes}
+      x
       className="bg-white border border-gray-300 p-2 mb-2 rounded shadow"
     >
       {content}
