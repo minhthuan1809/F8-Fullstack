@@ -63,6 +63,7 @@ export default function Trello() {
           if (!acc[column]) {
             acc[column] = [];
           }
+          console.log(response);
           acc[column].push(task);
           return acc;
         }, {});
