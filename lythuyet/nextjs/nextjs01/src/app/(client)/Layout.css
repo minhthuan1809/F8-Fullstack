@@ -1,0 +1,8 @@
+.about-page {
+  width: 80%;
+  margin: 0 auto;
+  color: blue;
+}
+.active a {
+  color: red;
+}
