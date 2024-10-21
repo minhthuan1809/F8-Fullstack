@@ -1,7 +1,7 @@
 "use client"; // Đảm bảo là client component
+import Link from "next/link";
 import { useRouter } from "next/navigation"; // Import từ next/navigation
 import { useEffect } from "react";
-import { useState } from "react";
 import {
   FaHome,
   FaSearch,
@@ -33,22 +33,26 @@ const Nav = ({ darkMode, setDarkMode, path }) => {
       <div className="flex items-center">
         <FaHome className="text-green-500" size={24} />
         <span className="ml-2 font-semibold">The Example Name</span>
-        <a href="/" className="ml-4 text-green-500 hover:text-green-600">
+        <Link href="/" className="ml-4 text-green-500 hover:text-green-600">
           Home
-        </a>
+        </Link>
       </div>
       <div className="flex items-center space-x-4">
         <FaSearch className="text-gray-600" size={20} />
-        <a
+        <Link
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaFacebookF className="text-gray-600" size={20} />
-        </a>
-        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+        </Link>
+        <Link
+          href="https://youtube.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaYoutube className="text-gray-600" size={20} />
-        </a>
+        </Link>
         <button
           className="p-1 rounded-full bg-gray-200"
           onClick={handleDarkModeToggle}
