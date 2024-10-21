@@ -15,7 +15,7 @@ export const translations = {
       "2019-2021: Trường trung học phổ thông khác",
       "2022-2023: Học đại học",
     ],
-    name: "Tên Ví Dụ",
+    name: "NGUYỄN MINH THUẬN",
     socialContact: "Liên hệ xã hội",
     selfProject: "Dự án cá nhân",
     myHobbies: "Sở thích của tôi",
@@ -25,7 +25,7 @@ export const translations = {
     ],
   },
   en: {
-    title: "Front-end Developer",
+    name: "NGUYỄN MINH THUẬN",
     skills: "My skills",
     webDeveloper: "Web developer:",
     webDeveloperSkills:
