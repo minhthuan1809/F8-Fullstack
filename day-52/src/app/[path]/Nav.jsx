@@ -1,6 +1,6 @@
-"use client"; // Đảm bảo là client component
+"use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; // Import từ next/navigation
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import {
   FaHome,
@@ -14,14 +14,14 @@ const Nav = ({ darkMode, setDarkMode, path }) => {
   const router = useRouter();
 
   useEffect(() => {
-    const storedDarkMode = localStorage.getItem("darkMode") === "true"; // Chuyển đổi chuỗi thành boolean
+    const storedDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(storedDarkMode);
   }, [setDarkMode]);
 
   const handleDarkModeToggle = () => {
     const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode); // Cập nhật trạng thái mới
-    localStorage.setItem("darkMode", newDarkMode); // Lưu trạng thái mới vào localStorage
+    setDarkMode(newDarkMode);
+    localStorage.setItem("darkMode", newDarkMode);
   };
 
   const toggleLanguage = () => {
@@ -33,9 +33,9 @@ const Nav = ({ darkMode, setDarkMode, path }) => {
       <div className="flex items-center">
         <FaHome className="text-green-500" size={24} />
         <span className="ml-2 font-semibold">The Example Name</span>
-        <a href="/" className="ml-4 text-green-500 hover:text-green-600">
+        <Link href="/" className="ml-4 text-green-500 hover:text-green-600">
           Home
-        </a>
+        </Link>
       </div>
       <div className="flex items-center space-x-4">
         <FaSearch className="text-gray-600" size={20} />
