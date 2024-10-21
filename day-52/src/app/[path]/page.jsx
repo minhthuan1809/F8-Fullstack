@@ -91,9 +91,9 @@ export default function Page() {
               </p>
               <p>
                 <strong>Zalo:</strong>{" "}
-                <a href="#" className="text-orange-500">
+                <Link href="#" className="text-orange-500">
                   https://zalo.me
-                </a>
+                </Link>
               </p>
               <p>
                 <strong>Email:</strong>{" "}
@@ -112,12 +112,12 @@ export default function Page() {
               </p>
               <p>
                 <strong>Youtube:</strong>{" "}
-                <a
+                <Link
                   href="https://www.youtube.com/c/f8vnofficial"
                   className="text-orange-500"
                 >
                   https://www.youtube.com/c/f8vnofficial
-                </a>
+                </Link>
               </p>
             </div>
 
