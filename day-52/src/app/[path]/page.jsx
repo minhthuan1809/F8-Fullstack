@@ -125,8 +125,6 @@ export default function Page() {
               <h2 className="text-xl font-bold">
                 {currentTranslations.selfProject}
               </h2>
-              {/* Your project details here */}
-              {/* You can also make it dynamic using translations if needed */}
             </div>
 
             <div className="mt-8">
