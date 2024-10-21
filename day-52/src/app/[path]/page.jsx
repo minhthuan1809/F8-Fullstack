@@ -5,6 +5,7 @@ import "../globals.css";
 import { translations } from "@/app/utils/translations";
 import Nav from "./Nav";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Page() {
   const path = usePathname();
@@ -84,33 +85,30 @@ export default function Page() {
               </h2>
               <p>
                 <strong>Phone:</strong>{" "}
-                <a href="tel:0987654321" className="text-orange-500">
+                <Link href="#" className="text-orange-500">
                   0987654321
-                </a>
+                </Link>
               </p>
               <p>
                 <strong>Zalo:</strong>{" "}
-                <a href="https://zalo.me" className="text-orange-500">
+                <a href="#" className="text-orange-500">
                   https://zalo.me
                 </a>
               </p>
               <p>
                 <strong>Email:</strong>{" "}
-                <a
+                <Link
                   href="mailto:contact@fullstack.edu.vn"
                   className="text-orange-500"
                 >
                   contact@fullstack.edu.vn
-                </a>
+                </Link>
               </p>
               <p>
                 <strong>Facebook:</strong>{" "}
-                <a
-                  href="https://www.facebook.com/groups/f8official"
-                  className="text-orange-500"
-                >
+                <Link href="#" className="text-orange-500">
                   https://www.facebook.com/groups/f8official
-                </a>
+                </Link>
               </p>
               <p>
                 <strong>Youtube:</strong>{" "}
