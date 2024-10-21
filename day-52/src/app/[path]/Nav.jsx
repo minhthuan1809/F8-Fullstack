@@ -33,19 +33,19 @@ const Nav = ({ darkMode, setDarkMode, path }) => {
       <div className="flex items-center">
         <FaHome className="text-green-500" size={24} />
         <span className="ml-2 font-semibold">The Example Name</span>
-        <Link href="/" className="ml-4 text-green-500 hover:text-green-600">
+        <a href="/" className="ml-4 text-green-500 hover:text-green-600">
           Home
-        </Link>
+        </a>
       </div>
       <div className="flex items-center space-x-4">
         <FaSearch className="text-gray-600" size={20} />
-        <Link
+        <a
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaFacebookF className="text-gray-600" size={20} />
-        </Link>
+        </a>
         <Link
           href="https://youtube.com"
           target="_blank"
