@@ -1,5 +1,5 @@
-"use client";
-import React, { useState } from "react";
+"use client"; // Đảm bảo là client component
+import React, { useEffect, useState } from "react";
 
 import "../globals.css";
 import { translations } from "@/app/utils/translations";
@@ -11,15 +11,20 @@ export default function Page() {
   const path = usePathname();
   console.log(path);
 
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("darkMode") === "true"
-  );
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem("darkMode") === "true";
+    setDarkMode(storedDarkMode);
+  }, []);
+
   let currentTranslations = null;
   if (path === "/vn" || path === "/en") {
     currentTranslations = translations[path.replace("/", "")];
   } else {
-    return <h1 className=" text-6xl absolute top-2/4 left-2/4">404</h1>;
+    return <h1 className="text-6xl absolute top-2/4 left-2/4">404</h1>;
   }
+
   return (
     <div
       className={`absolute inset-0 ${darkMode ? "bg-black text-white" : ""}`}
