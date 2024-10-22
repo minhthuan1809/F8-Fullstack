@@ -12,10 +12,11 @@ import {
 
 const Nav = ({ darkMode, setDarkMode, path }) => {
   const router = useRouter();
-
   useEffect(() => {
-    const storedDarkMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(storedDarkMode);
+    if (typeof window !== "undefined") {
+      const storedDarkMode = localStorage.getItem("darkMode") === "true";
+      setDarkMode(storedDarkMode);
+    }
   }, [setDarkMode]);
 
   const handleDarkModeToggle = () => {
