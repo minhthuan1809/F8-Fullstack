@@ -1,7 +1,5 @@
-"use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import {
   FaHome,
   FaSearch,
@@ -12,12 +10,6 @@ import {
 
 const Nav = ({ darkMode, setDarkMode, path }) => {
   const router = useRouter();
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedDarkMode = localStorage.getItem("darkMode") === "true";
-      setDarkMode(storedDarkMode);
-    }
-  }, [setDarkMode]);
 
   const handleDarkModeToggle = () => {
     const newDarkMode = !darkMode;

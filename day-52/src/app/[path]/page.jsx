@@ -1,41 +1,65 @@
-"use client"; // Đảm bảo là client component
-import React, { useEffect, useState } from "react";
-
+"use client";
+import React from "react";
 import "../globals.css";
 import { translations } from "@/app/utils/translations";
 import Nav from "./Nav";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Page() {
   const path = usePathname();
-  console.log(path);
-
   const [darkMode, setDarkMode] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const storedDarkMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(storedDarkMode);
+    setIsClient(true);
+
+    const storedDarkMode = localStorage.getItem("darkMode");
+    if (storedDarkMode !== null) {
+      setDarkMode(storedDarkMode === "true");
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setDarkMode(prefersDark);
+    }
   }, []);
 
-  let currentTranslations = null;
-  if (path === "/vn" || path === "/en") {
-    currentTranslations = translations[path.replace("/", "")];
-  } else {
-    return <h1 className="text-6xl absolute top-2/4 left-2/4">404</h1>;
+  const getCurrentTranslations = () => {
+    if (path === "/vn" || path === "/en") {
+      return translations[path.replace("/", "")];
+    }
+    return null;
+  };
+
+  const currentTranslations = getCurrentTranslations();
+
+  // Handle 404 case
+  if (!currentTranslations) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <h1 className="text-6xl">404</h1>
+      </div>
+    );
   }
 
-  return (
+  // Base layout that's consistent between server and client
+  const layout = (
     <div
-      className={`absolute inset-0 ${darkMode ? "bg-black text-white" : ""}`}
+      className={`min-h-screen ${
+        darkMode ? "bg-black text-white" : "bg-white text-black"
+      }`}
     >
-      <div className="w-4/5 m-auto ">
+      <div className="w-4/5 mx-auto">
         <header>
-          <Nav
-            darkMode={darkMode}
-            setDarkMode={setDarkMode}
-            path={path.replace("/", "")}
-          />
+          {isClient && (
+            <Nav
+              darkMode={darkMode}
+              setDarkMode={setDarkMode}
+              path={path.replace("/", "")}
+            />
+          )}
         </header>
 
         <main className="flex flex-wrap">
@@ -90,13 +114,13 @@ export default function Page() {
               </h2>
               <p>
                 <strong>Phone:</strong>{" "}
-                <Link href="#" className="text-orange-500">
+                <Link href="tel:0987654321" className="text-orange-500">
                   0987654321
                 </Link>
               </p>
               <p>
                 <strong>Zalo:</strong>{" "}
-                <Link href="#" className="text-orange-500">
+                <Link href="https://zalo.me" className="text-orange-500">
                   https://zalo.me
                 </Link>
               </p>
@@ -111,7 +135,10 @@ export default function Page() {
               </p>
               <p>
                 <strong>Facebook:</strong>{" "}
-                <Link href="#" className="text-orange-500">
+                <Link
+                  href="https://www.facebook.com/groups/f8official"
+                  className="text-orange-500"
+                >
                   https://www.facebook.com/groups/f8official
                 </Link>
               </p>
@@ -147,4 +174,12 @@ export default function Page() {
       </div>
     </div>
   );
+
+  // Return null during server-side rendering
+  if (!isClient) {
+    return <div className="hidden">{layout}</div>;
+  }
+
+  // Return the actual layout once we're on the client
+  return layout;
 }
