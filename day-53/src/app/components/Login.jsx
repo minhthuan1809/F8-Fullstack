@@ -7,11 +7,25 @@ import { signIn } from "next-auth/react";
 export default function PageLogin() {
   const { data: session } = useSession();
 
+  const handleGithubLogin = () => {
+    signIn("github", {
+      callbackUrl: window.location.origin,
+      redirect: true,
+    });
+  };
+
+  const handleGoogleLogin = () => {
+    signIn("google", {
+      callbackUrl: window.location.origin,
+      redirect: true,
+    });
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         {!session ? (
-          <div className=" py-8 px-4 shadow-lg rounded-2xl">
+          <div className="py-8 px-4 shadow-lg rounded-2xl">
             {/* Login Header */}
             <div className="text-center mb-8">
               <p>Đăng nhập để truy cập tài khoản của bạn</p>
@@ -20,7 +34,7 @@ export default function PageLogin() {
             {/* Login Options */}
             <div className="space-y-4">
               <button
-                onClick={() => signIn("github")}
+                onClick={handleGithubLogin}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 text-white bg-gray-800 rounded-lg hover:bg-gray-900 transition-all duration-200 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
               >
                 <Github className="w-5 h-5" />
@@ -29,7 +43,7 @@ export default function PageLogin() {
               </button>
 
               <button
-                onClick={() => signIn("google")}
+                onClick={handleGoogleLogin}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all duration-200 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 <Chrome className="w-5 h-5" />
