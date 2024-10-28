@@ -9,9 +9,10 @@ const handle = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
     GitHubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID,
+      clientId: process.env.GITHUB_CLIENT_ID as string,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
+
   ],
 });
 export { handle as GET, handle as POST };
