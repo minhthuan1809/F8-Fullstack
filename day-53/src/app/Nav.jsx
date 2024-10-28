@@ -1,4 +1,4 @@
-q"use client";
+"use client";
 
 import { Avatar } from "@nextui-org/avatar";
 import { Facebook, Moon, Sun, Youtube } from "lucide-react";
