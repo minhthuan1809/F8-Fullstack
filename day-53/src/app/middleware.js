@@ -15,12 +15,6 @@ export default withAuth(
   }
 );
 
-// Cấu hình những route cần bảo vệ
 export const config = {
-  matcher: [
-    // Những route cần auth
-    "/dashboard/:path*",
-    "/profile/:path*",
-    // Thêm các protected route khác ở đây
-  ],
+  matcher: ["/dashboard/:path*", "/profile/:path*"],
 };
