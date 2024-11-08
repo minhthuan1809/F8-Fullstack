@@ -6,8 +6,10 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function Nav() {
+  const { user, error, isLoading } = useUser();
   const [darkMode, setDarkMode] = useState(true);
   const [mounted, setMounted] = useState("light");
   const { theme, setTheme } = useTheme();
